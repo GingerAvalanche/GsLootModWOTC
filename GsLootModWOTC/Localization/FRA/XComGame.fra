@@ -1,0 +1,3564 @@
+;---------------------------------------------
+;---           CONTINENT BONUSES           ---
+;---------------------------------------------
+[ContinentBonus_SafeCracker X2GameplayMutatorTemplate]
+DisplayName="Hackeur de Coffre"
+SummaryText="Le temps de décryptage de Coffre est divisé par deux."
+
+[ContinentBonus_ProwlersProfit X2GameplayMutatorTemplate]
+DisplayName="Profit du Rôdeur"
+SummaryText="Les Coffres contiennent toujours des améliorations avancées ou supérieures."
+
+[ContinentBonus_HelpingHand X2GameplayMutatorTemplate]
+DisplayName="Coup de Main"
+SummaryText="Vous obtenez un ingénieur supplémentaire."
+
+[ContinentBonus_SignalFlare X2GameplayMutatorTemplate]
+DisplayName="Signal de Détresse"
+SummaryText="Vous obtenez un contact de résistance supplémentaire"
+
+[ContinentBonus_Xenobiology X2GameplayMutatorTemplate]
+DisplayName="Xenobiologie"
+SummaryText="Autopsies instantanées."
+
+;---------------------------------------------
+;---      SPARK UPGRADES && ABILITIES      ---
+;---------------------------------------------
+
+[GrimyOverdriveOne X2AbilityTemplate]
+LocFriendlyName="Overclock"
+LocLongDescription="Effectuez 4 actions ce tour, aucune d'entre elle ne termine votre tour. Des tirs multiples induisent une pénalité de recul."
+LocHelpText="Effectuez 4 actions ce tour, aucune d'entre elle ne termine votre tour. Des tirs multiples induisent une pénalité de recul."
+
+[GrimyOverdriveTwo X2AbilityTemplate]
+LocFriendlyName="Overclock Avancé"
+LocLongDescription="Effectuez 4 actions ce tour, aucune d'entre elle ne termine votre tour. Des tirs multiples induisent une pénalité de recul."
+LocHelpText="Effectuez 4 actions ce tour, aucune d'entre elle ne termine votre tour. Des tirs multiples induisent une pénalité de recul."
+
+[GrimyOverdriveThree X2AbilityTemplate]
+LocFriendlyName="Overclock Supérieur"
+LocLongDescription="Effectuez 4 actions ce tour, aucune d'entre elle ne termine votre tour. Des tirs multiples induisent une pénalité de recul."
+LocHelpText="Effectuez 4 actions ce tour, aucune d'entre elle ne termine votre tour. Des tirs multiples induisent une pénalité de recul."
+
+[GrimySpotter_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Observateur"
+FriendlyNamePlural="Protocoles d'Observateur"
+BriefSummary="L'intimidation marque les ennemis pendant 2 tours."
+TinySummary="Intimidation marque les Ennemis"
+LootTooltip="Cette amélioration rend nos Sparks plus intimidants."
+
+[GrimySpotter_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Observateur Avancé"
+FriendlyNamePlural="Protocoles d'Observateur Avancés"
+BriefSummary="L'intimidation marque les ennemis pendant 3 tours."
+TinySummary="Intimidation marque les Ennemis"
+LootTooltip="Cette amélioration rend nos Sparks plus intimidants."
+
+[GrimySpotter_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Observateur Supérieur"
+FriendlyNamePlural="Protocoles d'Observateur Supérieurs"
+BriefSummary="L'intimidation marque les ennemis pendant 4 tours."
+TinySummary="Intimidation marque les Ennemis"
+LootTooltip="Cette amélioration rend nos Sparks plus intimidants."
+
+[GrimySurvival_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Survie"
+FriendlyNamePlural="Protocoles de Survie"
+BriefSummary="L'intimidation donne 1 blindage pour 2 tours."
+TinySummary="Intimdation donne du blindage"
+LootTooltip="Cette amélioration fournit un blindage réactif."
+
+[GrimySurvival_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Survie Avancé"
+FriendlyNamePlural="Protocoles de Survie Avancés"
+BriefSummary="L'intimidation donne 2 blindages pour 2 tours."
+TinySummary="Intimdation donne du blindage"
+LootTooltip="Cette amélioration fournit un blindage réactif."
+
+[GrimySurvival_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Survie Supérieur"
+FriendlyNamePlural="Protocoles de Survie Supérieurs"
+BriefSummary="L'intimidation donne 3 blindages pour 2 tours."
+TinySummary="Intimdation donne du blindage"
+LootTooltip="Cette amélioration fournit un blindage réactif."
+
+[GrimyRepair_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Réparation"
+FriendlyNamePlural="Protocoles de Réparation"
+BriefSummary="Augmente les Charges de Réparation d'1 point."
+TinySummary="Augmente les Charges de Réparation"
+LootTooltip="Cette amélioration autorise plus de réparations lors d'une bataille."
+
+[GrimyRepair_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Réparation Avancé"
+FriendlyNamePlural="Protocoles de Réparation Avancés"
+BriefSummary="Augmente les Charges de Réparation de 2 points."
+TinySummary="Augmente les Charges de Réparation"
+LootTooltip="Cette amélioration autorise plus de réparations lors d'une bataille."
+
+[GrimyRepair_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Réparation Supérieur"
+FriendlyNamePlural="Protocoles de Réparation Supérieurs"
+BriefSummary="Augmente les Charges de Réparation de 3 points."
+TinySummary="Augmente les Charges de Réparation"
+LootTooltip="Cette amélioration autorise plus de réparations lors d'une bataille."
+
+[GrimySparkRocket_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Roquettes"
+FriendlyNamePlural="Réserves de Roquettes"
+BriefSummary="Augmente l'utilisation du Lance-Roquettes d'1 charge."
+TinySummary="Augmente les Charges du Lance-Roquettes"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Lance-Roquettes."
+
+[GrimySparkRocket_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Roquettes Avancée"
+FriendlyNamePlural="Réserves de Roquettes Avancées"
+BriefSummary="Augmente l'utilisation du Lance-Roquettes d'1 charge. Augmente les dégâts de Roquettes d'1 point."
+TinySummary="Augmente les Charges du Lance-Roquettes"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Lance-Roquettes."
+
+[GrimySparkRocket_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Roquettes Supérieure"
+FriendlyNamePlural="Réserves de Roquettes Supérieures"
+BriefSummary="Augmente l'utilisation du Lance-Roquettes d'1 charge. Augmente les dégâts de Roquettes de 2 points."
+TinySummary="Augmente les Charges du Lance-Roquettes"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Lance-Roquettes."
+
+[GrimySparkShredder_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Projectiles"
+FriendlyNamePlural="Réserves de Projectiles"
+BriefSummary="Augmente l'utilisation du Fusil Perforant d'1 charge."
+TinySummary="Augmente les Charges du Fusil Perforant"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Fusil Perforant."
+
+[GrimySparkShredder_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Projectiles Avancée"
+FriendlyNamePlural="Réserves de Projectiles Avancées"
+BriefSummary="Augmente l'utilisation du Fusil Perforant d'1 charge. Augmente la portée du Fusil Perforant de 2."
+TinySummary="Augmente les Charges du Fusil Perforant"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Fusil Perforant."
+
+[GrimySparkShredder_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Projectiles Supérieure"
+FriendlyNamePlural="Réserves de Projectiles Supérieures"
+BriefSummary="Augmente l'utilisation du Fusil Perforant d'1 charge. Augmente la portée du Fusil Perforant de 4."
+TinySummary="Augmente les Charges du Fusil Perforant"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Fusil Perforant."
+
+[GrimySparkFlamethrower_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Napalm"
+FriendlyNamePlural="Réserves de Napalm"
+BriefSummary="Augmente l'utilisation du Lance-Flamme d'1 charge."
+TinySummary="Augmente les Charges du Lance-Flamme"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Lance-Flamme."
+
+[GrimySparkFlamethrower_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Napalm Avancée"
+FriendlyNamePlural="Réserves de Napalm Avancées"
+BriefSummary="Augmente l'utilisation du Lance-Flamme d'1 charge. Augmente le diamètre du Lance-Flamme de 1."
+TinySummary="Augmente les Charges du Lance-Flamme"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Lance-Flamme."
+
+[GrimySparkFlamethrower_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Napalm Supérieure"
+FriendlyNamePlural="Réserves de Napalm Supérieures"
+BriefSummary="Augmente l'utilisation du Lance-Flamme d'1 charge. Augmente le diamètre du Lance-Flamme de 1."
+TinySummary="Augmente les Charges du Lance-Flamme"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Lance-Flamme."
+
+[GrimySparkBlasterLauncher_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve d'Elerium"
+FriendlyNamePlural="Réserves d'Elerium"
+BriefSummary="Augmente l'utilisation du Lanceur Nucléaire d'1 charge."
+TinySummary="Augmente les Charges du Lanceur Nucléaire"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Lanceur Nucléaire."
+
+[GrimySparkBlasterLauncher_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve d'Elerium Avancée"
+FriendlyNamePlural="Réserves d'Elerium Avancées"
+BriefSummary="Augmente l'utilisation du Lanceur Nucléaire d'1 charge. Augmente les dégâts du Lanceur Nucléaire d'1 point."
+TinySummary="Augmente les Charges du Lanceur Nucléaire"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Lanceur Nucléaire."
+
+[GrimySparkBlasterLauncher_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve d'Elerium Supérieure"
+FriendlyNamePlural="Réserves d'Elerium Supérieures"
+BriefSummary="Augmente l'utilisation du Lanceur Nucléaire d'1 charge. Augmente les dégâts du Lanceur Nucléaire de 2 points."
+TinySummary="Augmente les Charges du Lanceur Nucléaire"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Lanceur Nucléaire."
+
+[GrimySparkPlasmaBlaster_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Plasma"
+FriendlyNamePlural="Réserves de Plasma"
+BriefSummary="Augmente l'utilisation du Blaster Plasmique d'1 charge."
+TinySummary="Augmente les Charges du Blaster Plasmique"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Blaster Plasmique."
+
+[GrimySparkPlasmaBlaster_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Plasma Avancée"
+FriendlyNamePlural="Réserves de Plasma Avancées"
+BriefSummary="Augmente l'utilisation du Blaster Plasmique d'1 charge. Augmente la largeur du rayon de 1."
+TinySummary="Augmente les Charges du Blaster Plasmique"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Blaster Plasmique."
+
+[GrimySparkPlasmaBlaster_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Réserve de Plasma Supérieure"
+FriendlyNamePlural="Réserves de Plasma Supérieures"
+BriefSummary="Augmente l'utilisation du Blaster Plasmique d'1 charge. Augmente la largeur du rayon de 2."
+TinySummary="Augmente les Charges du Blaster Plasmique"
+LootTooltip="Cette amélioration fournit un compartiment de réserve pour munitions de Blaster Plasmique."
+
+[GrimySparkNova_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Explosion"
+FriendlyNamePlural="Protocoles d'Explosion"
+BriefSummary="Augmente les dégâts de Nova de 3 points."
+TinySummary="Augmente les dégâts de Nova"
+LootTooltip="Cette amélioration augmente les dégâts faits par Nova."
+
+[GrimySparkNova_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Explosion Avancé"
+FriendlyNamePlural="Protocoles d'Explosion Avancés"
+BriefSummary="Augmente les dégâts de Nova de 4 points."
+TinySummary="Augmente les dégâts de Nova"
+LootTooltip="Cette amélioration augmente les dégâts faits par Nova."
+
+[GrimySparkNova_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Explosion Supérieur"
+FriendlyNamePlural="Protocoles d'Explosion Supérieurs"
+BriefSummary="Augmente les dégâts de Nova de 5 points."
+TinySummary="Augmente les dégâts de Nova"
+LootTooltip="Cette amélioration augmente les dégâts faits par Nova."
+
+[GrimySparkMartyr_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole du Martyr"
+FriendlyNamePlural="Protocoles du Martyr"
+BriefSummary="Réduit les dégâts subis lors de l'utilisation de Sacrifice de 40%."
+TinySummary="Réduit les dégâts de Sacrifice"
+LootTooltip="Cette amélioration aide nos Sparks à survivre en protégeant nos alliés."
+
+[GrimySparkMartyr_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole du Martyr Avancé"
+FriendlyNamePlural="Protocoles du Martyr Avancés"
+BriefSummary="Réduit les dégâts subis lors de l'utilisation de Sacrifice de 50%."
+TinySummary="Réduit les dégâts de Sacrifice"
+LootTooltip="Cette amélioration aide nos Sparks à survivre en protégeant nos alliés."
+
+[GrimySparkMartyr_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole du Martyr Supérieur"
+FriendlyNamePlural="Protocoles du Martyr Supérieurs"
+BriefSummary="Réduit les dégâts subis lors de l'utilisation de Sacrifice de 60%."
+TinySummary="Réduit les dégâts de Sacrifice"
+LootTooltip="Cette amélioration aide nos Sparks à survivre en protégeant nos alliés."
+
+[GrimySparkBombard_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Siège"
+FriendlyNamePlural="Protocoles de Siège"
+BriefSummary="Augmente l'utilisation de Bombardement d'1 charge."
+TinySummary="Augmente les charges de Bombardement"
+LootTooltip="Cette amélioration permet à nos Sparks de bombarder l'ennemi plus souvent."
+
+[GrimySparkBombard_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Siège Avancé"
+FriendlyNamePlural="Protocoles de Siège Avancés"
+BriefSummary="Augmente l'utilisation de Bombardement de 2 charges."
+TinySummary="Augmente les charges de Bombardement"
+LootTooltip="Cette amélioration permet à nos Sparks de bombarder l'ennemi plus souvent."
+
+[GrimySparkBombard_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Siège Supérieur"
+FriendlyNamePlural="Protocoles de Siège Supérieurs"
+BriefSummary="Augmente l'utilisation de Bombardement de 3 charges."
+TinySummary="Augmente les charges de Bombardement"
+LootTooltip="Cette amélioration permet à nos Sparks de bombarder l'ennemi plus souvent."
+
+[GrimySparkOverclock_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Overclock"
+FriendlyNamePlural="Protocoles d'Overclock"
+BriefSummary="Permet d'activer Overclok 1 fois."
+TinySummary="Overdrive Amélioré"
+LootTooltip="Cette amélioration donne la capacité Overclock, une version à usage limité de l'Overdrive, mais donnant 4 points d'action."
+
+[GrimySparkOverclock_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Overclock Avancé"
+FriendlyNamePlural="Protocoles d'Overclock Avancés"
+BriefSummary="Permet d'activer Overclok 2 fois."
+TinySummary="Overdrive Amélioré"
+LootTooltip="Cette amélioration donne la capacité Overclock, une version à usage limité de l'Overdrive, mais donnant 4 points d'action."
+
+[GrimySparkOverclock_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Overclock Supérieur"
+FriendlyNamePlural="Protocoles d'Overclock Supérieurs"
+BriefSummary="Permet d'activer Overclok 3 fois."
+TinySummary="Overdrive Amélioré"
+LootTooltip="Cette amélioration donne la capacité Overclock, une version à usage limité de l'Overdrive, mais donnant 4 points d'action."
+
+[GrimySparkTrojan_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Troyen"
+FriendlyNamePlural="Protocoles Troyens"
+BriefSummary="Augmente la statistique de piratage de 50."
+TinySummary="Augmente la statistique de Piratage"
+LootTooltip="Cette amélioration permet à nos ingénieurs de hacker à distance."
+
+[GrimySparkTrojan_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Troyen Avancé"
+FriendlyNamePlural="Protocoles Troyens Avancés"
+BriefSummary="Augmente la statistique de piratage de 70."
+TinySummary="Augmente la statistique de Piratage"
+LootTooltip="Cette amélioration permet à nos ingénieurs de hacker à distance."
+
+[GrimySparkTrojan_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Troyen Supérieur"
+FriendlyNamePlural="Protocoles Troyens Supérieurs"
+BriefSummary="Augmente la statistique de piratage de 90."
+TinySummary="Augmente la statistique de Piratage"
+LootTooltip="Cette amélioration permet à nos ingénieurs de hacker à distance."
+
+[GrimyNorthStar_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Etoile Polaire"
+FriendlyNamePlural="Etoiles Polaires"
+BriefSummary="Diminiue le temps de rechargement de Frappe de 2."
+TinySummary="Diminiue le temps de rechargement de Frappe"
+LootTooltip="Cette amélioration permet à nos Sparks d'aller au corps-à-corps plus fréquemment."
+
+[GrimyNorthStar_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Etoile Polaire Avancée"
+FriendlyNamePlural="Etoiles Polaires Avancées"
+BriefSummary="Diminiue le temps de rechargement de Frappe de 3."
+TinySummary="Diminiue le temps de rechargement de Frappe"
+LootTooltip="Cette amélioration permet à nos Sparks d'aller au corps-à-corps plus fréquemment."
+
+[GrimyNorthStar_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Etoile Polaire Supérieure"
+FriendlyNamePlural="Etoiles Polaires Supérieures"
+BriefSummary="Diminiue le temps de rechargement de Frappe de 4."
+TinySummary="Diminiue le temps de rechargement de Frappe"
+LootTooltip="Cette amélioration permet à nos Sparks d'aller au corps-à-corps plus fréquemment."
+
+[GrimyStranglehold_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Domination"
+FriendlyNamePlural="Dominations"
+BriefSummary="Frappe étourdit les ennemis pour 2 points d'action, et augmente la défense de 20."
+TinySummary="Améliore la capacité Frappe"
+LootTooltip="Cette amélioration permet à nos Sparks de temporairement maîtriser même les plus gros ennemis."
+
+[GrimyStranglehold_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Domination Avancée"
+FriendlyNamePlural="Dominations Avancées"
+BriefSummary="Frappe étourdit les ennemis pour 2 points d'action, et augmente la défense de 25."
+TinySummary="Améliore la capacité Frappe"
+LootTooltip="Cette amélioration permet à nos Sparks de temporairement maîtriser même les plus gros ennemis."
+
+[GrimyStranglehold_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Domination Supérieure"
+FriendlyNamePlural="Dominations Supérieures"
+BriefSummary="Frappe étourdit les ennemis pour 2 points d'action, et augmente la défense de 30."
+TinySummary="Améliore la capacité Frappe"
+LootTooltip="Cette amélioration permet à nos Sparks de temporairement maîtriser même les plus gros ennemis."
+
+[GrimyArmServos_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Moteurs Asservis de Bras"
+FriendlyNamePlural="Moteurs Asservis de Bras"
+BriefSummary="Augmente les dégâts de Frappe de 1."
+TinySummary="Augmente les dégâts de Frappe"
+LootTooltip="Cette amélioration permet à nos Sparks de frapper avec plus de force au corps-à-corps."
+
+[GrimyArmServos_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Moteurs Asservis de Bras Avancés"
+FriendlyNamePlural="Moteurs Asservis de Bras Avancés"
+BriefSummary="Augmente les dégâts de Frappe de 2."
+TinySummary="Augmente les dégâts de Frappe"
+LootTooltip="Cette amélioration permet à nos Sparks de frapper avec plus de force au corps-à-corps."
+
+[GrimyArmServos_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Moteurs Asservis de Bras Supérieurs"
+FriendlyNamePlural="Moteurs Asservis de Bras Supérieurs"
+BriefSummary="Augmente les dégâts de Frappe de 3."
+TinySummary="Augmente les dégâts de Frappe"
+LootTooltip="Cette amélioration permet à nos Sparks de frapper avec plus de force au corps-à-corps."
+
+[GrimyShockAbsorbent_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Armure à Suspensions"
+FriendlyNamePlural="Armures à Suspensions"
+BriefSummary="Diminue les dégâts occasionnés par les ennemis dans un rayon de 4 cases de 30%."
+TinySummary="Diminue les dégâts des ennemis proches"
+LootTooltip="Cette amélioration d'armure protège nos soldats au corps-à-corps."
+
+[GrimyShockAbsorbent_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Armure à Suspensions Avancée"
+FriendlyNamePlural="Armures à Suspensions Avancées"
+BriefSummary="Diminue les dégâts occasionnés par les ennemis dans un rayon de 4 cases de 35%."
+TinySummary="Diminue les dégâts des ennemis proches"
+LootTooltip="Cette amélioration d'armure protège nos soldats au corps-à-corps."
+
+[GrimyShockAbsorbent_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Armure à Suspensions Supérieure"
+FriendlyNamePlural="Armures à Suspensions Supérieures"
+BriefSummary="Diminue les dégâts occasionnés par les ennemis dans un rayon de 4 cases de 40%."
+TinySummary="Diminue les dégâts des ennemis proches"
+LootTooltip="Cette amélioration d'armure protège nos soldats au corps-à-corps."
+
+[GrimyBodyShield_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Bouclier Corporel"
+FriendlyNamePlural="Boucliers Corporels"
+BriefSummary="Augmente la défense contre l'ennemi le plus proche de 15%."
+TinySummary="Augmente la défense contre l'ennemi le plus proche"
+LootTooltip="Cette amélioration fournit un bouclier directionnel qui protège nos soldats de l'ennemi le plus proche."
+
+[GrimyBodyShield_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Bouclier Corporel Avancé"
+FriendlyNamePlural="Boucliers Corporels Avancés"
+BriefSummary="Augmente la défense contre l'ennemi le plus proche de 20%."
+TinySummary="Augmente la défense contre l'ennemi le plus proche"
+LootTooltip="Cette amélioration fournit un bouclier directionnel qui protège nos soldats de l'ennemi le plus proche."
+
+[GrimyBodyShield_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Bouclier Corporel Supérieur"
+FriendlyNamePlural="Boucliers Corporels Supérieurs"
+BriefSummary="Augmente la défense contre l'ennemi le plus proche de 25%."
+TinySummary="Augmente la défense contre l'ennemi le plus proche"
+LootTooltip="Cette amélioration fournit un bouclier directionnel qui protège nos soldats de l'ennemi le plus proche."
+
+[GrimyFireSuit X2WeaponUpgradeTemplate]
+FriendlyName="Veste Anti-Feu"
+FriendlyNamePlural="Vestes Anti-Feu"
+BriefSummary="Immunise contre le feu."
+TinySummary="Immunise contre le feu"
+LootTooltip="Cette amélioration protège nos soldats des effets du Feu."
+
+[GrimyPoisonSuit X2WeaponUpgradeTemplate]
+FriendlyName="Veste Anti-Poison"
+FriendlyNamePlural="Vestes Anti-Poison"
+BriefSummary="Immunise contre le Poison."
+TinySummary="Immunise contre le Poison"
+LootTooltip="Cette amélioration protège nos soldats des effets du Poison."
+
+[GrimyAcidSuit X2WeaponUpgradeTemplate]
+FriendlyName="Veste Anti-Acide"
+FriendlyNamePlural="Vestes Anti-Acide"
+BriefSummary="Immunise contre l'Acide."
+TinySummary="Immunise contre l'Acide"
+LootTooltip="Cette amélioration protège nos soldats des effets de l'Acide."
+
+;---------------------------------------------
+;---     PRIMARY UPGRADES && ABILITIES     ---
+;---------------------------------------------
+[GrimyDodgePierce_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Traceur Intelligent"
+FriendlyNamePlural="Traceurs Intelligents"
+BriefSummary="Diminue les chances d'écorchures de 10%."
+TinySummary="Diminue les chances d'écorchures"
+LootTooltip="Cete amélioration d'arme diminue les chances que votre tir écorche l'adversaire."
+
+[GrimyDodgePierce_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Traceur Intelligent Avancé"
+FriendlyNamePlural="Traceurs Intelligents Avancés"
+BriefSummary="Diminue les chances d'écorchures de 20%."
+TinySummary="Diminue les chances d'écorchures"
+LootTooltip="Cete amélioration d'arme diminue les chances que votre tir écorche l'adversaire."
+
+[GrimyDodgePierce_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Traceur Intelligent Supérieur"
+FriendlyNamePlural="Traceurs Intelligents Supérieurs"
+BriefSummary="Diminue les chances d'écorchures de 30%."
+TinySummary="Diminue les chances d'écorchures"
+LootTooltip="Cete amélioration d'arme diminue les chances que votre tir écorche l'adversaire."
+
+[GrimyScanner_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Scanner Personnel"
+FriendlyNamePlural="Scanners Personnels"
+BriefSummary="Augmente le champ de vision et la visibilité d'1 case."
+TinySummary="Augmente le champ de vision et la visibilité"
+LootTooltip="Cette amélioration d'arme augmente le champ de vision et la visibilité."
+
+[GrimyScanner_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Scanner Personnel Avancé"
+FriendlyNamePlural="Scanners Personnels Avancés"
+BriefSummary="Augmente le champ de vision et la visibilité de 2 cases."
+TinySummary="Augmente le champ de vision et la visibilité"
+LootTooltip="Cette amélioration d'arme augmente le champ de vision et la visibilité."
+
+[GrimyScanner_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Scanner Personnel Supérieur"
+FriendlyNamePlural="Scanners Personnels Supérieurs"
+BriefSummary="Augmente le champ de vision et la visibilité de 3 cases."
+TinySummary="Augmente le champ de vision et la visibilité"
+LootTooltip="Cette amélioration d'arme augmente le champ de vision et la visibilité."
+
+[GrimyRedDot_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Viseur de Points Vitaux"
+FriendlyNamePlural="Viseurs de Points Vitaux"
+BriefSummary="Augmente les chance de coups critiques et la visée contre les ennemis pris de flanc de 5%."
+TinySummary="Augmente les chance de coups critiques et la visée contre les ennemis pris de flanc"
+LootTooltip="Cette amélioration d'arme augmente les chance de coups critiques et la visée contre les ennemis pris de flanc."
+
+[GrimyRedDot_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Viseur de Points Vitaux Avancé"
+FriendlyNamePlural="Viseurs de Points Vitaux Avancés"
+BriefSummary="Augmente les chance de coups critiques et la visée contre les ennemis pris de flanc de 10%."
+TinySummary="Augmente les chance de coups critiques et la visée contre les ennemis pris de flanc"
+LootTooltip="Cette amélioration d'arme augmente les chance de coups critiques et la visée contre les ennemis pris de flanc."
+
+[GrimyRedDot_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Viseur de Points Vitaux Supérieur"
+FriendlyNamePlural="Viseurs de Points Vitaux Supérieurs"
+BriefSummary="Augmente les chance de coups critiques et la visée contre les ennemis pris de flanc de 15%."
+TinySummary="Augmente les chance de coups critiques et la visée contre les ennemis pris de flanc"
+LootTooltip="Cette amélioration d'arme augmente les chance de coups critiques et la visée contre les ennemis pris de flanc."
+
+[GrimyVitalPoint_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Viseur de Point Vital"
+FriendlyNamePlural="Viseurs de Point Vital"
+BriefSummary="Donne la capacité Oeil de Lynx."
+TinySummary="Donne la capacité Oeil de Lynx"
+LootTooltip="Cette amélioration d'arme aidera nos soldats à trouver les faiblesses de lennemi."
+
+[GrimyVitalPoint_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Viseur de Point Vital Avancé"
+FriendlyNamePlural="Viseurs de Point Vital Avancés"
+BriefSummary="Donne la capacité Oeil de Lynx et augmente la visée de 5%."
+TinySummary="Donne la capacité Oeil de Lynx, Améliore la Visée"
+LootTooltip="Cette amélioration d'arme aidera nos soldats à trouver les faiblesses de lennemi."
+
+[GrimyVitalPoint_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Viseur de Point Vital Supérieur"
+FriendlyNamePlural="Viseurs de Point Vital Supérieurs"
+BriefSummary="Donne la capacité Oeil de Lynx et augmente la visée de 10%."
+TinySummary="Donne la capacité Oeil de Lynx, Améliore la Visée"
+LootTooltip="Cette amélioration d'arme aidera nos soldats à trouver les faiblesses de lennemi."
+
+[GrimyHeavyFrame_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Structure Lourde"
+FriendlyNamePlural="Structures Lourdes"
+BriefSummary="Augmente les dégâts de 20% et réduit la mobilité de 2."
+TinySummary="Augmente les Dégâts, Réduit la Mobilité"
+LootTooltip="Cette amélioration d'arme augmente les dégâts et réduit la mobilité."
+
+[GrimyHeavyFrame_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Structure Lourde Avancée"
+FriendlyNamePlural="Structures Lourdes Avancées"
+BriefSummary="Augmente les dégâts de 25% et réduit la mobilité de 2."
+TinySummary="Augmente les Dégâts, Réduit la Mobilité"
+LootTooltip="Cette amélioration d'arme augmente les dégâts et réduit la mobilité."
+
+[GrimyHeavyFrame_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Structure Lourde Supérieure"
+FriendlyNamePlural="Structures Lourdes Supérieures"
+BriefSummary="Augmente les dégâts de 30% et réduit la mobilité de 2."
+TinySummary="Augmente les Dégâts, Réduit la Mobilité"
+LootTooltip="Cette amélioration d'arme augmente les dégâts et réduit la mobilité."
+
+[GrimyHangfire_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Propulseur de Coups de Feu"
+FriendlyNamePlural="Propulseurs de Coups de Feu"
+BriefSummary="Augmente les dégâts de 1 et réduit la visée de 5%."
+TinySummary="Augmente les Dégâts, Réduit la Visée"
+LootTooltip="Cette amélioration d'arme augmente les dégâts mais réduit sa précision."
+
+[GrimyHangfire_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Propulseur de Coups de Feu Avancé"
+FriendlyNamePlural="Propulseurs de Coups de Feu Avancés"
+BriefSummary="Augmente les dégâts de 2 et réduit la visée de 10%."
+TinySummary="Augmente les Dégâts, Réduit la Visée"
+LootTooltip="Cette amélioration d'arme augmente les dégâts mais réduit sa précision."
+
+[GrimyHangfire_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Propulseur de Coups de Feu Supérieur"
+FriendlyNamePlural="Propulseurs de Coups de Feu Supérieurs"
+BriefSummary="Augmente les dégâts de 3 et réduit la visée de 15%."
+TinySummary="Augmente les Dégâts, Réduit la Visée"
+LootTooltip="Cette amélioration d'arme augmente les dégâts mais réduit sa précision."
+
+[GrimySuppressor_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Silencieux"
+FriendlyNamePlural="Silencieux"
+BriefSummary="Augmente la visée et les chances de coups critiques de 15% tant que l'unité est invisible."
+TinySummary="Attaque Furtive à 15%"
+LootTooltip="Cette amélioration d'arme augmente la précision et les chances de coups critiques tant que l'unité est invisible."
+
+[GrimySuppressor_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Silencieux Avancé"
+FriendlyNamePlural="Silencieux Avancés"
+BriefSummary="Augmente la visée et les chances de coups critiques de 20% tant que l'unité est invisible."
+TinySummary="Attaque Furtive à 20%"
+LootTooltip="Cette amélioration d'arme augmente la précision et les chances de coups critiques tant que l'unité est invisible."
+
+[GrimySuppressor_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Silencieux Supérieur"
+FriendlyNamePlural="Silencieux Supérieurs"
+BriefSummary="Augmente la visée et les chances de coups critiques de 25% tant que l'unité est invisible."
+TinySummary="Attaque Furtive à 25%"
+LootTooltip="Cette amélioration d'arme augmente la précision et les chances de coups critiques tant que l'unité est invisible."
+
+[GrimyHeatSink_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Radiateur"
+FriendlyNamePlural="Radiateurs"
+BriefSummary="Donne la capacité de Suppression."
+TinySummary="Donne la capacité de Suppression"
+LootTooltip="Cette amélioration d'arme donnera à son utilisateur un volume de coups de feu accru"
+
+[GrimyHeatSink_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Radiateur Avancé"
+FriendlyNamePlural="Radiateurs Avancés"
+BriefSummary="Donne les capacités Suppression et Démolition."
+TinySummary="Donne les capacités Suppression et Démolition"
+LootTooltip="Cette amélioration d'arme donnera à son utilisateur un volume de coups de feu accru"
+
+[GrimyHeatSink_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Radiateur Supérieur"
+FriendlyNamePlural="Radiateurs Supérieurs"
+BriefSummary="Donne les capacités Suppression, Démolition, et 1 utilisation de Zone Mortelle."
+TinySummary="Donne les capacités Suppression, Démolition, et 1 utilisation de Zone Mortelle"
+LootTooltip="Cette amélioration d'arme donnera à son utilisateur un volume de coups de feu accru"
+
+[GrimyLightFrame_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Structure Légère"
+FriendlyNamePlural="Structures Légères"
+BriefSummary="Augmente la mobilité de 1 et réduit les dégâts de 15%."
+TinySummary="Augmente la Mobilité et Réduit les Dégâts"
+LootTooltip="Cette amélioration d'arme augmente la mobilité mais réduit les dégâts."
+
+[GrimyLightFrame_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Structure Légère Avancée"
+FriendlyNamePlural="Structures Légères Avancées"
+BriefSummary="Augmente la mobilité de 2 et réduit les dégâts de 20%."
+TinySummary="Augmente la Mobilité et Réduit les Dégâts"
+LootTooltip="Cette amélioration d'arme augmente la mobilité mais réduit les dégâts."
+
+[GrimyLightFrame_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Structure Légère Supérieure"
+FriendlyNamePlural="Structures Légères Supérieures"
+BriefSummary="Augmente la mobilité de 3 et réduit les dégâts de 25%."
+TinySummary="Augmente la Mobilité et Réduit les Dégâts"
+LootTooltip="Cette amélioration d'arme augmente la mobilité mais réduit les dégâts."
+
+[GrimyKillZoneOne X2AbilityTemplate]
+LocFriendlyName="Zone Mortelle"
+LocHelpText="Effectuez un tir réflexe contre les ennemis qui bougent ou traversent le cône de visée.'
+
+[GrimyRunAndGunOne X2AbilityTemplate]
+LocFriendlyName="Course et Tir"
+LocHelpText="Permet d'effectuer une action après un sprint."
+
+[GrimyRunAndGunTwo X2AbilityTemplate]
+LocFriendlyName="Course et Tir"
+LocHelpText="Permet d'effectuer une action après un sprint."
+
+[GrimyRunAndGunThree X2AbilityTemplate]
+LocFriendlyName="Course et Tir"
+LocHelpText="Permet d'effectuer une action après un sprint."
+
+[GrimyRapidFireOne X2AbilityTemplate]
+LocFriendlyName="Tir Rapide"
+LocHelpText="Vous tirez deux fois de suite avec une pénalité de visée de <Ability:RAPIDFIREPENALTY/>."
+
+[GrimyRapidFireTwo X2AbilityTemplate]
+LocFriendlyName="Tir Rapide"
+LocHelpText="Vous tirez deux fois de suite avec une pénalité de visée de <Ability:RAPIDFIREPENALTY/>."
+
+[GrimyRapidFireThree X2AbilityTemplate]
+LocFriendlyName="Tir Rapide"
+LocHelpText="Vous tirez deux fois de suite avec une pénalité de visée de <Ability:RAPIDFIREPENALTY/>."
+
+[GrimyHailOfBulletsOne X2AbilityTemplate]
+LocFriendlyName="Déluge de Balles"
+LocHelpText="Attaque garantie à 100% de toucher mais qui consomme beaucoup de munitions (3 tours de recharge et 3 munitions)."
+
+[GrimyHailOfBulletsTwo X2AbilityTemplate]
+LocFriendlyName="Déluge de Balles"
+LocHelpText="Attaque garantie à 100% de toucher mais qui consomme beaucoup de munitions (3 tours de recharge et 3 munitions)."
+
+[GrimySaturationFireOne X2AbilityTemplate]
+LocFriendlyName="Tir de Saturation"
+LocHelpText="Tire un déluge de balles dans un long cône et touche toutes les cibles à l'intérieur et détruit les couvertures (consomme 3 munitions et a 5 tours de recharge)."
+
+[GrimySaturationFireTwo X2AbilityTemplate]
+LocFriendlyName="Tir de Saturation"
+LocHelpText="Tire un déluge de balles dans un long cône et touche toutes les cibles à l'intérieur et détruit les couvertures (consomme 3 munitions et a 5 tours de recharge)."
+
+[GrimySaturationFireThree X2AbilityTemplate]
+LocFriendlyName="Tir de Saturation"
+LocHelpText="Tire un déluge de balles dans un long cône et touche toutes les cibles à l'intérieur et détruit les couvertures (consomme 3 munitions et a 5 tours de recharge)."
+
+[GrimySérieOne X2AbilityTemplate]
+LocFriendlyName="Série"
+LocHelpText="Chaque fois que vous tuez une cible avec votre <Ability:WeaponName/>, votre action vous est remboursée (4 tours de recharge)."
+
+[GrimySérieTwo X2AbilityTemplate]
+LocFriendlyName="Série"
+LocHelpText="Chaque fois que vous tuez une cible avec votre <Ability:WeaponName/>, votre action vous est remboursée (4 tours de recharge)."
+
+[GrimySérieThree X2AbilityTemplate]
+LocFriendlyName="Série"
+LocHelpText="Chaque fois que vous tuez une cible avec votre <Ability:WeaponName/>, votre action vous est remboursée (4 tours de recharge)."
+
+[GrimyConfrontationOne X2AbilityTemplate]
+LocFriendlyName="Confrontation"
+LocHelpText="Tirez une fois sur chaque cible visible (et à portée) avec votre pistolet."
+
+[GrimyConfrontationTwo X2AbilityTemplate]
+LocFriendlyName="Confrontation"
+LocHelpText="Tirez une fois sur chaque cible visible (et à portée) avec votre pistolet."
+
+[GrimyConfrontationThree X2AbilityTemplate]
+LocFriendlyName="Confrontation"
+LocHelpText="Tirez une fois sur chaque cible visible (et à portée) avec votre pistolet."
+
+[GrimyFanFireOne X2AbilityTemplate]
+LocFriendlyName="Rafale"
+LocHelpText="Vous tirez trois fois au pistolet sur une même cible."
+
+[GrimyFanFireTwo X2AbilityTemplate]
+LocFriendlyName="Rafale"
+LocHelpText="Vous tirez trois fois au pistolet sur une même cible."
+
+[GrimyFanFireThree X2AbilityTemplate]
+LocFriendlyName="Rafale"
+LocHelpText="Vous tirez trois fois au pistolet sur une même cible."
+
+[GrimyLightningHandsZero X2AbilityTemplate]
+LocFriendlyName="Mains Fulgurantes"
+LocHelpText="Vous permet de tirer une fois au pistolet sur un ennemi sans consommer d'action (4 tours de recharge)."
+
+
+[GrimyStabilizer_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Stabilisateur de Recul"
+FriendlyNamePlural="Stabilisateurs de Recul"
+BriefSummary="Donne 1 utilisation de la capacité Course et Tir."
+TinySummary="1 utilisation de Course et Tir"
+LootTooltip="Cette amélioration d'arme fournit la capacité Course et Tir."
+
+[GrimyStabilizer_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Stabilisateur de Recul Avancé"
+FriendlyNamePlural="Stabilisateurs de Recul Avancés"
+BriefSummary="Donne 2 utilisations de la capacité Course et Tir."
+TinySummary="2 utilisations de Course et Tir"
+LootTooltip="Cette amélioration d'arme fournit la capacité Course et Tir."
+
+[GrimyStabilizer_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Stabilisateur de Recul Supérieur"
+FriendlyNamePlural="Stabilisateurs de Recul Supérieurs"
+BriefSummary="Donne 3 utilisations de la capacité Course et Tir."
+TinySummary="3 utilisations de Course et Tir"
+LootTooltip="Cette amélioration d'arme fournit la capacité Course et Tir."
+
+[GrimyProgressive_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Détente Graduelle"
+FriendlyNamePlural="Détentes Graduelles"
+BriefSummary="Donne 1 utilisation de la capacité Tir Rapide."
+TinySummary="1 utilisation de Tir Rapide"
+LootTooltip="Cette amélioration d'arme fournit la capacité Tir Rapide"
+
+[GrimyProgressive_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Détente Graduelle Avancée"
+FriendlyNamePlural="Détentes Graduelles Avancées"
+BriefSummary="Donne 2 utilisations de la capacité Tir Rapide."
+TinySummary="2 utilisations de Tir Rapide"
+LootTooltip="Cette amélioration d'arme fournit la capacité Tir Rapide"
+
+[GrimyProgressive_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Détente Graduelle Supérieure"
+FriendlyNamePlural="Détentes Graduelles Supérieures"
+BriefSummary="Donne 3 utilisations de la capacité Tir Rapide."
+TinySummary="3 utilisations de Tir Rapide"
+LootTooltip="Cette amélioration d'arme fournit la capacité Tir Rapide"
+
+[GrimyHighCycle_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Chambre à Recyclage"
+FriendlyNamePlural="Chambres à Recyclage"
+BriefSummary="Augmente la visée de 5%, les dégâts de 30%, et réduit les chances de coups critiques de 100%."
+TinySummary="Augmente la visée et des dégâts, et réduit les chances de coups critiques"
+LootTooltip="Cette amélioration d'arme augmente la précision et les dégâts, mais réduit les chances de coups critiques"
+
+[GrimyHighCycle_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Chambre à Recyclage Avancée"
+FriendlyNamePlural="Chambres à Recyclage Avancées"
+BriefSummary="Augmente la visée de 10%, les dégâts de 35%, et réduit les chances de coups critiques de 100%."
+TinySummary="Augmente la visée et des dégâts, et réduit les chances de coups critiques"
+LootTooltip="Cette amélioration d'arme augmente la précision et les dégâts, mais réduit les chances de coups critiques"
+
+[GrimyHighCycle_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Chambre à Recyclage Supérieure"
+FriendlyNamePlural="Chambres à Recyclage Supérieures"
+BriefSummary="Augmente la visée de 15%, les dégâts de 40%, et réduit les chances de coups critiques de 100%."
+TinySummary="Augmente la visée et des dégâts, et réduit les chances de coups critiques"
+LootTooltip="Cette amélioration d'arme augmente la précision et les dégâts, mais réduit les chances de coups critiques"
+
+[GrimyHighCaliber_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Gros Calibre"
+FriendlyNamePlural="Chargeurs Gros Calibre"
+BriefSummary="Augmente les dégâts de 30% et réduit les munitions de 2."
+TinySummary="Augmente les dégâts, Réduit les munitions"
+LootTooltip="Cette amélioration d'arme augmente les dégâts et réduit les munitions."
+
+[GrimyHighCaliber_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Gros Calibre Avancé"
+FriendlyNamePlural="Chargeurs Gros Calibre Avancés"
+BriefSummary="Augmente les dégâts de 35% et réduit les munitions de 2."
+TinySummary="Augmente les dégâts, Réduit les munitions"
+LootTooltip="Cette amélioration d'arme augmente les dégâts et réduit les munitions."
+
+[GrimyHighCaliber_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Gros Calibre Supérieur"
+FriendlyNamePlural="Chargeurs Gros Calibre Supérieurs"
+BriefSummary="Augmente les dégâts de 40% et réduit les munitions de 2."
+TinySummary="Augmente les dégâts, Réduit les munitions"
+LootTooltip="Cette amélioration d'arme augmente les dégâts et réduit les munitions."
+
+[GrimyProcessor_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Processeur Externe"
+FriendlyNamePlural="Processeurs Externes"
+BriefSummary="Augmente le piratage et l'attaque Psi de 5%."
+TinySummary="Augmente le piratage et l'attaque Psi"
+LootTooltip="Cette amélioration d'arme augmente l'efficacité du Piratage et des Capaciptés Psioniques"
+
+[GrimyProcessor_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Processeur Externe Avancé"
+FriendlyNamePlural="Processeurs Externes Avancés"
+BriefSummary="Augmente le piratage et l'attaque Psi de 10%."
+TinySummary="Augmente le piratage et l'attaque Psi"
+LootTooltip="Cette amélioration d'arme augmente l'efficacité du Piratage et des Capaciptés Psioniques"
+
+[GrimyProcessor_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Processeur Externe Supérieur"
+FriendlyNamePlural="Processeurs Externes Supérieurs"
+BriefSummary="Augmente le piratage et l'attaque Psi de 15%."
+TinySummary="Augmente le piratage et l'attaque Psi"
+LootTooltip="Cette amélioration d'arme augmente l'efficacité du Piratage et des Capaciptés Psioniques"
+
+[GrimyWildcat_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Cartouche Lynx"
+FriendlyNamePlural="Cartouches Lynx"
+BriefSummary="Augmente les dégâts critiques de 1."
+TinySummary="Augmente les dégâts critiques"
+LootTooltip="Cette amélioration d'arme augmente l'efficacité des coups critiques"
+
+[GrimyWildcat_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Cartouche Lynx Avancée"
+FriendlyNamePlural="Cartouches Lynx Avancées"
+BriefSummary="Augmente les dégâts critiques de 2."
+TinySummary="Augmente les dégâts critiques"
+LootTooltip="Cette amélioration d'arme augmente l'efficacité des coups critiques"
+
+[GrimyWildcat_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Cartouche Lynx Supérieure"
+FriendlyNamePlural="Cartouches Lynx Supérieures"
+BriefSummary="Augmente les dégâts critiques de 3."
+TinySummary="Augmente les dégâts critiques"
+LootTooltip="Cette amélioration d'arme augmente l'efficacité des coups critiques"
+
+[GrimyFrontload_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Frontal"
+FriendlyNamePlural="Chargeurs Frontaux"
+BriefSummary="Augmente les chances de coups critiques et la visée de 10%, mais les réduit de 10% pour chaque coup tiré après le premier."
+TinySummary="Augmente la visée et les chances de coups critiques pour le premier tir"
+LootTooltip="Cette amélioration d'arme augmente la visée et les chances de coups critiques pour le premier tir, mais les réduit pour chaque coup tiré ensuite."
+
+[GrimyFrontload_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Frontal Avancé"
+FriendlyNamePlural="Chargeurs Frontaux Avancés"
+BriefSummary="Augmente les chances de coups critiques et la visée de 15%, mais les réduit de 15% pour chaque coup tiré après le premier."
+TinySummary="Augmente la visée et les chances de coups critiques pour le premier tir"
+LootTooltip="Cette amélioration d'arme augmente la visée et les chances de coups critiques pour le premier tir, mais les réduit pour chaque coup tiré ensuite."
+
+[GrimyFrontload_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Frontal Supérieur"
+FriendlyNamePlural="Chargeurs Frontaux Supérieurs"
+BriefSummary="Augmente les chances de coups critiques et la visée de 20%, mais les réduit de 20% pour chaque coup tiré après le premier."
+TinySummary="Augmente la visée et les chances de coups critiques pour le premier tir"
+LootTooltip="Cette amélioration d'arme augmente la visée et les chances de coups critiques pour le premier tir, mais les réduit pour chaque coup tiré ensuite."
+
+[GrimyReserve_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur de réserve"
+FriendlyNamePlural="Chargeurs de réserve"
+BriefSummary="Le dernier coup d'un chargeur augmente la visée de 40% et les chances de coups critiques de 10%."
+TinySummary="Augmente la visée et les chances de coups critiques de la dernière cartouche"
+LootTooltip="Cette amélioration d'arme augmente la visée et les chances de coups critiques de la dernière cartouche."
+
+[GrimyReserve_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur de réserve Avancé"
+FriendlyNamePlural="Chargeurs de réserve Avancés"
+BriefSummary="Le dernier coup d'un chargeur augmente la visée de 50% et les chances de coups critiques de 20%."
+TinySummary="Augmente la visée et les chances de coups critiques de la dernière cartouche"
+LootTooltip="Cette amélioration d'arme augmente la visée et les chances de coups critiques de la dernière cartouche."
+
+[GrimyReserve_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur de réserve Supérieur"
+FriendlyNamePlural="Chargeurs de réserve Supérieurs"
+BriefSummary="Le dernier coup d'un chargeur augmente la visée de 60% et les chances de coups critiques de 30%."
+TinySummary="Augmente la visée et les chances de coups critiques de la dernière cartouche"
+LootTooltip="Cette amélioration d'arme augmente la visée et les chances de coups critiques de la dernière cartouche."
+
+[GrimyAmmoSynthesizer_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Synthétiseur de Munitions"
+FriendlyNamePlural="Synthétiseurs de Munitions"
+BriefSummary="Crée 1 munition directement dans votre chargeur à chaque tour. Vous ne pouvez pas recharger votre arme."
+TinySummary="Crée des Munitions"
+LootTooltip="Cette amélioration d'arme crée petit à petit des munitions illimitées pour le porteur de l'arme."
+
+[GrimyAmmoSynthesizer_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Synthétiseur de Munitions Avancé"
+FriendlyNamePlural="Synthétiseurs de Munitions Avancés"
+BriefSummary="Crée 1 munition directement dans votre chargeur à chaque tour, avec 20% de chances d'en créer une 2ème. Vous ne pouvez pas recharger votre arme."
+TinySummary="Crée des Munitions"
+LootTooltip="Cette amélioration d'arme crée petit à petit des munitions illimitées pour le porteur de l'arme."
+
+[GrimyAmmoSynthesizer_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Synthétiseur de Munitions Supérieur"
+FriendlyNamePlural="Synthétiseurs de Munitions Supérieurs"
+BriefSummary="Crée 1 munition directement dans votre chargeur à chaque tour, avec 40% de chances d'en créer une 2ème. Vous ne pouvez pas recharger votre arme."
+TinySummary="Crée des Munitions"
+LootTooltip="Cette amélioration d'arme crée petit à petit des munitions illimitées pour le porteur de l'arme."
+
+[GrimyAddDragonRounds_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Dragon"
+FriendlyNamePlural="Chargeurs Dragon"
+BriefSummary="Donne (et remplace les munitions existantes avec) des munitions Dragon. -1 munition."
+TinySummary="Munitions Dragon et réduction des munitions"
+LootTooltip="Cette amélioration d'arme donne des Munitions Dragon à son porteur."
+
+[GrimyAddDragonRounds_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Dragon Avancé"
+FriendlyNamePlural="Chargeurs Dragon Avancés"
+BriefSummary="Donne (et remplace les munitions existantes avec) des munitions Dragon."
+TinySummary="Munitions Dragon"
+LootTooltip="Cette amélioration d'arme donne des Munitions Dragon à son porteur."
+
+[GrimyAddDragonRounds_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Dragon Supérieur"
+FriendlyNamePlural="Chargeurs Dragon Supérieurs"
+BriefSummary="Donne (et remplace les munitions existantes avec) des munitions Dragon. +1 munition."
+TinySummary="Munitions Dragon et augmentation des munitions"
+LootTooltip="Cette amélioration d'arme donne des Munitions Dragon à son porteur."
+
+[GrimyAddVenomRounds_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Venin"
+FriendlyNamePlural="Chargeurs Venin"
+BriefSummary="Donne (et remplace les munitions existantes avec) des munitions Venin. -1 munition."
+TinySummary="Munitions Venin et réduction des munitions"
+LootTooltip="Cette amélioration d'arme donne des Munitions Venin à son porteur."
+
+[GrimyAddVenomRounds_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Venin Avancé"
+FriendlyNamePlural="Chargeurs Venin Avancés"
+BriefSummary="Donne (et remplace les munitions existantes avec) des munitions Venin."
+TinySummary="Munitions Venin"
+LootTooltip="Cette amélioration d'arme donne des Munitions Venin à son porteur."
+
+[GrimyAddVenomRounds_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Venin Supérieur"
+FriendlyNamePlural="Chargeurs Venin Supérieurs"
+BriefSummary="Donne (et remplace les munitions existantes avec) des munitions Venin. +1 munition."
+TinySummary="Munitions Venin et augmentation des munitions"
+LootTooltip="Cette amélioration d'arme donne des Munitions Venin à son porteur."
+
+[GrimyAddBluescreenRounds_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Ecran Bleu"
+FriendlyNamePlural="Chargeurs Ecran Bleu"
+BriefSummary="Donne (et remplace les munitions existantes avec) des munitions Ecran Bleu. -1 munition."
+TinySummary="Munitions Ecran Bleu et réduction des munitions"
+LootTooltip="Cette amélioration d'arme donne des Munitions Ecran Bleu à son porteur."
+
+[GrimyAddBluescreenRounds_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Ecran Bleu Avancé"
+FriendlyNamePlural="Chargeurs Ecran Bleu Avancés"
+BriefSummary="Donne (et remplace les munitions existantes avec) des munitions Ecran Bleu."
+TinySummary="Munitions Ecran Bleu"
+LootTooltip="Cette amélioration d'arme donne des Munitions Ecran Bleu à son porteur."
+
+[GrimyAddBluescreenRounds_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur Ecran Bleu Supérieur"
+FriendlyNamePlural="Chargeurs Ecran Bleu Supérieurs"
+BriefSummary="Donne (et remplace les munitions existantes avec) des munitions Ecran Bleu. +1 munition."
+TinySummary="Munitions Ecran Bleu et augmentation des munitions"
+LootTooltip="Cette amélioration d'arme donne des Munitions Ecran Bleu à son porteur."
+
+[GrimySentinelScope_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Lunette de Protecteur"
+FriendlyNamePlural="Lunettes de Protecteur"
+BriefSummary="Donne 1 utilisation de Protecteur."
+TinySummary="Donne la capacité Protecteur"
+LootTooltip="Cette amélioration d'arme permet à son porteur de réaliser deux tirs de Vigilance consécutifs."
+
+[GrimySentinelScope_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Lunette de Protecteur Avancée"
+FriendlyNamePlural="Lunettes de Protecteur Avancées"
+BriefSummary="Donne 2 utilisations de Protecteur."
+TinySummary="Donne la capacité Protecteur"
+LootTooltip="Cette amélioration d'arme permet à son porteur de réaliser deux tirs de Vigilance consécutifs."
+
+[GrimySentinelScope_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Lunette de Protecteur Supérieure"
+FriendlyNamePlural="Lunettes de Protecteur Supérieures"
+BriefSummary="Donne 3 utilisations de Protecteur."
+TinySummary="Donne la capacité Protecteur"
+LootTooltip="Cette amélioration d'arme permet à son porteur de réaliser deux tirs de Vigilance consécutifs."
+
+[GrimySentinelOne X2AbilityTemplate]
+LocFriendlyName="Protecteur"
+LocHelpText="Permet de réaliser deux tirs de Vigilance consécutifs."
+
+[GrimySentinelTwo X2AbilityTemplate]
+LocFriendlyName="Potecteur Avancé"
+LocHelpText="Permet de réaliser deux tirs de Vigilance consécutifs."
+
+[GrimySentinelThree X2AbilityTemplate]
+LocFriendlyName="Protecteur Supérieur"
+LocHelpText="Permet de réaliser deux tirs de Vigilance consécutifs."
+
+[GrimyUndertaker_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Capteur du Croque-Mort"
+FriendlyNamePlural="Capteurs du Croque-Mort"
+BriefSummary="Augmente les dégâts critiques de 1 par ennemi visible, jusqu'à 3."
+TinySummary="Augmente les Dégâts Critiques"
+LootTooltip="Cette amélioration d'arme augmente les dégâts critiques en fonction du nombre d'ennemis visibles."
+
+[GrimyUndertaker_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Capteur du Croque-Mort Avancé"
+FriendlyNamePlural="Capteurs du Croque-Mort Avancé"
+BriefSummary="Augmente les dégâts critiques de 1 par ennemi visible, jusqu'à 4."
+TinySummary="Augmente les Dégâts Critiques"
+LootTooltip="Cette amélioration d'arme augmente les dégâts critiques en fonction du nombre d'ennemis visibles."
+
+[GrimyUndertaker_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Capteur du Croque-Mort Supérieur"
+FriendlyNamePlural="Capteurs du Croque-Mort Supérieurs"
+BriefSummary="Augmente les dégâts critiques de 1 par ennemi visible, jusqu'à 5."
+TinySummary="Augmente les Dégâts Critiques"
+LootTooltip="Cette amélioration d'arme augmente les dégâts critiques en fonction du nombre d'ennemis visibles."
+
+[GrimyDuelist_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Crosse de Duelliste"
+FriendlyNamePlural="Crosses de Duelliste"
+BriefSummary="Augmente les dégâts de 25% si le tireur ne voit qu'un seul ennemi, et que cet ennemi voit le tireur."
+TinySummary="Augmente les dégâts"
+LootTooltip="Cette amélioration d'arme améliore les performances du tireur en duel."
+
+[GrimyDuelist_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Crosse de Duelliste Avancée"
+FriendlyNamePlural="Crosses de Duelliste Avancées"
+BriefSummary="Augmente les dégâts de 30% si le tireur ne voit qu'un seul ennemi, et que cet ennemi voit le tireur."
+TinySummary="Augmente les dégâts"
+LootTooltip="Cette amélioration d'arme améliore les performances du tireur en duel."
+
+[GrimyDuelist_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Crosse de Duelliste Supérieure"
+FriendlyNamePlural="Crosses de Duelliste Supérieures"
+BriefSummary="Augmente les dégâts de 35% si le tireur ne voit qu'un seul ennemi, et que cet ennemi voit le tireur."
+TinySummary="Augmente les dégâts"
+LootTooltip="Cette amélioration d'arme améliore les performances du tireur en duel"
+
+[GrimySeigebreakerScope_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Lunette Brise-Siège"
+FriendlyNamePlural="Lunettes Brise-Siège"
+BriefSummary="Augmente la visée et les chances de coups critiques contre les ennemis en Vigilance de 25%."
+TinySummary="Augmente la Visée et les chance de Coups Critiques"
+LootTooltip="Cette amélioration d'arme augmente la Visée et les chance de Coups Critiques contre les ennemis en Vigilance."
+
+[GrimySeigebreakerScope_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Lunette Brise-Siège Avancée"
+FriendlyNamePlural="Lunettes Brise-Siège Avancées"
+BriefSummary="Augmente la visée et les chances de coups critiques contre les ennemis en Vigilance de 30%."
+TinySummary="Augmente la Visée et les chance de Coups Critiques"
+LootTooltip="Cette amélioration d'arme augmente la Visée et les chance de Coups Critiques contre les ennemis en Vigilance."
+
+[GrimySeigebreakerScope_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Lunette Brise-Siège Supérieure"
+FriendlyNamePlural="Lunettes Brise-Siège Supérieures"
+BriefSummary="Augmente la visée et les chances de coups critiques contre les ennemis en Vigilance de 35%."
+TinySummary="Augmente la Visée et les chance de Coups Critiques"
+LootTooltip="Cette amélioration d'arme augmente la Visée et les chance de Coups Critiques contre les ennemis en Vigilance."
+
+
+[GrimySquadVideo_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Flux Vidéo d'Equipe"
+FriendlyNamePlural="Flux Vidéos d'Equipe"
+BriefSummary="Confère Vision Commune."
+TinySummary="Confère Vision Commune"
+LootTooltip="Cette amélioration d'arme fournit un flux vidéos dans l'escouade."
+
+[GrimySquadVideo_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Flux Vidéo d'Equipe Avancé"
+FriendlyNamePlural="Flux Vidéos d'Equipe Avancés"
+BriefSummary="Confère Vision Commune et Surveillance."
+TinySummary="Confère Vision Commune et Surveillance"
+LootTooltip="Cette amélioration d'arme fournit un flux vidéos dans l'escouade."
+
+[GrimySquadVideo_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Flux Vidéo d'Equipe Supérieur"
+FriendlyNamePlural="Flux Vidéos d'Equipe Supérieurs"
+BriefSummary="Confère Vision Commune, Surveillance, et Vigilance Sans Faille."
+TinySummary="Confère Vision Commune, Surveillance, et Vigilance Sans Faille"
+LootTooltip="Cette amélioration d'arme fournit un flux vidéos dans l'escouade."
+
+[GrimyDoubleTap_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Ciblage Double Touche"
+FriendlyNamePlural="Ciblages Double Touche"
+BriefSummary="Confère Tir Enchaîné."
+TinySummary="Confère Tir Enchaîné"
+LootTooltip="Cette amélioration d'arme aide son porteur à truffer l'ennemi de balles."
+
+[GrimyDoubleTap_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Ciblage Double Touche Avancé"
+FriendlyNamePlural="Ciblages Double Touche Avancés"
+BriefSummary="Confère Tir Enchaîné et 1 utilisation de Déluge de Balles."
+TinySummary="Confère Tir Enchaîné et Déluge de Balles"
+LootTooltip="Cette amélioration d'arme aide son porteur à truffer l'ennemi de balles."
+
+[GrimyDoubleTap_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Ciblage Double Touche Supérieur"
+FriendlyNamePlural="Ciblages Double Touche Supérieurs"
+BriefSummary="Confère Tir Enchaîné et 2 utilisations de Déluge de Balles."
+TinySummary="Confère Tir Enchaîné et Déluge de Balles"
+LootTooltip="Cette amélioration d'arme aide son porteur à truffer l'ennemi de balles."
+
+[GrimyBeltFeed_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Ceinture de Distribution"
+FriendlyNamePlural="Ceintures de Distribution"
+BriefSummary="Confère 1 utilisation de Tir de Saturation."
+TinySummary="Confère Tir de Saturation"
+LootTooltip="Cette amélioration d'arme augmente grandement son volume de coups de feu."
+
+[GrimyBeltFeed_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Ceinture de Distribution Avancée"
+FriendlyNamePlural="Ceintures de Distribution Avancées"
+BriefSummary="Confère 2 utilisations de Tir de Saturation."
+TinySummary="Confère Tir de Saturation"
+LootTooltip="Cette amélioration d'arme augmente grandement son volume de coups de feu."
+
+[GrimyBeltFeed_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Ceinture de Distribution Supérieure"
+FriendlyNamePlural="Ceintures de Distribution Supérieures"
+BriefSummary="Confère 3 utilisations de Tir de Saturation."
+TinySummary="Confère Tir de Saturation"
+LootTooltip="Cette amélioration d'arme augmente grandement son volume de coups de feu."
+
+[GrimyAntiMaterial_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Canon Anti-Matériaux"
+FriendlyNamePlural="Canons Anti-Matériaux"
+BriefSummary="Détruit et Perce 1 d'armure"
+TinySummary="Détruit et perce l'Armure"
+LootTooltip="Cette amélioration d'arme permet à son porteur d'utiliser des munitions antiblindage."
+
+[GrimyAntiMaterial_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Canon Anti-Matériaux Avancé"
+FriendlyNamePlural="Canons Anti-Matériaux Avancés"
+BriefSummary="Détruit et Perce 2 d'armure."
+TinySummary="Détruit et perce l'Armure"
+LootTooltip="Cette amélioration d'arme permet à son porteur d'utiliser des munitions antiblindage."
+
+[GrimyAntiMaterial_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Canon Anti-Matériaux Supérieur"
+FriendlyNamePlural="Canons Anti-Matériaux Supérieurs"
+BriefSummary="Détruit et Perce 3 d'armure."
+TinySummary="Détruit et perce l'Armure"
+LootTooltip="Cette amélioration d'arme permet à son porteur d'utiliser des munitions antiblindage."
+
+[GrimyCustomStock_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Crosse Sur Mesure"
+FriendlyNamePlural="Crosses Sur Mesure"
+BriefSummary="Augmente les dégâts de 1, que le tir touche ou manque sa cible."
+TinySummary="Augmente les Dégâts"
+LootTooltip="Cette amélioration d'arme augmente grandement la constance du soldat."
+
+[GrimyCustomStock_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Crosse Sur Mesure Avancée"
+FriendlyNamePlural="Crosses Sur Mesure Avancées"
+BriefSummary="Augmente les dégâts de 2, que le tir touche ou manque sa cible."
+TinySummary="Augmente les Dégâts"
+LootTooltip="Cette amélioration d'arme augmente grandement la constance du soldat."
+
+[GrimyCustomStock_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Crosse Sur Mesure Supérieure"
+FriendlyNamePlural="Crosses Sur Mesure Supérieures"
+BriefSummary="Augmente les dégâts de 3, que le tir touche ou manque sa cible."
+TinySummary="Augmente les Dégâts"
+LootTooltip="Cette amélioration d'arme augmente grandement la constance du soldat."
+
+[GrimyTwitchTrigger_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Détente Sensible"
+FriendlyNamePlural="Détentes Sensibles"
+BriefSummary="Confère 1 utilisation de Série."
+TinySummary="Confère la capacité Série"
+LootTooltip="Cette amélioration d'arme aide nos soldats à de débarrasser de plusieurs ennemis."
+
+[GrimyTwitchTrigger_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Détente Sensible Avancée"
+FriendlyNamePlural="Détentes Sensibles Avancées"
+BriefSummary="Confère 2 utilisations de Série."
+TinySummary="Confère la capacité Série"
+LootTooltip="Cette amélioration d'arme aide nos soldats à de débarrasser de plusieurs ennemis."
+
+[GrimyTwitchTrigger_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Détente Sensible Supérieure"
+FriendlyNamePlural="Détentes Sensibles Supérieures"
+BriefSummary="Confère 3 utilisations de Série."
+TinySummary="Confère la capacité Série"
+LootTooltip="Cette amélioration d'arme aide nos soldats à de débarrasser de plusieurs ennemis."
+
+[GrimyMaxCaliber_Bsc X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur de Calibre Maximal"
+FriendlyNamePlural="Chargeurs de Calibre Maximal"
+BriefSummary="Augmente les Dégâts de 100% mais réduit les munitions à 1."
+TinySummary="Augmente les dégâts, réduit les munitions
+LootTooltip="Cette amélioration d'arme augmente massivement les dégâts, mais réduit les munitions à 1."
+
+[GrimyMaxCaliber_Adv X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur de Calibre Maximal Avancé"
+FriendlyNamePlural="Chargeurs de Calibre Maximal Avancés"
+BriefSummary="Augmente les Dégâts de 100% mais réduit les munitions à 1, perce 3 armure."
+TinySummary="Augmente les dégâts, réduit les munitions"
+LootTooltip="Cette amélioration d'arme augmente massivement les dégâts, mais réduit les munitions à 1."
+
+[GrimyMaxCaliber_Sup X2WeaponUpgradeTemplate]
+FriendlyName="Chargeur de Calibre Maximal Supérieur"
+FriendlyNamePlural="Chargeurs de Calibre Maximal Supérieurs"
+BriefSummary="Augmente les Dégâts de 100% mais réduit les munitions à 1, perce 3 armure, et donne +15% de chances de coups critiques contre les ennemis à couvert"
+TinySummary="Augmente les dégâts, réduit les munitions"
+LootTooltip="Cette amélioration d'arme augmente massivement les dégâts, mais réduit les munitions à 1."
+
+;---------------------------------------------
+;---    SECONDARY UPGRADES && ABILITIES    ---
+;---------------------------------------------
+
+[GrimyDodgePierce_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Traceur Intelligent"
+FriendlyNamePlural="Traceurs Intelligents"
+BriefSummary="Réduit les chances d'écorchures de 10%."
+TinySummary="Réduit les chances d'écorchures"
+LootTooltip="Cette amélioration d'arme réduit les chances d'écorchures."
+
+[GrimyDodgePierce_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Traceur Intelligent Avancé"
+FriendlyNamePlural="Traceurs Intelligents Avancés"
+BriefSummary="Réduit les chances d'écorchures de 20%."
+TinySummary="Réduit les chances d'écorchures"
+LootTooltip="Cette amélioration d'arme réduit les chances d'écorchures."
+
+[GrimyDodgePierce_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Traceur Intelligent Supérieur"
+FriendlyNamePlural="Traceurs Intelligents Supérieurs"
+BriefSummary="Réduit les chances d'écorchures de 30%."
+TinySummary="Réduit les chances d'écorchures"
+LootTooltip="Cette amélioration d'arme réduit les chances d'écorchures."
+
+[GrimyRedDot_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Viseur de Points Vitaux"
+FriendlyNamePlural="Viseurs de Points Vitaux"
+BriefSummary="Augmente la visée et les chance de coups critiques contre les ennemis à découvert de 5%."
+TinySummary="Augmente la visée et les chance de coups critiques contre les ennemis à découvert"
+LootTooltip="Cette amélioration d'arme augmente la visée et les chance de coups critiques contre les ennemis à découvert."
+
+[GrimyRedDot_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Viseur de Points Vitaux Avancé"
+FriendlyNamePlural="Viseurs de Points Vitaux"
+BriefSummary="Augmente la visée et les chance de coups critiques contre les ennemis à découvert de 10%."
+TinySummary="Augmente la visée et les chance de coups critiques contre les ennemis à découvert"
+LootTooltip="Cette amélioration d'arme augmente la visée et les chance de coups critiques contre les ennemis à découvert."
+
+[GrimyRedDot_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Viseur de Points Vitaux Supérieur"
+FriendlyNamePlural="Viseurs de Points Vitaux"
+BriefSummary="Augmente la visée et les chance de coups critiques contre les ennemis à découvert de 15%."
+TinySummary="Augmente la visée et les chance de coups critiques contre les ennemis à découvert"
+LootTooltip="Cette amélioration d'arme augmente la visée et les chance de coups critiques contre les ennemis à découvert."
+
+[GrimyScanner_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Scanner Personnel"
+FriendlyNamePlural="Scanners Personnels"
+BriefSummary="Augmente le champ de vision et la visibilité d'1 case."
+TinySummary="Augmente le champ de vision et la visibilité"
+LootTooltip="Cette amélioration d'arme augmente le champ de vision et la visibilité."
+
+[GrimyScanner_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Scanners Personnels Avancés"
+FriendlyNamePlural="Advanced Personal Scanners"
+BriefSummary="Augmente le champ de vision et la visibilité de 2 cases."
+TinySummary="Augmente le champ de vision et la visibilité"
+LootTooltip="Cette amélioration d'arme augmente le champ de vision et la visibilité."
+
+[GrimyScanner_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Scanners Personnels Supérieurs"
+FriendlyNamePlural="Superior Personal Scanners"
+BriefSummary="Augmente le champ de vision et la visibilité de 3 cases."
+TinySummary="Augmente le champ de vision et la visibilité"
+LootTooltip="Cette amélioration d'arme augmente le champ de vision et la visibilité."
+
+[GrimySuppressor_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Silencieux"
+FriendlyNamePlural="Silencieux"
+BriefSummary="Augmente la visée et les chances de coups critiques de 15% tant que l'unité est invisible."
+TinySummary="Attaque Furtive à 15%"
+LootTooltip="Cette amélioration d'arme augmente la précision et les chances de coups critiques tant que l'unité est invisible."
+
+[GrimySuppressor_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Silencieux Avancé"
+FriendlyNamePlural="Silencieux Avancés"
+BriefSummary="Augmente la visée et les chances de coups critiques de 20% tant que l'unité est invisible."
+TinySummary="Attaque Furtive à 20%"
+LootTooltip="Cette amélioration d'arme augmente la précision et les chances de coups critiques tant que l'unité est invisible."
+
+[GrimySuppressor_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Silencieux Supérieur"
+FriendlyNamePlural="Silencieux Supérieurs"
+BriefSummary="Augmente la visée et les chances de coups critiques de 25% tant que l'unité est invisible."
+TinySummary="Attaque Furtive à 25%"
+LootTooltip="Cette amélioration d'arme augmente la précision et les chances de coups critiques tant que l'unité est invisible."
+
+[GrimyWildcat_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Cartouche Lynx"
+FriendlyNamePlural="Cartouches Lynx"
+BriefSummary="Augmente les dégâts critiques de 1."
+TinySummary="Augmente les dégâts critiques"
+LootTooltip="Cette amélioration d'arme augmente les dégâts critiques"
+
+[GrimyWildcat_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Cartouche Lynx Avancée"
+FriendlyNamePlural="Cartouches Lynx Avancées"
+BriefSummary="Augmente les dégâts critiques de 2."
+TinySummary="Augmente les dégâts critiques"
+LootTooltip="Cette amélioration d'arme augmente les dégâts critiques"
+
+[GrimyWildcat_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Cartouche Lynx Supérieure"
+FriendlyNamePlural="Cartouches Lynx Supérieures"
+BriefSummary="Augmente les dégâts critiques de 3."
+TinySummary="Augmente les dégâts critiques"
+LootTooltip="Cette amélioration d'arme augmente les dégâts critiques"
+
+[GrimyWidowmaker_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Faiseur de Veuve"
+FriendlyNamePlural="Faiseurs de Veuve"
+BriefSummary="Confère 1 utilisation de Confrontation"
+TinySummary="Confère Confrontation"
+LootTooltip="Cette amélioration d'arme confère la capacité Confrontation"
+
+[GrimyWidowmaker_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Faiseur de Veuve Avancé"
+FriendlyNamePlural="Faiseurs de Veuve Avancés"
+BriefSummary="Confère 2 utilisations de Confrontation"
+TinySummary="Confère Confrontation"
+LootTooltip="Cette amélioration d'arme confère la capacité Confrontation"
+
+[GrimyWidowmaker_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Faiseur de Veuve Supérieur"
+FriendlyNamePlural="Faiseurs de Veuve Supérieurs"
+BriefSummary="Confère 3 utilisations de Confrontation"
+TinySummary="Confère Confrontation"
+LootTooltip="Cette amélioration d'arme confère la capacité Confrontation"
+
+[GrimyLawbringer_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Législateur"
+FriendlyNamePlural="Législateurs"
+BriefSummary="Confère 1 utilisation de Rafale"
+TinySummary="Confère Rafale"
+LootTooltip="Cette amélioration d'arme confère la capacité Rafale"
+
+[GrimyLawbringer_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Législateur Avancé"
+FriendlyNamePlural="Législateurs Avancés"
+BriefSummary="Confère 2 utilisations de Rafale"
+TinySummary="Confère Rafale"
+LootTooltip="Cette amélioration d'arme confère la capacité Rafale"
+
+[GrimyLawbringer_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Législateur Supérieur"
+FriendlyNamePlural="Législateurs Supérieurs"
+BriefSummary="Confère 3 utilisations de Rafale"
+TinySummary="Confère Rafale"
+LootTooltip="Cette amélioration d'arme confère la capacité Rafale"
+
+[GrimyHandofLight_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Main de Lumière"
+FriendlyNamePlural="Mains de Lumière"
+BriefSummary="Temps de Recharge de Mains Fulgurantes réduit à 1 tour."
+TinySummary="Confère Mains Fulgurantes"
+LootTooltip="Cette amélioration d'arme confère la capacité Mains Fulgurantes"
+
+[GrimyHandofLight_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Main de Lumière Avancée"
+FriendlyNamePlural="Mains de Lumière Avancées"
+BriefSummary="Temps de Recharge de Mains Fulgurantes réduit à 1 tour et confère +5% de chances de coups critiques."
+TinySummary="Confère Mains Fulgurantes"
+LootTooltip="Cette amélioration d'arme confère la capacité Mains Fulgurantes"
+
+[GrimyHandofLight_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Main de Lumière Supérieure"
+FriendlyNamePlural="Mains de Lumière Supérieures"
+BriefSummary="Temps de Recharge de Mains Fulgurantes réduit à 1 tour et confère +10% de chances de coups critiques."
+TinySummary="Confère Mains Fulgurantes"
+LootTooltip="Cette amélioration d'arme confère la capacité Mains Fulgurantes"
+
+[GrimyWolfsTooth_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Dent de Loup"
+FriendlyNamePlural="Dents de Loup"
+BriefSummary="Confère 40% de chances de gagner un point d'action à l'unité lorsqu'elle tue un ennemi"
+TinySummary="Confère le remboursement d'un point d'action"
+LootTooltip="Cette amélioration confère le remboursement d'un point d'action si l'unité tue un ennemi au pistolet"
+
+[GrimyWolfsTooth_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Dent de Loup Avancée"
+FriendlyNamePlural="Dents de Loup Avancées"
+BriefSummary="Confère 50% de chances de gagner un point d'action à l'unité lorsqu'elle tue un ennemi"
+TinySummary="Confère le remboursement d'un point d'action"
+LootTooltip="Cette amélioration confère le remboursement d'un point d'action si l'unité tue un ennemi au pistolet"
+
+[GrimyWolfsTooth_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Dent de Loup Supérieure"
+FriendlyNamePlural="Dents de Loup Supérieures"
+BriefSummary="Confère 60% de chances de gagner un point d'action à l'unité lorsqu'elle tue un ennemi"
+TinySummary="Confère le remboursement d'un point d'action"
+LootTooltip="Cette amélioration confère le remboursement d'un point d'action si l'unité tue un ennemi au pistolet"
+
+[GrimyThunderAndLightning_BscPistol X2WeaponUpgradeTemplate]
+FriendlyName="Tonnerre et Foudre"
+FriendlyNamePlural="Tonnerres et Foudre"
+BriefSummary="Augmente les dégâts du pistolet de 1, du fusil de précision de 80%, mais vous ne pouvez plus recharger."
+TinySummary="Augmente les dégâts et empêche la recharge"
+LootTooltip="Cette amélioration d'arme augmente massivement les dégâts mais empêche la recharge."
+
+[GrimyThunderAndLightning_AdvPistol X2WeaponUpgradeTemplate]
+FriendlyName="Tonnerre et Foudre Avancé"
+FriendlyNamePlural="Tonnerres et Foudre Avancés"
+BriefSummary="Augmente les dégâts du pistolet de 1, du fusil de précision de 90%, mais vous ne pouvez plus recharger."
+TinySummary="Augmente les dégâts et empêche la recharge"
+LootTooltip="Cette amélioration d'arme augmente massivement les dégâts mais empêche la recharge."
+
+[GrimyThunderAndLightning_SupPistol X2WeaponUpgradeTemplate]
+FriendlyName="Tonnerre et Foudre Supérieur"
+FriendlyNamePlural="Tonnerres et Foudre Supérieurs"
+BriefSummary="Augmente les dégâts du pistolet de 1, du fusil de précision de 100%, mais vous ne pouvez plus recharger."
+TinySummary="Augmente les dégâts et empêche la recharge"
+LootTooltip="Cette amélioration d'arme augmente massivement les dégâts mais empêche la recharge."
+
+[GrimySwordGrip_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Holster Latéral"
+FriendlyNamePlural="Holsters Latéraux"
+BriefSummary="Commencez votre tour avec un point d'action supplémentaire. Réduit la mobilité de 6."
+TinySummary="Augmente les points d'actions, réduit la mobilité"
+LootTooltip="Cette amélioration d'arme permet une flexibilité accrue des points d'actions."
+
+[GrimySwordGrip_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Holster Latéral Avancé"
+FriendlyNamePlural="Holsters Latéraux Avancés"
+BriefSummary="Commencez votre tour avec un point d'action supplémentaire. Réduit la mobilité de 5."
+TinySummary="Augmente les points d'actions, réduit la mobilité"
+LootTooltip="Cette amélioration d'arme permet une flexibilité accrue des points d'actions."
+
+[GrimySwordGrip_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Holster Latéral Supérieur"
+FriendlyNamePlural="Holsters Latéraux Supérieurs"
+BriefSummary="Commencez votre tour avec un point d'action supplémentaire. Réduit la mobilité de 4."
+TinySummary="Augmente les points d'actions, réduit la mobilité"
+LootTooltip="Cette amélioration d'arme permet une flexibilité accrue des points d'actions."
+
+[GrimyFlourish_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Floraison de Lames"
+FriendlyNamePlural="Floraisons de Lames"
+BriefSummary="Réduit de 10% les chances d'écorchures, augmente donc les chances de toucher."
+TinySummary="Lacération a moins de chances de provoquer des écorchures"
+LootTooltip="Cette amélioration d'arme diminue les chances d'écorchures de Lacération."
+
+[GrimyFlourish_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Floraison de Lames Avancée"
+FriendlyNamePlural="Floraisons de Lames Avancées"
+BriefSummary="Réduit de 20% les chances d'écorchures, augmente donc les chances de toucher."
+TinySummary="Lacération a moins de chances de provoquer des écorchures"
+LootTooltip="Cette amélioration d'arme diminue les chances d'écorchures de Lacération."
+
+[GrimyFlourish_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Floraison de Lames Supérieure"
+FriendlyNamePlural="Floraisons de Lames Supérieures"
+BriefSummary="Réduit de 30% les chances d'écorchures, augmente donc les chances de toucher."
+TinySummary="Lacération a moins de chances de provoquer des écorchures"
+LootTooltip="Cette amélioration d'arme diminue les chances d'écorchures de Lacération."
+
+[GrimySerrated_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Bords Acérés"
+FriendlyNamePlural="Bords Acérés"
+BriefSummary="+10% Chances de coups critiques, +1 dégât critique."
+TinySummary="Augmentation des chances de critiques et de leurs dégâts"
+LootTooltip="Cette amélioration d'arme augmente les chances de critiques et leurs dégâts."
+
+[GrimySerrated_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Bords Acérés Avancés"
+FriendlyNamePlural="Bords Acérés Avancés"
+BriefSummary="+20% Chances de coups critiques, +1 dégât critique."
+TinySummary="Augmentation des chances de critiques et de leurs dégâts"
+LootTooltip="Cette amélioration d'arme augmente les chances de critiques et leurs dégâts."
+
+[GrimySerrated_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Bords Acérés Supérieurs"
+FriendlyNamePlural="Bords Acérés Supérieurs"
+BriefSummary="+30% Chances de coups critiques, +1 dégât critique."
+TinySummary="Augmentation des chances de critiques et de leurs dégâts"
+LootTooltip="Cette amélioration d'arme augmente les chances de critiques et leurs dégâts."
+
+[GrimyLightweight_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame Allégée"
+FriendlyNamePlural="Lames Allégées"
+BriefSummary="Augmente la mobilité de 1."
+TinySummary="Augmente la mobilité"
+LootTooltip="Cette amélioration d'arme rend son utilisateur plus mobile."
+
+[GrimyLightweight_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame Allégée Avancée"
+FriendlyNamePlural="Lames Allégées Avancées"
+BriefSummary="Augmente la mobilité de 2."
+TinySummary="Augmente la mobilité"
+LootTooltip="Cette amélioration d'arme rend son utilisateur plus mobile."
+
+[GrimyLightweight_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame Allégée Supérieure"
+FriendlyNamePlural="Lames Allégées Supérieures"
+BriefSummary="Augmente la mobilité de 3."
+TinySummary="Augmente la mobilité"
+LootTooltip="Cette amélioration d'arme rend son utilisateur plus mobile."
+
+[GrimyVibroblade_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame Haute-Fréquence"
+FriendlyNamePlural="Lames Haute-Fréquence"
+BriefSummary="Perce 1 d'armure."
+TinySummary="Perce l'armure"
+LootTooltip="Cette amélioration permet à son utilisateur de traverser les armures."
+
+[GrimyVibroblade_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame Haute-Fréquence Avancée"
+FriendlyNamePlural="Lames Haute-Fréquence Avancées"
+BriefSummary="Perce 2 d'armure."
+TinySummary="Perce l'armure"
+LootTooltip="Cette amélioration permet à son utilisateur de traverser les armures."
+
+[GrimyVibroblade_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame Haute-Fréquence Supérieure"
+FriendlyNamePlural="Lames Haute-Fréquence Supérieures"
+BriefSummary="Perce 3 d'armure."
+TinySummary="Perce l'armure"
+LootTooltip="Cette amélioration permet à son utilisateur de traverser les armures."
+
+[GrimyMomentum_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Inertie"
+FriendlyNamePlural="Inerties"
+BriefSummary="Augmente les chances de coups critiques de 30% et les dégâts critiques de 1 contre les ennemis distants de 10 cases ou plus."
+TinySummary="Augmente les chances de critiques et les dégâts critiques de Lacération à distance"
+LootTooltip="Cette amélioration d'arme rend Lacération à distance encore plus léthale"
+
+[GrimyMomentum_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Inertie Avancée"
+FriendlyNamePlural="Inerties Avancées"
+BriefSummary="Augmente les chances de coups critiques de 45% et les dégâts critiques de 1 contre les ennemis distants de 10 cases ou plus."
+TinySummary="Augmente les chances de critiques et les dégâts critiques de Lacération à distance"
+LootTooltip="Cette amélioration d'arme rend Lacération à distance encore plus léthale"
+
+[GrimyMomentum_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Inertie Supérieure"
+FriendlyNamePlural="Inerties Supérieures"
+BriefSummary="Augmente les chances de coups critiques de 60% et les dégâts critiques de 1 contre les ennemis distants de 10 cases ou plus."
+TinySummary="Augmente les chances de critiques et les dégâts critiques de Lacération à distance"
+LootTooltip="Cette amélioration d'arme rend Lacération à distance encore plus léthale"
+
+[GrimyParrying_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame de Garde"
+FriendlyNamePlural="Lames de Garde"
+BriefSummary="Réduit les dégâts subis au corps-à-corps de 4."
+TinySummary="Réduit les dégâts subis au corps-à-corps"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'effetuer des parades au corps-à-corps."
+
+[GrimyParrying_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame de Garde Avancée"
+FriendlyNamePlural="Lames de Garde Avancées"
+BriefSummary="Réduit les dégâts subis au corps-à-corps de 5."
+TinySummary="Réduit les dégâts subis au corps-à-corps"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'effetuer des parades au corps-à-corps."
+
+[GrimyParrying_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame de Garde Supérieure"
+FriendlyNamePlural="Lames de Garde Supérieures"
+BriefSummary="Réduit les dégâts subis au corps-à-corps de 6."
+TinySummary="Réduit les dégâts subis au corps-à-corps"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'effetuer des parades au corps-à-corps."
+
+[GrimyInquisition_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Inquisition Sombre"
+FriendlyNamePlural="Inquisitions Sombres"
+BriefSummary="Augmente les dégâts au corps-à-corps de 80% quand l'unité est invisible."
+TinySummary="Augmente les dégâts au corps-à-corps quand l'unité est invisible"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'infliger plus de dégâts si son attaque est déclenchée quand il est invisible."
+
+[GrimyInquisition_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Inquisition Sombre Avancée"
+FriendlyNamePlural="Inquisitions Sombres Avancées"
+BriefSummary="Augmente les dégâts au corps-à-corps de 90% quand l'unité est invisible."
+TinySummary="Augmente les dégâts au corps-à-corps quand l'unité est invisible"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'infliger plus de dégâts si son attaque est déclenchée quand il est invisible."
+
+[GrimyInquisition_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Inquisition Sombre Supérieure"
+FriendlyNamePlural="Inquisitions Sombres Supérieures"
+BriefSummary="Augmente les dégâts au corps-à-corps de 100% quand l'unité est invisible."
+TinySummary="Augmente les dégâts au corps-à-corps quand l'unité est invisible"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'infliger plus de dégâts si son attaque est déclenchée quand il est invisible."
+
+[GrimyLongCrusade_BscSword X2AbilityTemplate]
+LocFriendlyName="Longue Croisade"
+LocHelpText="Gagnez 2 points d'armure par Lacération pour 2 tours."
+
+[GrimyLongCrusade_AdvSword X2AbilityTemplate]
+LocFriendlyName="Longue Croisade Avancée"
+LocHelpText="Gagnez 2 points d'armure par Lacération pour 3 tours."
+
+[GrimyLongCrusade_SupSword X2AbilityTemplate]
+LocFriendlyName="Longue Croisade Supérieure"
+LocHelpText="Gagnez 2 points d'armure par Lacération pour 4 tours."
+
+[GrimyLongCrusade_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Longue Croisade"
+FriendlyNamePlural="Longues Croisades"
+BriefSummary="Confère 2 points d'armure par lacération, pour 3 tours."
+TinySummary="Confère de l'armure au corps-à-corps"
+LootTooltip="Cette amélioration d'arme confère de l'armure aux combattants au corps-à-corps."
+
+[GrimyLongCrusade_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Longue Croisade Avancée"
+FriendlyNamePlural="Longues Croisades Avancées"
+BriefSummary="Confère 2 points d'armure par lacération, pour 4 tours."
+TinySummary="Confère de l'armure au corps-à-corps"
+LootTooltip="Cette amélioration d'arme confère de l'armure aux combattants au corps-à-corps."
+
+[GrimyLongCrusade_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Longue Croisade Supérieure"
+FriendlyNamePlural="Longues Croisades Supérieures"
+BriefSummary="Confère 2 points d'armure par lacération, pour 5 tours."
+TinySummary="Confère de l'armure au corps-à-corps"
+LootTooltip="Cette amélioration d'arme confère de l'armure aux combattants au corps-à-corps."
+
+[GrimyBigGameHunter_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Chasseur de Gros Gibier"
+FriendlyNamePlural="Chasseurs de Gros Gibier"
+BriefSummary="+30% Chances de coups critiques, et +1 dégât critique contre les ennemis à couvert."
+TinySummary="Augmente les Chances de Critiques et leurs Dégâts"
+LootTooltip="Cette amélioration d'arme augmente les chances de critiques et leurs dégâts contre les ennemis à couvert."
+
+[GrimyBigGameHunter_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Chasseur de Gros Gibier Avancé"
+FriendlyNamePlural="Chasseurs de Gros Gibier Avancés"
+BriefSummary="+45% Chances de coups critiques, et +1 dégât critique contre les ennemis à couvert."
+TinySummary="Augmente les Chances de Critiques et leurs Dégâts"
+LootTooltip="Cette amélioration d'arme augmente les chances de critiques et leurs dégâts contre les ennemis à couvert."
+
+[GrimyBigGameHunter_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Chasseur de Gros Gibier Supérieur"
+FriendlyNamePlural="Chasseurs de Gros Gibier Supérieurs"
+BriefSummary="+60% Chances de coups critiques, et +1 dégât critique contre les ennemis à couvert."
+TinySummary="Augmente les Chances de Critiques et leurs Dégâts"
+LootTooltip="Cette amélioration d'arme augmente les chances de critiques et leurs dégâts contre les ennemis à couvert."
+
+[GrimyBrokenBlade_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame Brisée"
+FriendlyNamePlural="Lames Brisées"
+BriefSummary="Augmente les dégâts du fusil de 30%, et diminue les dégâts de l'épée de 30%."
+TinySummary="Augmente les dégâts du fusil et diminue les dégâts de l'épée"
+LootTooltip="Cette amélioration d'arme augmente les dégâts du fusil et diminue les dégâts de l'épée."
+
+[GrimyBrokenBlade_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame Brisée Avancée"
+FriendlyNamePlural="Lames Brisées Avancées"
+BriefSummary="Augmente les dégâts du fusil de 35%, et diminue les dégâts de l'épée de 35%."
+TinySummary="Augmente les dégâts du fusil et diminue les dégâts de l'épée"
+LootTooltip="Cette amélioration d'arme augmente les dégâts du fusil et diminue les dégâts de l'épée."
+
+[GrimyBrokenBlade_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Lame Brisée Supérieure"
+FriendlyNamePlural="Lames Brisées Supérieures"
+BriefSummary="Augmente les dégâts du fusil de 40%, et diminue les dégâts de l'épée de 40%."
+TinySummary="Augmente les dégâts du fusil et diminue les dégâts de l'épée"
+LootTooltip="Cette amélioration d'arme augmente les dégâts du fusil et diminue les dégâts de l'épée."
+
+[GrimyReaperOne X2AbilityTemplate]
+LocFriendlyName="Main de la Mort"
+LocHelpText="Faucheur augmente désormais les dégâts de 2 après chaque ennemi tué."
+
+[GrimyReaperTwo X2AbilityTemplate]
+LocFriendlyName="Main de la Mort Avancée"
+LocHelpText="Faucheur augmente désormais les dégâts de 2 après chaque ennemi tué, et les dégâts de base de 1."
+
+[GrimyReaperThree X2AbilityTemplate]
+LocFriendlyName="Main de la Mort Supérieure"
+LocHelpText="Faucheur augmente désormais les dégâts de 2 après chaque ennemi tué, et les dégâts de base de 2."
+
+[GrimyDeathsHand_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Main de la Mort"
+FriendlyNamePlural="Mains de la Mort"
+BriefSummary="Faucheur augmente désormais les dégâts de 2 après chaque ennemi tué."
+TinySummary="Améliore Faucheur"
+LootTooltip="Cette amélioration d'arme rend la capacité Faucheur encore plus léthale."
+
+[GrimyDeathsHand_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Main de la Mort Avancée"
+FriendlyNamePlural="Mains de la Mort Avancées"
+BriefSummary="Faucheur augmente désormais les dégâts de 2 après chaque ennemi tué, et les dégâts de base de 1."
+TinySummary="Améliore Faucheur"
+LootTooltip="Cette amélioration d'arme rend la capacité Faucheur encore plus léthale."
+
+[GrimyDeathsHand_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Main de la Mort Supérieure"
+FriendlyNamePlural="Mains de la Mort Supérieures"
+BriefSummary="Faucheur augmente désormais les dégâts de 2 après chaque ennemi tué, et les dégâts de base de 2."
+TinySummary="Améliore Faucheur"
+LootTooltip="Cette amélioration d'arme rend la capacité Faucheur encore plus léthale."
+
+[GrimyRapidSlashOne X2AbilityTemplate]
+LocFriendlyName="Lacération Rapide"
+LocHelpText="Vous gagnez un point d'action après Lacération."
+
+[GrimyRapidSlashTwo X2AbilityTemplate]
+LocFriendlyName="Lacération Rapide Avancée"
+LocHelpText="Vous gagnez un point d'action après Lacération."
+
+[GrimyRapidSlashThree X2AbilityTemplate]
+LocFriendlyName="Lacération Rapide Supérieure"
+LocHelpText="Vous gagnez un point d'action après Lacération."
+
+[GrimyRazorsEdge_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Affûtage Rasoir"
+FriendlyNamePlural="Affûtages Rasoir"
+BriefSummary="Confère 1 utilisation de Lacération Rapide."
+TinySummary="Confère des charges de Lacération Rapide"
+LootTooltip="Cette amélioration d'arme fait gagner 1 point d'action à son utilisateur après une Lacération."
+
+[GrimyRazorsEdge_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Affûtage Rasoir Avancé"
+FriendlyNamePlural="Affûtages Rasoir Avancés"
+BriefSummary="Confère 2 utilisations de Lacération Rapide."
+TinySummary="Confère des charges de Lacération Rapide"
+LootTooltip="Cette amélioration d'arme fait gagner 1 point d'action à son utilisateur après une Lacération."
+
+[GrimyRazorsEdge_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Affûtage Rasoir Supérieur"
+FriendlyNamePlural="Affûtages Rasoir Supérieurs"
+BriefSummary="Confère 3 utilisations de Lacération Rapide."
+TinySummary="Confère des charges de Lacération Rapide"
+LootTooltip="Cette amélioration d'arme fait gagner 1 point d'action à son utilisateur après une Lacération."
+
+[GrimyConviction X2AbilityTemplate]
+LocFriendlyName="Zealous Conviction"
+LocHelpText="Gain an action point after slashing an impaired enemy without killing it."
+
+[GrimyConviction_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Conviction Zélée"
+FriendlyNamePlural="Convictions Zélées"
+BriefSummary="Gagnez un point d'action après avoir utilisé Lacération sur un ennemi blessé sans l'avoir tué."
+TinySummary="Action bonus sur les ennemis affaiblis"
+LootTooltip="Cette amélioration d'arme donne une action bonus sur les ennemis affaiblis."
+
+[GrimyConviction_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Conviction Zélée Avancée"
+FriendlyNamePlural="Convictions Zélées Avancées"
+BriefSummary="Gagnez un point d'action après avoir utilisé Lacération sur un ennemi blessé sans l'avoir tué et améliore la visée de 5%."
+TinySummary="Action bonus sur les ennemis affaiblis"
+LootTooltip="Cette amélioration d'arme donne une action bonus sur les ennemis affaiblis."
+
+[GrimyConviction_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Conviction Zélée Supérieure"
+FriendlyNamePlural="Convictions Zélées Supérieures"
+BriefSummary="Gagnez un point d'action après avoir utilisé Lacération sur un ennemi blessé sans l'avoir tué et améliore la visée de 10%."
+TinySummary="Action bonus sur les ennemis affaiblis"
+LootTooltip="Cette amélioration d'arme donne une action bonus sur les ennemis affaiblis."
+
+[GrimyShadowlace_BscSword X2WeaponUpgradeTemplate]
+FriendlyName="Lacet de l'Ombre"
+FriendlyNamePlural="Lacets de l'Ombre"
+BriefSummary="Confère 1 charge de Dissimulation."
+TinySummary="Charges supplémentaires de Dissimulation"
+LootTooltip="Cette amélioration d'arme permet à son porteur de se dissmuler en combat."
+
+[GrimyShadowlace_AdvSword X2WeaponUpgradeTemplate]
+FriendlyName="Lacet de l'Ombre Avancé"
+FriendlyNamePlural="Lacets de l'Ombre Avancés"
+BriefSummary="Confère 2 charges de Dissimulation."
+TinySummary="Charges supplémentaires de Dissimulation"
+LootTooltip="Cette amélioration d'arme permet à son porteur de se dissmuler en combat."
+
+[GrimyShadowlace_SupSword X2WeaponUpgradeTemplate]
+FriendlyName="Lacet de l'Ombre Supérieur"
+FriendlyNamePlural="Lacets de l'Ombre Supérieurs"
+BriefSummary="Confère 3 charges de Dissimulation."
+TinySummary="Charges supplémentaires de Dissimulation"
+LootTooltip="Cette amélioration d'arme permet à son porteur de se dissmuler en combat."
+
+[GrimyBlindingProtocolOne X2AbilityTemplate]
+LocFriendlyName="Protocole d'Aveuglement"
+LocHelpText="Réduit la visée de la cible de 50% pour 1 tour."
+LocFlyOverText="Aveuglé"
+
+[GrimyBlindingProtocolTwo X2AbilityTemplate]
+LocFriendlyName="Protocole d'Aveuglement"
+LocHelpText="Réduit la visée de la cible de 50% pour 1 tour."
+LocFlyOverText="Aveuglé"
+
+[GrimyBlindingProtocolThree X2AbilityTemplate]
+LocFriendlyName="Protocole d'Aveuglement"
+LocHelpText="Réduit la visée de la cible de 50% pour 1 tour."
+LocFlyOverText="Aveuglé"
+
+[GrimyTripwireProtocolOne X2AbilityTemplate]
+LocFriendlyName="Protocole de Restriction de Mouvements"
+LocHelpText="Réduit la mobilité de la cible de 4 pour 1 tour."
+LocFlyOverText="Ralenti"
+
+[GrimyTripwireProtocolTwo X2AbilityTemplate]
+LocFriendlyName="Protocole de Restriction de Mouvements"
+LocHelpText="Réduit la mobilité de la cible de 4 pour 1 tour."
+LocFlyOverText="Ralenti"
+
+[GrimyTripwireProtocolThree X2AbilityTemplate]
+LocFriendlyName="Protocole de Restriction de Mouvements"
+LocHelpText="Réduit la mobilité de la cible de 4 pour 1 tour."
+LocFlyOverText="Ralenti"
+
+[GrimyChargeRevivalOne X2AbilityTemplate]
+LocFriendlyName="Protocole de Stimulus"
+LocHelpText="Envoie le Gremlin sur un allié afin de lui supprimer tout effet mental négatif."
+LocFlyOverText="Stimulé"
+
+[GrimyChargeRevivalTwo X2AbilityTemplate]
+LocFriendlyName="Protocole de Stimulus"
+LocHelpText="Envoie le Gremlin sur un allié afin de lui supprimer tout effet mental négatif."
+LocFlyOverText="Stimulé"
+
+[GrimyChargeRevivalThree X2AbilityTemplate]
+LocFriendlyName="Protocole de Stimulus"
+LocHelpText="Envoie le Gremlin sur un allié afin de lui supprimer tout effet mental négatif."
+LocFlyOverText="Stimulé"
+
+[GrimyChargeOverrideOne X2AbilityTemplate]
+LocFriendlyName="Protocole de Contournement"
+LocHelpText="L'unité alliée cible est immune à la prochaine attaque."
+LocFlyOverText="Contournement"
+
+[GrimyChargeOverrideTwo X2AbilityTemplate]
+LocFriendlyName="Protocole de Contournement"
+LocHelpText="L'unité alliée cible est immune à la prochaine attaque."
+LocFlyOverText="Contournement"
+
+[GrimyChargeOverrideThree X2AbilityTemplate]
+LocFriendlyName="Protocole de Contournement"
+LocHelpText="L'unité alliée cible est immune à la prochaine attaque."
+LocFlyOverText="Contournement"
+
+[GrimyShieldProtocolOne X2AbilityTemplate]
+LocFriendlyName="Protocole de Blindage"
+LocHelpText="Confère 3 points de Boucliers à un allié pour 3 tours."
+
+[GrimyShieldProtocolTwo X2AbilityTemplate]
+LocFriendlyName="Protocole de Blindage"
+LocHelpText="Confère 3 points de Boucliers à un allié pour 3 tours."
+
+[GrimyShieldProtocolThree X2AbilityTemplate]
+LocFriendlyName="Protocole de Blindage"
+LocHelpText="Confère 3 points de Boucliers à un allié pour 3 tours."
+
+[GrimyChargeDistortionOne X2AbilityTemplate]
+LocFriendlyName="Protocole de Distorsion"
+LocHelpText="L'ennemi ciblé panique."
+
+[GrimyChargeDistortionTwo X2AbilityTemplate]
+LocFriendlyName="Protocole de Distorsion"
+LocHelpText="L'ennemi ciblé panique."
+
+[GrimyChargeDistortionThree X2AbilityTemplate]
+LocFriendlyName="Protocole de Distorsion"
+LocHelpText="L'ennemi ciblé panique."
+
+[GrimyTargetingProtocolOne X2AbilityTemplate]
+LocFriendlyName="Protocole de Visée"
+LocHelpText="Confère +10% de visée et +10% de chances de coups critiques à un allié."
+LocFlyOverText="Protocole de Visée"
+
+[GrimyTargetingProtocolTwo X2AbilityTemplate]
+LocFriendlyName="Protocole de Visée"
+LocHelpText="Confère +10% de visée et +10% de chances de coups critiques à un allié."
+LocFlyOverText="Protocole de Visée"
+
+[GrimyTargetingProtocolThree X2AbilityTemplate]
+LocFriendlyName="Protocole de Visée"
+LocHelpText="Confère +10% de visée et +10% de chances de coups critiques à un allié."
+LocFlyOverText="Protocole de Visée"
+
+[GrimyChargeMascotOne X2AbilityTemplate]
+LocFriendlyName="Protocole Mascotte"
+LocHelpText="Confère 1 point d'action à un allié."
+
+[GrimyChargeMascotTwo X2AbilityTemplate]
+LocFriendlyName="Protocole Mascotte"
+LocHelpText="Confère 1 point d'action à un allié."
+
+[GrimyChargeMascotThree X2AbilityTemplate]
+LocFriendlyName="Protocole Mascotte"
+LocHelpText="Confère 1 point d'action à un allié."
+
+[GrimyChargeAegisOne X2AbilityTemplate]
+LocFriendlyName="Protocole d'Egide"
+LocHelpText="Confère aux alliés proches 6 points de bouclier pour 4 tours."
+
+[GrimyChargeAegisTwo X2AbilityTemplate]
+LocFriendlyName="Protocole d'Egide"
+LocHelpText="Confère aux alliés proches 6 points de bouclier pour 4 tours."
+
+[GrimyChargeAegisThree X2AbilityTemplate]
+LocFriendlyName="Protocole d'Egide"
+LocHelpText="Confère aux alliés proches 6 points de bouclier pour 4 tours."
+
+[GrimySquadTargetingOne X2AbilityTemplate]
+LocFriendlyName="Protocole de Visée d'Escouade"
+LocHelpText="Confère aux alliés proches +15% de visée et de chance de critiques pour 1 tour."
+
+[GrimySquadTargetingTwo X2AbilityTemplate]
+LocFriendlyName="Protocole de Visée d'Escouade"
+LocHelpText="Confère aux alliés proches +15% de visée et de chance de critiques pour 1 tour."
+
+[GrimySquadTargetingThree X2AbilityTemplate]
+LocFriendlyName="Protocole de Visée d'Escouade"
+LocHelpText="Confère aux alliés proches +15% de visée et de chance de critiques pour 1 tour."
+
+[GrimyTrojan_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Troyen"
+FriendlyNamePlural="Protocoles Troyens"
+BriefSummary="Piratage +5."
+TinySummary="Améliore le Piratage"
+LootTooltip="Cette amélioration rend nos capacités de hacking plus performantes."
+
+[GrimyTrojan_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Troyen Avancé"
+FriendlyNamePlural="Protocoles Troyens Avancés"
+BriefSummary="Piratage +10."
+TinySummary="Améliore le Piratage"
+LootTooltip="Cette amélioration rend nos capacités de hacking plus performantes."
+
+[GrimyTrojan_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Troyen Supérieur"
+FriendlyNamePlural="Protocoles Troyens Supérieurs"
+BriefSummary="Piratage +15."
+TinySummary="Améliore le Piratage"
+LootTooltip="Cette amélioration rend nos capacités de hacking plus performantes."
+
+[GrimyShock_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Choc"
+FriendlyNamePlural="Shock Protocols"
+BriefSummary="1 charge supplémentaire à la capacité Protocole de Combat."
+TinySummary="Augmente les charges de la capacité Protocole de Combat"
+LootTooltip="Cette amélioration confère à son utilisateurs plus de charges de Protocole de Combat."
+
+[GrimyShock_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Choc Avancé"
+FriendlyNamePlural="Advanced Shock Protocols"
+BriefSummary="2 charges supplémentaires à la capacité Protocole de Combat."
+TinySummary="Augmente les charges de la capacité Protocole de Combat"
+LootTooltip="Cette amélioration confère à son utilisateurs plus de charges de Protocole de Combat."
+
+[GrimyShock_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Superior Shock Protocol"
+FriendlyNamePlural="Protocole de Choc Supérieur"
+BriefSummary="3 charges supplémentaires à la capacité Protocole de Combat."
+TinySummary="Augmente les charges de la capacité Protocole de Combat"
+LootTooltip="Cette amélioration confère à son utilisateurs plus de charges de Protocole de Combat."
+
+[GrimyBlindingProtocol_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Aveuglement"
+FriendlyNamePlural="Protocoles d'Aveuglement"
+BriefSummary="Confère 1 charge de Protocole d'Aveuglement, qui réduit la visée de l'ennemi de 50% pour 1 tour."
+TinySummary="Confère des charges de Protocole d'Aveuglement"
+LootTooltip="Cette amélioration confère des charges de Protocole d'Aveuglement."
+
+[GrimyBlindingProtocol_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Aveuglement Avancé"
+FriendlyNamePlural="Protocoles d'Aveuglement Avancés"
+BriefSummary="Confère 2 charge de Protocole d'Aveuglement, qui réduit la visée de l'ennemi de 50% pour 1 tour."
+TinySummary="Confère des charges de Protocole d'Aveuglement"
+LootTooltip="Cette amélioration confère des charges de Protocole d'Aveuglement."
+
+[GrimyBlindingProtocol_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Aveuglement Supérieur"
+FriendlyNamePlural="Protocoles d'Aveuglement Supérieurs"
+BriefSummary="Confère 1 charge de Protocole d'Aveuglement, qui réduit la visée de l'ennemi de 50% pour 1 tour."
+TinySummary="Confère des charges de Protocole d'Aveuglement"
+LootTooltip="Cette amélioration confère des charges de Protocole d'Aveuglement."
+
+[GrimyTripwireProtocol_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Restriction de Mouvements"
+FriendlyNamePlural="Protocoles de Restriction de Mouvements"
+BriefSummary="Confère 1 charge de Protocole de Restriction de Mouvements, qui réduit la mobilité de l'ennemi ciblé de 4 pour 1 tour."
+TinySummary="Confère des charges de Protocole de Restriction de Mouvements"
+LootTooltip="Cette amélioration confère des charges de Protocole de Restriction de Mouvements."
+
+[GrimyTripwireProtocol_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Restriction de Mouvements Avancé"
+FriendlyNamePlural="Protocoles de Restriction de Mouvements Avancés"
+BriefSummary="Confère 2 charge de Protocole de Restriction de Mouvements, qui réduit la mobilité de l'ennemi ciblé de 4 pour 1 tour."
+TinySummary="Confère des charges de Protocole de Restriction de Mouvements"
+LootTooltip="Cette amélioration confère des charges de Protocole de Restriction de Mouvements."
+
+[GrimyTripwireProtocol_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Restriction de Mouvements Supérieur"
+FriendlyNamePlural="Protocoles de Restriction de Mouvements Supérieurs"
+BriefSummary="Confère 3 charge de Protocole de Restriction de Mouvements, qui réduit la mobilité de l'ennemi ciblé de 4 pour 1 tour."
+TinySummary="Confère des charges de Protocole de Restriction de Mouvements"
+LootTooltip="Cette amélioration confère des charges de Protocole de Restriction de Mouvements."
+
+[GrimySuperCapacitors_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Super Condensateur"
+FriendlyNamePlural="Super Condensateurs"
+BriefSummary="Les Gremlins font 1 dégât de plus."
+TinySummary="Augmente les dégâts du Gremlin"
+LootTooltip="Cette amélioration augmente les dégâts du Gremlin."
+
+[GrimySuperCapacitors_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Super Condensateur Avancé"
+FriendlyNamePlural="uper Condensateurs Avancés"
+BriefSummary="Les Gremlins font 2 dégâts de plus."
+TinySummary="Augmente les dégâts du Gremlin"
+LootTooltip="Cette amélioration augmente les dégâts du Gremlin."
+
+[GrimySuperCapacitors_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Super Condensateur Supérieurs"
+FriendlyNamePlural="Super Condensateurs Supérieurs"
+BriefSummary="Les Gremlins font 3 dégâts de plus."
+TinySummary="Augmente les dégâts du Gremlin"
+LootTooltip="Cette amélioration augmente les dégâts du Gremlin."
+
+[GrimyRevival_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Répartition"
+FriendlyNamePlural="Protocoles de Répartition"
+BriefSummary="Confère 1 charge supplémentaire au Protocole de Stimulus. Requiert la capacité Protocole de Stimulus."
+TinySummary="Confère des charges au Protocole de Stimulus"
+LootTooltip="Cette amélioration confère des charges au Protocole de Stimulus."
+
+[GrimyRevival_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Répartition Avancé"
+FriendlyNamePlural="Protocoles de Répartition Avancés"
+BriefSummary="Confère 2 charges supplémentaires au Protocole de Stimulus. Requiert la capacité Protocole de Stimulus."
+TinySummary="Confère des charges au Protocole de Stimulus"
+LootTooltip="Cette amélioration confère des charges au Protocole de Stimulus."
+
+[GrimyRevival_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Répartition Supérieur"
+FriendlyNamePlural="Protocoles de Répartition Supérieurs"
+BriefSummary="Confère 3 charges supplémentaires au Protocole de Stimulus. Requiert la capacité Protocole de Stimulus."
+TinySummary="Confère des charges au Protocole de Stimulus"
+LootTooltip="Cette amélioration confère des charges au Protocole de Stimulus."
+
+[GrimyScanning_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Liaison Satellite"
+FriendlyNamePlural="Liaisons Satellite"
+BriefSummary="Confère 1 charge supplémentaire au Protocole de Scan. Requiert la capacité Protocole de Scan."
+TinySummary="Confère des charges au Protocole de Scan"
+LootTooltip="Cette amélioration confère des charges au Protocole de Scan."
+
+[GrimyScanning_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Liaison Satellite Avancée"
+FriendlyNamePlural="Liaisons Satellite Avancées"
+BriefSummary="Confère 2 charges supplémentaires au Protocole de Scan. Requiert la capacité Protocole de Scan."
+TinySummary="Confère des charges au Protocole de Scan"
+LootTooltip="Cette amélioration confère des charges au Protocole de Scan."
+
+[GrimyScanning_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Liaison Satellite Supérieure"
+FriendlyNamePlural="Liaisons Satellite Supérieures"
+BriefSummary="Confère 3 charges supplémentaires au Protocole de Scan. Requiert la capacité Protocole de Scan."
+TinySummary="Confère des charges au Protocole de Scan"
+LootTooltip="Cette amélioration confère des charges au Protocole de Scan."
+
+[GrimyShieldProtocol_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Blindage"
+FriendlyNamePlural="Protocoles de Blindage"
+BriefSummary="Le Protocole d'Assistance confère aussi 3 points de bouclier pour 3 tours."
+TinySummary="Le Protocole d'Assistance confère des points de bouclier"
+LootTooltip="Cette améliroation permet à nos Gremlin de conférer du blindage à nos alliés."
+
+[GrimyShieldProtocol_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Blindage Avancé"
+FriendlyNamePlural="Protocoles de Blindage Avancés"
+BriefSummary="Le Protocole d'Assistance confère aussi 4 points de bouclier pour 3 tours."
+TinySummary="Le Protocole d'Assistance confère des points de bouclier"
+LootTooltip="Cette améliroation permet à nos Gremlin de conférer du blindage à nos alliés."
+
+[GrimyShieldProtocol_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Blindage Supérieur"
+FriendlyNamePlural="Protocoles de Blindage Supérieurs"
+BriefSummary="Le Protocole d'Assistance confère aussi 5 points de bouclier pour 3 tours."
+TinySummary="Le Protocole d'Assistance confère des points de bouclier"
+LootTooltip="Cette améliroation permet à nos Gremlin de conférer du blindage à nos alliés."
+
+[GrimyOverride_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Contournement"
+FriendlyNamePlural="Protocoles de Contournement"
+BriefSummary="Confère 1 charge de Protocole de contournement, qui rend une unité immune à la prochaine attaque."
+TinySummary="Confère des charges de Protocole de Contournement"
+LootTooltip="Cette amélioration permet à nos Gremlins de protéger nos alliés des attaques ennemies."
+
+[GrimyOverride_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Contournement Avancé"
+FriendlyNamePlural="Protocoles de Contournement Avancés"
+BriefSummary="Confère 2 charges de Protocole de contournement, qui rend une unité immune à la prochaine attaque."
+TinySummary="Confère des charges de Protocole de Contournement"
+LootTooltip="Cette amélioration permet à nos Gremlins de protéger nos alliés des attaques ennemies."
+
+[GrimyOverride_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Contournement Supérieur"
+FriendlyNamePlural="Protocoles de Contournement Supérieurs"
+BriefSummary="Confère 3 charges de Protocole de contournement, qui rend une unité immune à la prochaine attaque."
+TinySummary="Confère des charges de Protocole de Contournement"
+LootTooltip="Cette amélioration permet à nos Gremlins de protéger nos alliés des attaques ennemies."
+
+[GrimyDistortion_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Distorsion"
+FriendlyNamePlural="Protocoles de Distorsion"
+BriefSummary="Confère 1 charge de Protocole de Distorsion, qui panique l'ennemi ciblé pour 1 tour."
+TinySummary="Confère des charges de Protocole de Distorsion"
+LootTooltip="Cette amélioration permet à nos Gremlins de faire paniquer les ennemis."
+
+[GrimyDistortion_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Distorsion Avancé"
+FriendlyNamePlural="Protocoles de Distorsion Avancés"
+BriefSummary="Confère 2 charges de Protocole de Distorsion, qui panique l'ennemi ciblé pour 1 tour."
+TinySummary="Confère des charges de Protocole de Distorsion"
+LootTooltip="Cette amélioration permet à nos Gremlins de faire paniquer les ennemis."
+
+[GrimyDistortion_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Distorsion Supérieur"
+FriendlyNamePlural="Protocoles de Distorsion Supérieurs"
+BriefSummary="Confère 2 charges de Protocole de Distorsion, qui panique l'ennemi ciblé pour 1 tour."
+TinySummary="Confère des charges de Protocole de Distorsion"
+LootTooltip="Cette amélioration permet à nos Gremlins de faire paniquer les ennemis."
+
+[GrimyTargetingProtocol_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée"
+FriendlyNamePlural="Protocoles de Visée"
+BriefSummary="Le Protocole d'Assistance confère aussi +5% de visée et de chances de critiques pour 1 tour."
+TinySummary="Le Protocole d'Assistance confère une amélioration de visée et de chances de critiques"
+LootTooltip="Cette amélioration permet à nos Gremlins d'assister la visée de nos unités alliées."
+
+[GrimyTargetingProtocol_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée Avancé"
+FriendlyNamePlural="Protocoles de Visée Avancés"
+BriefSummary="Le Protocole d'Assistance confère aussi +10% de visée et de chances de critiques pour 1 tour."
+TinySummary="Le Protocole d'Assistance confère une amélioration de visée et de chances de critiques"
+LootTooltip="Cette amélioration permet à nos Gremlins d'assister la visée de nos unités alliées."
+
+[GrimyTargetingProtocol_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée Supérieur"
+FriendlyNamePlural="Protocoles de Visée Supérieurs"
+BriefSummary="Le Protocole d'Assistance confère aussi +15% de visée et de chances de critiques pour 1 tour."
+TinySummary="Le Protocole d'Assistance confère une amélioration de visée et de chances de critiques"
+LootTooltip="Cette amélioration permet à nos Gremlins d'assister la visée de nos unités alliées."
+
+[GrimyMascot_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mascotte"
+FriendlyNamePlural="Protocoles Mascotte"
+BriefSummary="Confère 1 charge de Protocole Mascotte, qui donne 1 point d'action supplémentaire à un allié."
+TinySummary="Confère des charges de Protocole Mascotte"
+LootTooltip="Cette amélioration permet à nos Gremlins d'améliorer la versatilité de nos unités."
+
+[GrimyMascot_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mascotte Avancé"
+FriendlyNamePlural="Protocoles Mascotte Avancés"
+BriefSummary="Confère 2 charges de Protocole Mascotte, qui donne 1 point d'action supplémentaire à un allié."
+TinySummary="Confère des charges de Protocole Mascotte"
+LootTooltip="Cette amélioration permet à nos Gremlins d'améliorer la versatilité de nos unités."
+
+[GrimyMascot_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mascotte Supérieur"
+FriendlyNamePlural="Protocoles Mascotte Supérieurs"
+BriefSummary="Confère 3 charges de Protocole Mascotte, qui donne 1 point d'action supplémentaire à un allié."
+TinySummary="Confère des charges de Protocole Mascotte"
+LootTooltip="Cette amélioration permet à nos Gremlins d'améliorer la versatilité de nos unités."
+
+[GrimyMjolnir_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mjolnir"
+FriendlyNamePlural="Protocoles Mjolnir"
+BriefSummary="Confère 1 charge supplémentaire de Décharge. Requiert la capacité Décharge."
+TinySummary="Confère des charges supplémentaires à la capacité Décharge"
+LootTooltip="Cette amélioration permet à nos Gremlins de conférer plus d'utilisations de Décharge à nos Colonels Spécialistes."
+
+[GrimyMjolnir_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mjolnir Avancé"
+FriendlyNamePlural="Protocoles Mjolnir Avancés"
+BriefSummary="Confère 2 charges supplémentaires de Décharge. Requiert la capacité Décharge."
+TinySummary="Confère des charges supplémentaires à la capacité Décharge"
+LootTooltip="Cette amélioration permet à nos Gremlins de conférer plus d'utilisations de Décharge à nos Colonels Spécialistes."
+
+[GrimyMjolnir_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mjolnir Supérieur"
+FriendlyNamePlural="Protocoles Mjolnir Supérieurs"
+BriefSummary="Confère 3 charges supplémentaires de Décharge. Requiert la capacité Décharge."
+TinySummary="Confère des charges supplémentaires à la capacité Décharge"
+LootTooltip="Cette amélioration permet à nos Gremlins de conférer plus d'utilisations de Décharge à nos Colonels Spécialistes."
+
+[GrimyAegis_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Egide"
+FriendlyNamePlural="Protocoles d'Egide"
+BriefSummary="Confère 1 charge de Protocole d'Egide, qui donne 6 points de bouclier pour 4 tours aux alliés proches."
+TinySummary="Confère des charges de Protocole d'Egide"
+LootTooltip="Cette amélioration permet à nos Gremlins de fournir du blindage à plusieurs alliés simultanément."
+
+[GrimyAegis_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Egide Avancé"
+FriendlyNamePlural="Protocoles d'Egide Avancés"
+BriefSummary="Confère 2 charges de Protocole d'Egide, qui donne 6 points de bouclier pour 4 tours aux alliés proches."
+TinySummary="Confère des charges de Protocole d'Egide"
+LootTooltip="Cette amélioration permet à nos Gremlins de fournir du blindage à plusieurs alliés simultanément."
+
+[GrimyAegis_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Egide Supérieur"
+FriendlyNamePlural="Protocoles d'Egide Supérieurs"
+BriefSummary="Confère 3 charges de Protocole d'Egide, qui donne 6 points de bouclier pour 4 tours aux alliés proches."
+TinySummary="Confère des charges de Protocole d'Egide"
+LootTooltip="Cette amélioration permet à nos Gremlins de fournir du blindage à plusieurs alliés simultanément."
+
+[GrimyBastion_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Bastion"
+FriendlyNamePlural="Protocoles Bastion"
+BriefSummary="Soigne les alliés dans un rayon de 5 cases d'1 point de vie par tour."
+TinySummary="Soigne les alliés proches"
+LootTooltip="Cette amélioration permet à nos Gremlins de soigner nos alliés proches."
+
+[GrimyBastion_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Bastion Avancé"
+FriendlyNamePlural="Protocoles Bastion Avancés"
+BriefSummary="Soigne les alliés dans un rayon de 5 cases de 2 points de vie par tour."
+TinySummary="Soigne les alliés proches"
+LootTooltip="Cette amélioration permet à nos Gremlins de soigner nos alliés proches."
+
+[GrimyBastion_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Bastion Supérieur"
+FriendlyNamePlural="Protocoles Bastion Supérieurs"
+BriefSummary="Soigne les alliés dans un rayon de 5 cases de 3 points de vie par tour."
+TinySummary="Soigne les alliés proches"
+LootTooltip="Cette amélioration permet à nos Gremlins de soigner nos alliés proches."
+
+[GrimySquadTargeting_BscGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée d'Escouade"
+FriendlyNamePlural="Protocoles de Visée d'Escouade"
+BriefSummary="Confère 1 charge de Protocole de Visée d'Escouade, qui donne +15% de visée et de chances de critiques aux alliés proches pour 1 tour."
+TinySummary="Charges de Protocole de Visée d'Escouade"
+LootTooltip="Cette amélioration permet à nos Gremlins d'assister plusieurs unités alliées dans la visée de nos ennemis."
+
+[GrimySquadTargeting_AdvGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée d'Escouade Avancé"
+FriendlyNamePlural="Protocoles de Visée d'Escouade Avancés"
+BriefSummary="Confère 1 charge de Protocole de Visée d'Escouade, qui donne +15% de visée et de chances de critiques aux alliés proches pour 1 tour."
+TinySummary="Charges de Protocole de Visée d'Escouade"
+LootTooltip="Cette amélioration permet à nos Gremlins d'assister plusieurs unités alliées dans la visée de nos ennemis."
+
+[GrimySquadTargeting_SupGremlin X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée d'Escouade Supérieur"
+FriendlyNamePlural="Protocoles de Visée d'Escouade Supérieurs"
+BriefSummary="Confère 1 charge de Protocole de Visée d'Escouade, qui donne +15% de visée et de chances de critiques aux alliés proches pour 1 tour."
+TinySummary="Charges de Protocole de Visée d'Escouade"
+LootTooltip="Cette amélioration permet à nos Gremlins d'assister plusieurs unités alliées dans la visée de nos ennemis."
+
+[GrimyHEAT_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Munition Brûlante"
+FriendlyNamePlural="Munitions Brûlantes"
+BriefSummary="Perce 1 d'armure."
+TinySummary="Perce l'armure"
+LootTooltip="Cette amélioration d'arme permet à nos grenades de traverser les armures."
+
+[GrimyHEAT_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Munition Brûlante Avancée"
+FriendlyNamePlural="Munitions Brûlantes Avancées"
+BriefSummary="Perce 2 d'armure."
+TinySummary="Perce l'armure"
+LootTooltip="Cette amélioration d'arme permet à nos grenades de traverser les armures."
+
+[GrimyHEAT_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Munition Brûlante Supérieure"
+FriendlyNamePlural="Munitions Brûlantes Supérieures"
+BriefSummary="Perce 3 d'armure."
+TinySummary="Perce l'armure"
+LootTooltip="Cette amélioration d'arme permet à nos grenades de traverser les armures."
+
+[GrimyCorrosive_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Eclat Corrosif"
+FriendlyNamePlural="Eclats Corrosifs"
+BriefSummary="Détruit 1 d'armure."
+TinySummary="Destruction d'armure"
+LootTooltip="Cette amélioration augmente la capacité de nos grenades à détruire l'armure."
+
+[GrimyCorrosive_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Eclat Corrosif Avancé"
+FriendlyNamePlural="Eclats Corrosifs Avancés"
+BriefSummary="Détruit 2 d'armure."
+TinySummary="Destruction d'armure"
+LootTooltip="Cette amélioration augmente la capacité de nos grenades à détruire l'armure."
+
+[GrimyCorrosive_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Eclat Corrosif Supérieur"
+FriendlyNamePlural="Eclats Corrosifs Supérieurs"
+BriefSummary="Détruit 3 d'armure."
+TinySummary="Destruction d'armure"
+LootTooltip="Cette amélioration augmente la capacité de nos grenades à détruire l'armure."
+
+[GrimyHairTrigger_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Détente de Lance-Grenades"
+FriendlyNamePlural="Détentes de Lance-Grenades"
+BriefSummary="5% de chances que le tir au Lance-Grenades ne coûte aucune action."
+TinySummary="Chances d'action bonus"
+LootTooltip="Cette amélioration d'arme confère une chance que le tir au Lance-Grenades ne coûte aucune action."
+
+[GrimyHairTrigger_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Détente de Lance-Grenades Avancée"
+FriendlyNamePlural="Détentes de Lance-Grenades Avancées"
+BriefSummary="10% de chances que le tir au Lance-Grenades ne coûte aucune action."
+TinySummary="Chances d'action bonus"
+LootTooltip="Cette amélioration d'arme confère une chance que le tir au Lance-Grenades ne coûte aucune action.."
+
+[GrimyHairTrigger_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Détente de Lance-Grenades Supérieure"
+FriendlyNamePlural="Détentes de Lance-Grenades Supérieures"
+BriefSummary="15% de chances que le tir au Lance-Grenades ne coûte aucune action."
+TinySummary="Chances d'action bonus"
+LootTooltip="Cette amélioration d'arme confère une chance que le tir au Lance-Grenades ne coûte aucune action.."
+
+[GrimyLiquidExplosive_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Explosif Liquide"
+FriendlyNamePlural="Explosifs Liquides"
+BriefSummary="+10% de chances de critiques et +2 dégâts critique pour les grenades."
+TinySummary="Augmente les chances de critiques et leurs dégâts pour les grenades"
+LootTooltip="Cette amélioration d'arme augmente les chances de critiques et leurs dégâts pour les grenades."
+
+[GrimyLiquidExplosive_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Explosif Liquide Avancé"
+FriendlyNamePlural="Explosifs Liquides Avancés"
+BriefSummary="+20% de chances de critiques et +2 dégâts critique pour les grenades."
+TinySummary="Augmente les chances de critiques et leurs dégâts pour les grenades"
+LootTooltip="Cette amélioration d'arme augmente les chances de critiques et leurs dégâts pour les grenades."
+
+[GrimyLiquidExplosive_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Explosif Liquide Supérieur"
+FriendlyNamePlural="Explosifs Liquides Supérieurs"
+BriefSummary="+30% de chances de critiques et +2 dégâts critique pour les grenades."
+TinySummary="Augmente les chances de critiques et leurs dégâts pour les grenades"
+LootTooltip="Cette amélioration d'arme augmente les chances de critiques et leurs dégâts pour les grenades."
+
+[GrimyDangerClose_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Explosif Dangereusement Proche"
+FriendlyNamePlural="Explosifs Dangereusement Proches"
+BriefSummary="Augmente le rayon des grenades de 2, leurs dégâts de 1, et réduit la portée du Lance-Grenades de 60%."
+TinySummary="Augmente le rayon et les dégâts de l'explosion, mais réduit la portée du Lance-Grenades"
+LootTooltip="Cette amélioration d'arme permet de lancer de plus gros explosifs, mais à de plus courtes distances."
+
+[GrimyDangerClose_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Explosif Dangereusement Proche Avancé"
+FriendlyNamePlural="Explosifs Dangereusement Proches Avancés"
+BriefSummary="Augmente le rayon des grenades de 2, leurs dégâts de 1, et réduit la portée du Lance-Grenades de 50%."
+TinySummary="Augmente le rayon et les dégâts de l'explosion, mais réduit la portée du Lance-Grenades"
+LootTooltip="Cette amélioration d'arme permet de lancer de plus gros explosifs, mais à de plus courtes distances."
+
+[GrimyDangerClose_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Explosif Dangereusement Proche Supérieur"
+FriendlyNamePlural="Explosifs Dangereusement Proches Supérieurs"
+BriefSummary="Augmente le rayon des grenades de 2, leurs dégâts de 1, et réduit la portée du Lance-Grenades de 40%."
+TinySummary="Augmente le rayon et les dégâts de l'explosion, mais réduit la portée du Lance-Grenades"
+LootTooltip="Cette amélioration d'arme permet de lancer de plus gros explosifs, mais à de plus courtes distances."
+
+[GrimyLongshotPropellant_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Propulseur de Tir Lointain"
+FriendlyNamePlural="Propulseurs de Tir Lointain"
+BriefSummary="Augmente la portée du Lance-Grenades de 20%."
+TinySummary="Augmente la portée du Lance-Grenades"
+LootTooltip="Cette amélioration d'arme permet à son porteur d'envoyer des grenades plus loin."
+
+[GrimyLongshotPropellant_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Propulseur de Tir Lointain Avancé"
+FriendlyNamePlural="Propulseurs de Tir Lointain Avancés"
+BriefSummary="Augmente la portée du Lance-Grenades de 25%."
+TinySummary="Augmente la portée du Lance-Grenades"
+LootTooltip="Cette amélioration d'arme permet à son porteur d'envoyer des grenades plus loin."
+
+[GrimyLongshotPropellant_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Propulseur de Tir Lointain Supérieur"
+FriendlyNamePlural="Propulseurs de Tir Lointain Supérieurs"
+BriefSummary="Augmente la portée du Lance-Grenades de 30%."
+TinySummary="Augmente la portée du Lance-Grenades"
+LootTooltip="Cette amélioration d'arme permet à son porteur d'envoyer des grenades plus loin."
+
+[GrimyAirBurst_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Fusion de Comburant"
+FriendlyNamePlural="Fusions de Comburant"
+BriefSummary="Augmente le rayon d'explosion de 0.5."
+TinySummary="Augmente le rayon d'explosion"
+LootTooltip="Cette amélioration d'arme augmente le rayon d'explosion."
+
+[GrimyAirBurst_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Fusion de Comburant Avancée"
+FriendlyNamePlural="Fusions de Comburant Avancées"
+BriefSummary="Augmente le rayon d'explosion de 0.75."
+TinySummary="Augmente le rayon d'explosion"
+LootTooltip="Cette amélioration d'arme augmente le rayon d'explosion."
+
+[GrimyAirBurst_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Fusion de Comburant Supérieure"
+FriendlyNamePlural="Fusions de Comburant Supérieures"
+BriefSummary="Augmente le rayon d'explosion de 1.0."
+TinySummary="Augmente le rayon d'explosion"
+LootTooltip="Cette amélioration d'arme augmente le rayon d'explosion."
+
+[GrimyFragSatchel_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac de Grenades à Fragmentation"
+FriendlyNamePlural="Sacs de Grenades à Fragmentation"
+BriefSummary="Augmente la capacité d'emport de grenades à fragmentation de 1 par emplacement (2 grenades par emplacement)."
+TinySummary="Augmente la capacité d'emport de grenades à fragmentation"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter plus de grenades à fragmentation."
+
+[GrimyFragSatchel_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac de Grenades à Fragmentation Avancé"
+FriendlyNamePlural="Sacs de Grenades à Fragmentation Avancés"
+BriefSummary="Augmente la capacité d'emport de grenades à fragmentation de 2 par emplacement (3 grenades par emplacement)."
+TinySummary="Augmente la capacité d'emport de grenades à fragmentation"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter plus de grenades à fragmentation."
+
+[GrimyFragSatchel_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac de Grenades à Fragmentation Supérieur"
+FriendlyNamePlural="Sacs de Grenades à Fragmentation Supérieurs"
+BriefSummary="Augmente la capacité d'emport de grenades à fragmentation de 3 par emplacement (4 grenades par emplacement)."
+TinySummary="Augmente la capacité d'emport de grenades à fragmentation"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter plus de grenades à fragmentation."
+
+[GrimySmokeSatchel_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac de Grenades Fumigènes"
+FriendlyNamePlural="Sacs de Grenades Fumigènes"
+BriefSummary="Augmente la capacité d'emport de grenades fumigènes de 1 par emplacement (2 grenades par emplacement)."
+TinySummary="Augmente la capacité d'emport de grenades fumigènes"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter plus de grenades fumigènes."
+
+[GrimySmokeSatchel_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac de Grenades Fumigènes Avancé"
+FriendlyNamePlural="Sacs de Grenades Fumigènes Avancés"
+BriefSummary="Augmente la capacité d'emport de grenades fumigènes de 2 par emplacement (3 grenades par emplacement)."
+TinySummary="Augmente la capacité d'emport de grenades fumigènes"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter plus de grenades fumigènes."
+
+[GrimySmokeSatchel_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac de Grenades Fumigènes Supérieur
+FriendlyNamePlural="Sacs de Grenades Fumigènes Supérieurs"
+BriefSummary="Augmente la capacité d'emport de grenades fumigènes de 3 par emplacement (4 grenades par emplacement)."
+TinySummary="Augmente la capacité d'emport de grenades fumigènes"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter plus de grenades fumigènes."
+
+[GrimyHydraBarrel_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Barrillet à Tête d'Hydre"
+FriendlyNamePlural="Barrillets à Tête d'Hydre"
+BriefSummary="Réduit le rayon des explosions de 2.5, augmente la capacité d'emport de grenades de 8 par emplacement."
+TinySummary="Augmente la capacité d'emport de grenades, réduit le rayon d'explosion"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter un grand nombre de petites grenades."
+
+[GrimyHydraBarrel_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Barrillet à Tête d'Hydre Avancé"
+FriendlyNamePlural="Barrillets à Tête d'Hydre Avancés"
+BriefSummary="Réduit le rayon des explosions de 2.5, augmente la capacité d'emport de grenades de 9 par emplacement."
+TinySummary="Augmente la capacité d'emport de grenades, réduit le rayon d'explosion"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter un grand nombre de petites grenades."
+
+[GrimyHydraBarrel_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Barrillet à Tête d'Hydre Supérieur"
+FriendlyNamePlural="Barrillets à Tête d'Hydre Supérieurs"
+BriefSummary="Réduit le rayon des explosions de 2.5, augmente la capacité d'emport de grenades de 10 par emplacement."
+TinySummary="Augmente la capacité d'emport de grenades, réduit le rayon d'explosion"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter un grand nombre de petites grenades."
+
+[GrimyPlagueSatchel_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Bombes Toxiques"
+FriendlyNamePlural="Sacs à Bombes Toxiques"
+BriefSummary="Augmente la capacité d'emport de Bombes Toxiques de 1 par emplacement."
+TinySummary="Augmente la capacité d'emport de Bombes Toxiques"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter plus de Bombes Toxiques."
+
+[GrimyPlagueSatchel_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Bombes Toxiques Avancé"
+FriendlyNamePlural="Sacs à Bombes Toxiques Avancés"
+BriefSummary="Augmente la capacité d'emport de Bombes Toxiques de 2 par emplacement."
+TinySummary="Augmente la capacité d'emport de Bombes Toxiques"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter plus de Bombes Toxiques."
+
+[GrimyPlagueSatchel_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Bombes Toxiques Supérieur"
+FriendlyNamePlural="Sacs à Bombes Toxiques Supérieurs"
+BriefSummary="Augmente la capacité d'emport de Bombes Toxiques de 3 par emplacement."
+TinySummary="Augmente la capacité d'emport de Bombes Toxiques"
+LootTooltip="Cette amélioration d'arme permet à son utilisateur d'emporter plus de Bombes Toxiques."
+
+[GrimyRiotSatchel_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Grenades Flash"
+FriendlyNamePlural="Sacs à Grenades Flash"
+BriefSummary="Augmente la capacité d'emport de grenades flash de 1 par emplacement."
+TinySummary="Augmente la capacité d'emport de grenades flash"
+LootTooltip="Cette améioration d'arme permet à son utlisateur d'emporter plus de grenades flash."
+
+[GrimyRiotSatchel_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Grenades Flash Avancé"
+FriendlyNamePlural="Sacs à Grenades Flash Avancés"
+BriefSummary="Augmente la capacité d'emport de grenades flash de 2 par emplacement."
+TinySummary="Augmente la capacité d'emport de grenades flash"
+LootTooltip="Cette améioration d'arme permet à son utlisateur d'emporter plus de grenades flash."
+
+[GrimyRiotSatchel_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Grenades Flash Supérieur"
+FriendlyNamePlural="Sacs à Grenades Flash Supérieurs"
+BriefSummary="Augmente la capacité d'emport de grenades flash de 3 par emplacement."
+TinySummary="Augmente la capacité d'emport de grenades flash"
+LootTooltip="Cette améioration d'arme permet à son utlisateur d'emporter plus de grenades flash."
+
+[GrimySapperSatchel_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac du Sapeur"
+FriendlyNamePlural="Sacs du Sapeur"
+BriefSummary="Augmente la capacité d'emport de toutes les grenades de 1 dans l'emplacement réservé aux grenades."
+TinySummary="Augmente la capacité d'emport de grenades"
+LootTooltip="Cette amélioration d'arme permet à son porteur de porter plus de grenades."
+
+[GrimySapperSatchel_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac du Sapeur Avancé"
+FriendlyNamePlural="Sacs du Sapeur Avancés"
+BriefSummary="Augmente la capacité d'emport de toutes les grenades de 2 dans l'emplacement réservé aux grenades."
+TinySummary="Augmente la capacité d'emport de grenades"
+LootTooltip="Cette amélioration d'arme permet à son porteur de porter plus de grenades."
+
+[GrimySapperSatchel_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac du Sapeur Supérieur"
+FriendlyNamePlural="Sacs du Sapeur Supérieurs"
+BriefSummary="Augmente la capacité d'emport de toutes les grenades de 3 dans l'emplacement réservé aux grenades."
+TinySummary="Augmente la capacité d'emport de grenades"
+LootTooltip="Cette amélioration d'arme permet à son porteur de porter plus de grenades."
+
+[GrimyPyroSatchel_BscGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Bombes Incendiaires"
+FriendlyNamePlural="Sacs à Bombes Incendiaires"
+BriefSummary="Augmente la capacité d'emporte des Bombes Incendiaires de 1 par emplacement."
+TinySummary="Augmente la capacité d'emporte des Bombes Incendiaires"
+LootTooltip="Cette amélioration d'arme permet à son porteur d'emporter plus de Bombes Incendiaires."
+
+[GrimyPyroSatchel_AdvGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Bombes Incendiaires Avancé"
+FriendlyNamePlural="Sacs à Bombes Incendiaires Avancés"
+BriefSummary="Augmente la capacité d'emporte des Bombes Incendiaires de 2 par emplacement."
+TinySummary="Augmente la capacité d'emporte des Bombes Incendiaires"
+LootTooltip="Cette amélioration d'arme permet à son porteur d'emporter plus de Bombes Incendiaires."
+
+[GrimyPyroSatchel_SupGrenadeLauncher X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Bombes Incendiaires Supérieur"
+FriendlyNamePlural="Sacs à Bombes Incendiaires Supérieurs"
+BriefSummary="Augmente la capacité d'emporte des Bombes Incendiaires de 3 par emplacement."
+TinySummary="Augmente la capacité d'emporte des Bombes Incendiaires"
+LootTooltip="Cette amélioration d'arme permet à son porteur d'emporter plus de Bombes Incendiaires."
+
+[GrimyChargeFeedbackBsc X2AbilityTemplate]
+LocFriendlyName="Retour"
+LocHelpText="Fait des dégâts psioniques avec un bonus de dégâts proportionnel aux capacités psioniques de la cible"
+
+[GrimyChargeFeedbackAdv X2AbilityTemplate]
+LocFriendlyName="Retour Avancé"
+LocHelpText="Fait des dégâts psioniques avec un bonus de dégâts proportionnel aux capacités psioniques de la cible"
+
+[GrimyChargeFeedbackSup X2AbilityTemplate]
+LocFriendlyName="Retour Supérieur"
+LocHelpText="Fait des dégâts psioniques avec un bonus de dégâts proportionnel aux capacités psioniques de la cible"
+
+[GrimyChargeTeleportBsc X2AbilityTemplate]
+LocFriendlyName="Téléportation"
+LocHelpText="Téléportez-vous à un nouvel endroit. Passe outre les Vigilances et Tirs de Réaction."
+
+[GrimyChargeTeleportAdv X2AbilityTemplate]
+LocFriendlyName="Téléportation Avancée"
+LocHelpText="Téléportez-vous à un nouvel endroit. Passe outre les Vigilances et Tirs de Réaction."
+
+[GrimyChargeTeleportSup X2AbilityTemplate]
+LocFriendlyName="Téléportation Supérieure"
+LocHelpText="Téléportez-vous à un nouvel endroit. Passe outre les Vigilances et Tirs de Réaction."
+
+[GrimyChargeReanimationOne X2AbilityTemplate]
+LocFriendlyName="Résurrection"
+LocHelpText="Ressucite un soldat, civil, ou soldat d'ADVENT mort, en Zombie Psionique."
+
+[GrimyChargeReanimationTwo X2AbilityTemplate]
+LocFriendlyName="Résurrection Avancée"
+LocHelpText="Ressucite un soldat, civil, ou soldat d'ADVENT mort, en Zombie Psionique."
+
+[GrimyChargeReanimationThree X2AbilityTemplate]
+LocFriendlyName="Résurrection Supérieure"
+LocHelpText="Ressucite un soldat, civil, ou soldat d'ADVENT mort, en Zombie Psionique."
+
+[GrimySolaceOne X2AbilityTemplate]
+LocFriendlyName="Réconfort"
+LocHelpText="Supprime les altérations mentales négatives provoquées par les ennemis dans un rayon de 5 cases."
+
+[GrimySolaceTwo X2AbilityTemplate]
+LocFriendlyName="Réconfort Avancé"
+LocHelpText="Supprime les altérations mentales négatives provoquées par les ennemis dans un rayon de 6 cases."
+
+[GrimySolaceThree X2AbilityTemplate]
+LocFriendlyName="Réconfort Supérieur"
+LocHelpText="Supprime les altérations mentales négatives provoquées par les ennemis dans un rayon de 7 cases."
+
+[GrimyChargeBarrierBsc X2AbilityTemplate]
+LocFriendlyName="Barrière"
+LocHelpText="Confère 5 points de bouclier à un allié"
+
+[GrimyChargeBarrierAdv X2AbilityTemplate]
+LocFriendlyName="Barrière Avancée"
+LocHelpText="Confère 6 points de bouclier à un allié"
+
+[GrimyChargeBarrierSup X2AbilityTemplate]
+LocFriendlyName="Barrière Supérieure"
+LocHelpText="Confère 7 points de bouclier à un allié"
+
+[GrimyProjector_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Projecteur Psionique"
+FriendlyNamePlural="Projecteurs Psioniques"
+BriefSummary="+5 attaque Psi."
+TinySummary="Augmente l'attaque Psi"
+LootToolTip="Cette amélioration d'arme augmente les capacités psioniques du soldat."
+
+[GrimyProjector_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Projecteur Psionique Avancé"
+FriendlyNamePlural="Projecteurs Psioniques Avancés"
+BriefSummary="+10 attaque Psi."
+TinySummary="Augmente l'attaque Psi"
+LootToolTip="Cette amélioration d'arme augmente les capacités psioniques du soldat."
+
+[GrimyProjector_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Projecteur Psionique Supérieur"
+FriendlyNamePlural="Projecteurs Psioniques Supérieurs"
+BriefSummary="+15 attaque Psi."
+TinySummary="Augmente l'attaque Psi"
+LootToolTip="Cette amélioration d'arme augmente les capacités psioniques du soldat."
+
+[GrimyHeavyElerium_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Elérium Lourd"
+FriendlyNamePlural="Elérium Lourds"
+BriefSummary="+1 dégâts aux capacités Psioniques, -5% de visée."
+TinySummary="Augmentation des dégâts Psioniques, réduction de la visée"
+LootToolTip="Cette amélioration d'arme augmente les capacités de nos agents Psi, mais réduit leur visée."
+
+[GrimyHeavyElerium_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Elérium Lourd Avancé"
+FriendlyNamePlural="Elérium Lourds Avancés"
+BriefSummary="+2 dégâts aux capacités Psioniques, -10% de visée."
+TinySummary="Augmentation des dégâts Psioniques, réduction de la visée"
+LootToolTip="Cette amélioration d'arme augmente les capacités de nos agents Psi, mais réduit leur visée."
+
+[GrimyHeavyElerium_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Elérium Lourd Supérieur"
+FriendlyNamePlural="Elérium Lourds Supérieurs"
+BriefSummary="+3 dégâts aux capacités Psioniques, -15% de visée."
+TinySummary="Augmentation des dégâts Psioniques, réduction de la visée"
+LootToolTip="Cette amélioration d'arme augmente les capacités de nos agents Psi, mais réduit leur visée."
+
+[GrimyInhibitor_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Inhibiteur Psionique"
+FriendlyNamePlural="Inhibiteurs Psioniques"
+BriefSummary="+15 Volonté."
+TinySummary="Augmente la Volonté"
+LootToolTip="Cette amélioration d'arme augmente la défense Psi de son porteur."
+
+[GrimyInhibitor_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Inhibiteur Psionique Avancé"
+FriendlyNamePlural="Inhibiteurs Psioniques Avancés"
+BriefSummary="+30 Volonté."
+TinySummary="Augmente la Volonté"
+LootToolTip="Cette amélioration d'arme augmente la défense Psi de son porteur."
+
+[GrimyInhibitor_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Inhibiteur Psionique Supérieur"
+FriendlyNamePlural="Inhibiteurs Psioniques Supérieurs"
+BriefSummary="+45 Volonté."
+TinySummary="Augmente la Volonté"
+LootToolTip="Cette amélioration d'arme augmente la défense Psi de son porteur."
+
+[GrimyAura_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Amplificateur d'Aura"
+FriendlyNamePlural="Amplificateurs d'Aura"
+BriefSummary="Augmente le rayon de Réconfort d'1 case."
+TinySummary="Augmente le rayon de Réconfort"
+LootToolTip="Cette amélioration d'arme augmente le rayon de la capacité Réconfort de nos agents Psi."
+
+[GrimyAura_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Amplificateur d'Aura Avancé"
+FriendlyNamePlural="Amplificateurs d'Aura Avancés"
+BriefSummary="Augmente le rayon de Réconfort de 2 cases."
+TinySummary="Augmente le rayon de Réconfort"
+LootToolTip="Cette amélioration d'arme augmente le rayon de la capacité Réconfort de nos agents Psi."
+
+[GrimyAura_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Amplificateur d'Aura Supérieur"
+FriendlyNamePlural="Amplificateurs d'Aura Supérieurs"
+BriefSummary="Augmente le rayon de Réconfort dé 3 cases."
+TinySummary="Augmente le rayon de Réconfort"
+LootToolTip="Cette amélioration d'arme augmente le rayon de la capacité Réconfort de nos agents Psi."
+
+[GrimyReanimation_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Résurrection"
+FriendlyNamePlural="Modules de Résurrection"
+BriefSummary="Confère 1 utilisation de Résurrection."
+TinySummary="Capacité de Résurrection Psionique"
+LootToolTip="Cette amélioration d'arme permet à son porteur de ranimer les cadavres."
+
+[GrimyReanimation_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Résurrection Avancé"
+FriendlyNamePlural="Modules de Résurrection Avancés"
+BriefSummary="Confère 2 utilisations de Résurrection."
+TinySummary="Capacité de Résurrection Psionique"
+LootToolTip="Cette amélioration d'arme permet à son porteur de ranimer les cadavres."
+
+[GrimyReanimation_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Résurrection Supérieur"
+FriendlyNamePlural="Modules de Résurrection Supérieurs"
+BriefSummary="Confère 3 utilisations de Résurrection."
+TinySummary="Capacité de Résurrection Psionique"
+LootToolTip="Cette amélioration d'arme permet à son porteur de ranimer les cadavres."
+
+[GrimyMindblast_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module d'Attaque Mentale"
+FriendlyNamePlural="Modules d'Attaque Mentale"
+BriefSummary="Améliore Feu de l'Âme pour une version plus puissante avec 3 charges."
+TinySummary="Améliore Feu de l'Âme"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Feu de l'Âme d'un agent Psi."
+
+[GrimyMindblast_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module d'Attaque Mentale Avancé"
+FriendlyNamePlural="Modules d'Attaque Mentale Avancés"
+BriefSummary="Améliore Feu de l'Âme pour une version plus puissante avec 4 charges."
+TinySummary="Améliore Feu de l'Âme"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Feu de l'Âme d'un agent Psi."
+
+[GrimyMindblast_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module d'Attaque Mentale Supérieur"
+FriendlyNamePlural="Modules d'Attaque Mentale Supérieurs"
+BriefSummary="Améliore Feu de l'Âme pour une version plus puissante avec 5 charges."
+TinySummary="Améliore Feu de l'Âme"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Feu de l'Âme d'un agent Psi."
+
+[GrimyDistortion_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Distorsion"
+FriendlyNamePlural="Modules de Distorsion"
+BriefSummary="Améliore Aliénation pour une version plus puissante avec 2 charges."
+TinySummary="Améliore Aliénation"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Aliénation d'un agent Psi."
+
+[GrimyDistortion_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Distorsion Avancé"
+FriendlyNamePlural="Modules de Distorsion Avancés"
+BriefSummary="Améliore Aliénation pour une version plus puissante avec 3 charges."
+TinySummary="Améliore Aliénation"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Aliénation d'un agent Psi."
+
+[GrimyDistortion_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Distorsion Supérieur"
+FriendlyNamePlural="Modules de Distorsion Supérieurs"
+BriefSummary="Améliore Aliénation pour une version plus puissante avec 4 charges."
+TinySummary="Améliore Aliénation"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Aliénation d'un agent Psi."
+
+[GrimyBarrier_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module Barrière"
+FriendlyNamePlural="Modules Barrière"
+BriefSummary="Confère 3 utilisations de Barrière, qui donne 5 points de bouclier à un allié pour 3 tours."
+TinySummary="Confère la capacité Barrière"
+LootToolTip="Cette amélioration d'arme confère la capacité Barrière à son porteur."
+
+[GrimyBarrier_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module Barrière Avancé"
+FriendlyNamePlural="Modules Barrière Avancés"
+BriefSummary="Confère 3 utilisations de Barrière Avancée, qui donne 6 points de bouclier à un allié pour 3 tours."
+TinySummary="Confère la capacité Barrière"
+LootToolTip="Cette amélioration d'arme confère la capacité Barrière à son porteur."
+
+[GrimyBarrier_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module Barrière Supérieur"
+FriendlyNamePlural="Modules Barrière Supérieurs"
+BriefSummary="Confère 3 utilisations de Barrière Supérieure, qui donne 7 points de bouclier à un allié pour 3 tours."
+TinySummary="Confère la capacité Barrière"
+LootToolTip="Cette amélioration d'arme confère la capacité Barrière à son porteur."
+
+[GrimyFeedback_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Retour"
+FriendlyNamePlural="Modules de Retour"
+BriefSummary="Confère 1 utilisation de la capacité Retour, qui effectue des dégâts Psi proportionnels à l'attaque Psi de la cible."
+TinySummary="Confère la capacité Retour"
+LootToolTip="Cette amélioration d'arme confère la capacité Retour à son porteur."
+
+[GrimyFeedback_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Retour Avancé"
+FriendlyNamePlural="Modules de Retour Avancés"
+BriefSummary="Confère 2 utilisations de la capacité Retour, qui effectue des dégâts Psi proportionnels à l'attaque Psi de la cible."
+TinySummary="Confère la capacité Retour"
+LootToolTip="Cette amélioration d'arme confère la capacité Retour à son porteur."
+
+[GrimyFeedback_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Retour Supérieur"
+FriendlyNamePlural="Modules de Retour Supérieurs"
+BriefSummary="Confère 3 utilisations de la capacité Retour, qui effectue des dégâts Psi proportionnels à l'attaque Psi de la cible."
+TinySummary="Confère la capacité Retour"
+LootToolTip="Cette amélioration d'arme confère la capacité Retour à son porteur."
+
+[GrimyNavigator_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Navigation"
+FriendlyNamePlural="Navigator Modules"
+BriefSummary="Confère 1 utilisation de la capacité Téléportation."
+TinySummary="Confère la capacité Téléportation"
+LootToolTip="Cette amélioration d'arme confère la capacité Téléportation à son porteur"
+
+[GrimyNavigator_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Navigation Avancé"
+FriendlyNamePlural="Advanced Navigator Modules"
+BriefSummary="Confère 2 utilisations de la capacité Téléportation."
+TinySummary="Confère la capacité Téléportation"
+LootToolTip="Cette amélioration d'arme confère la capacité Téléportation à son porteur"
+
+[GrimyNavigator_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Navigation Supérieur"
+FriendlyNamePlural="Superior Navigator Modules"
+BriefSummary="Confère 3 utilisations de la capacité Téléportation."
+TinySummary="Confère la capacité Téléportation"
+LootToolTip="Cette amélioration d'arme confère la capacité Téléportation à son porteur"
+
+[GrimySympathy_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Sympathie"
+FriendlyNamePlural="Modules de Sympathie"
+BriefSummary="Améliore Inspiration pour une version plus puissante avec 2 charges."
+TinySummary="Améliore Inspiration"
+LootToolTip="Cette amélioration d'arme permet à la capacité Inspiration d'un agent Psi d'octroyer plus de points actions."
+
+[GrimySympathy_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Sympathie Avancé"
+FriendlyNamePlural="Modules de Sympathie Avancés"
+BriefSummary="Améliore Inspiration pour une version plus puissante avec 3 charges."
+TinySummary="Améliore Inspiration"
+LootToolTip="Cette amélioration d'arme permet à la capacité Inspiration d'un agent Psi d'octroyer plus de points actions."
+
+[GrimySympathy_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Module de Sympathie Supérieur
+FriendlyNamePlural="Modules de Sympathie Supérieurs"
+BriefSummary="Améliore Inspiration pour une version plus puissante avec 4 charges."
+TinySummary="Améliore Inspiration"
+LootToolTip="Cette amélioration d'arme permet à la capacité Inspiration d'un agent Psi d'octroyer plus de points actions."
+
+[GrimyNeural_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Réseau Neuronal"
+FriendlyNamePlural="Réseaux Neuronaux"
+BriefSummary="Confère une seconde utilisation de Domination par mission."
+TinySummary="Améliore Domination"
+LootToolTip="Cette amélioration d'arme permet à un agent Psi de dominer un ennemi supplémentaire par mission."
+
+[GrimyNeural_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Réseau Neuronal Avancé"
+FriendlyNamePlural="Réseaux Neuronaux Avancés"
+BriefSummary="Confère une seconde utilisation de Domination par mission et réduit son temps de recharge de 1."
+TinySummary="Améliore Domination"
+LootToolTip="Cette amélioration d'arme permet à un agent Psi de dominer un ennemi supplémentaire par mission."
+
+[GrimyNeural_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Réseau Neuronal Supérieur"
+FriendlyNamePlural="Réseaux Neuronaux Supérieurs"
+BriefSummary="Confère une seconde utilisation de Domination par mission et réduit son temps de recharge de 2."
+TinySummary="Améliore Domination"
+LootToolTip="Cette amélioration d'arme permet à un agent Psi de dominer un ennemi supplémentaire par mission."
+
+[GrimyRealitySink_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Radiateur Psionique"
+FriendlyNamePlural="Radiateurs Psioniques"
+BriefSummary="Améliore Lance Neutralisante pour une version plus puissante avec 1 charge."
+TinySummary="Améliore Lance Neutralisante"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Lance Neutralisante d'un agent Psi."
+
+[GrimyRealitySink_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Radiateur Psionique Avancé"
+FriendlyNamePlural="Radiateurs Psioniques Avancés"
+BriefSummary="Améliore Lance Neutralisante pour une version plus puissante avec 2 charges."
+TinySummary="Améliore Lance Neutralisante"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Lance Neutralisante d'un agent Psi."
+
+[GrimyRealitySink_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Radiateur Psionique Supérieur"
+FriendlyNamePlural="Radiateurs Psioniques Supérieurs"
+BriefSummary="Améliore Lance Neutralisante pour une version plus puissante avec 3 charges."
+TinySummary="Améliore Lance Neutralisante"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Lance Neutralisante d'un agent Psi."
+
+[GrimyVoidAnchor_BscPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Ancre du Vide"
+FriendlyNamePlural="Ancres du Vide"
+BriefSummary="Améliore Faille du Néant pour une version plus puissante avec 1 charge."
+TinySummary="Améliore Faille du Néant"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Faille du Néant d'un agent Psi."
+
+[GrimyVoidAnchor_AdvPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Ancre du Vide Avancée"
+FriendlyNamePlural="Ancres du Vide Avancées"
+BriefSummary="Améliore Faille du Néant pour une version plus puissante avec 2 charges."
+TinySummary="Améliore Faille du Néant"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Faille du Néant d'un agent Psi."
+
+[GrimyVoidAnchor_SupPsiAmp X2WeaponUpgradeTemplate]
+FriendlyName="Ancre du Vide Supérieure"
+FriendlyNamePlural="Ancres du Vide Supérieures"
+BriefSummary="Améliore Faille du Néant pour une version plus puissante avec 3 charges."
+TinySummary="Améliore Faille du Néant"
+LootToolTip="Cette amélioration d'arme augmente les dégâts de la capacité Faille du Néant d'un agent Psi."
+
+[GrimyTacticalSensors_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Capteur Tactique"
+FriendlyNamePlural="Capteurs Tactiques"
+BriefSummary="Augmente la défense de 5% contre les ennemis dans un rayon de 8 cases."
+TinySummary="Augmente la défense contre les ennemis proches"
+LootToolTip="Cette amélioration d'armure augmente la défense contre les ennemis proches."
+
+[GrimyTacticalSensors_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Capteur Tactique Avancé"
+FriendlyNamePlural="Capteurs Tactiques Avancés"
+BriefSummary="Augmente la défense de 10% contre les ennemis dans un rayon de 8 cases."
+TinySummary="Augmente la défense contre les ennemis proches"
+LootToolTip="Cette amélioration d'armure augmente la défense contre les ennemis proches."
+
+[GrimyTacticalSensors_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Capteur Tactique Supérieur"
+FriendlyNamePlural="Capteurs Tactiques Supérieurs"
+BriefSummary="Augmente la défense de 15% contre les ennemis dans un rayon de 8 cases."
+TinySummary="Augmente la défense contre les ennemis proches"
+LootToolTip="Cette amélioration d'armure augmente la défense contre les ennemis proches."
+
+[GrimyReactiveSensors_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Capteur Réactif"
+FriendlyNamePlural="Capteurs Réactifs"
+BriefSummary="Augmente la défense de 5% par ennemi visible, jusqu'à un maximum de 15%."
+TinySummary="Augmente la défense par ennemi visible"
+LootToolTip="Cette amélioration d'armure augmente la défense par ennemi visible."
+
+[GrimyReactiveSensors_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Capteur Réactif Avancé"
+FriendlyNamePlural="Capteurs Réactifs Avancés"
+BriefSummary="Augmente la défense de 5% par ennemi visible, jusqu'à un maximum de 20%."
+TinySummary="Augmente la défense par ennemi visible"
+LootToolTip="Cette amélioration d'armure augmente la défense par ennemi visible."
+
+[GrimyReactiveSensors_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Capteur Réactif Supérieur
+FriendlyNamePlural="Capteurs Réactifs Supérieurs"
+BriefSummary="Augmente la défense de 5% par ennemi visible, jusqu'à un maximum de 25%."
+TinySummary="Augmente la défense par ennemi visible"
+LootToolTip="Cette amélioration d'armure augmente la défense par ennemi visible."
+
+[GrimyBlastPadding_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Veste de Démineur"
+FriendlyNamePlural="Vestes de Démineur"
+BriefSummary="+1 armure, réduit les dégâts dûs aux explosions de 50%."
+TinySummary="Augmentation d'armure et de résistance aux explosions"
+LootToolTip="Cette amélioration d'armure augmentate l'armure et la résistance aux explosions."
+
+[GrimyBlastPadding_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Veste de Démineur Avancée"
+FriendlyNamePlural="Vestes de Démineur Avancées"
+BriefSummary="+1 armure, réduit les dégâts dûs aux explosions de 70%."
+TinySummary="Augmentation d'armure et de résistance aux explosions"
+LootToolTip="Cette amélioration d'armure augmentate l'armure et la résistance aux explosions."
+
+[GrimyBlastPadding_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Veste de Démineur Supérieure"
+FriendlyNamePlural="Vestes de Démineur Supérieures"
+BriefSummary="+1 armure, réduit les dégâts dûs aux explosions de 90%."
+TinySummary="Augmentation d'armure et de résistance aux explosions"
+LootToolTip="Cette amélioration d'armure augmentate l'armure et la résistance aux explosions."
+
+[GrimyHardpoints_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Renfort"
+FriendlyNamePlural="Renforts"
+BriefSummary="-5% de chances de subir un coup critique."
+TinySummary="Augmente la résistance aux coups critiques"
+LootToolTip="Cette amélioration d'armure protège son porteur des coups critiques."
+
+[GrimyHardpoints_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Renfort Avancé"
+FriendlyNamePlural="Renforts Avancés"
+BriefSummary="-10% de chances de subir un coup critique."
+TinySummary="Augmente la résistance aux coups critiques"
+LootToolTip="Cette amélioration d'armure protège son porteur des coups critiques."
+
+[GrimyHardpoints_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Renfort Supérieur"
+FriendlyNamePlural="Renforts Supérieurs"
+BriefSummary="-15% de chances de subir un coup critique."
+TinySummary="Augmente la résistance aux coups critiques"
+LootToolTip="Cette amélioration d'armure protège son porteur des coups critiques."
+
+[GrimyFlexweave_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Tissage Flexible"
+FriendlyNamePlural="Tissages Flexibles"
+BriefSummary="+1 Mobilité."
+TinySummary="Augmentation de la mobilité"
+LootToolTip="Cette amélioration d'armure augmente la mobilité de son porteur."
+
+[GrimyFlexweave_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Tissage Flexible Avancé"
+FriendlyNamePlural="Tissages Flexibles Avancés"
+BriefSummary="+1 Mobilité et +10% esquive."
+TinySummary="Augmentation de la mobilité et de l'esquive"
+LootToolTip="Cette amélioration d'armure augmente la mobilité de son porteur et son esquive."
+
+[GrimyFlexweave_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Tissage Flexible Supérieur"
+FriendlyNamePlural="Tissages Flexibles Supérieurs"
+BriefSummary="+1 Mobilité et +20% esquive."
+TinySummary="Augmentation de la mobilité et de l'esquive"
+LootToolTip="Cette amélioration d'armure augmente la mobilité de son porteur et son esquive."
+
+[GrimyUndervest_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sous-Veste"
+FriendlyNamePlural="Sous-Vestes"
+BriefSummary="+1 point de vie."
+TinySummary="Augmentation des points de vie"
+LootToolTip="Cette amélioration d'armure augmente la survivabilité de son porteur"
+
+[GrimyUndervest_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sous-Veste Avancée"
+FriendlyNamePlural="Sous-Vestes Avancées"
+BriefSummary="+2 points de vie."
+TinySummary="Augmentation des points de vie"
+LootToolTip="Cette amélioration d'armure augmente la survivabilité de son porteur"
+
+[GrimyUndervest_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sous-Veste Supérieure"
+FriendlyNamePlural="Sous-Vestes Supérieures"
+BriefSummary="+3 points de vie."
+TinySummary="Augmentation des points de vie"
+LootToolTip="Cette amélioration d'armure augmente la survivabilité de son porteur"
+
+[GrimyMagDeflectors_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Déflecteur Magnétique"
+FriendlyNamePlural="Déflecteurs Magnétiques"
+BriefSummary="-20% de dégâts subis par les armes magnétiques d'ADVENT."
+TinySummary="Résistance aux armes magnétiques d'ADVENT"
+LootToolTip="Cette amélioration d'armure réduit les dégâts subis par les armes magnétiques d'ADVENT."
+
+[GrimyMagDeflectors_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Déflecteur Magnétique Avancé"
+FriendlyNamePlural="Déflecteurs Magnétiques Avancés"
+BriefSummary="-25% de dégâts subis par les armes magnétiques d'ADVENT."
+TinySummary="Résistance aux armes magnétiques d'ADVENT"
+LootToolTip="Cette amélioration d'armure réduit les dégâts subis par les armes magnétiques d'ADVENT."
+
+[GrimyMagDeflectors_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Déflecteur Magnétique Supérieur"
+FriendlyNamePlural="Déflecteurs Magnétiques Supérieurs"
+BriefSummary="-30% de dégâts subis par les armes magnétiques d'ADVENT."
+TinySummary="Résistance aux armes magnétiques d'ADVENT"
+LootToolTip="Cette amélioration d'armure réduit les dégâts subis par les armes magnétiques d'ADVENT."
+
+[GrimyEnergyDiffuser_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Diffuseur d'Energie"
+FriendlyNamePlural="Diffuseurs d'Energie"
+BriefSummary="-20% de dégâts subis par les armes plasmiques extraterrestres."
+TinySummary="Résistance aux armes plasmiques extraterrestres"
+LootToolTip="Cette amélioration d'armure réduit les dégâts subis par les armes plasmiques extraterrestres."
+
+[GrimyEnergyDiffuser_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Diffuseur d'Energie Avancé"
+FriendlyNamePlural="Diffuseurs d'Energie Avancés"
+BriefSummary="-25% de dégâts subis par les armes plasmiques extraterrestres."
+TinySummary="Résistance aux armes plasmiques extraterrestres"
+LootToolTip="Cette amélioration d'armure réduit les dégâts subis par les armes plasmiques extraterrestres."
+
+[GrimyEnergyDiffuser_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Diffuseur d'Energie Supérieur"
+FriendlyNamePlural="Diffuseurs d'Energie Supérieurs"
+BriefSummary="-30% de dégâts subis par les armes plasmiques extraterrestres."
+TinySummary="Résistance aux armes plasmiques extraterrestres"
+LootToolTip="Cette amélioration d'armure réduit les dégâts subis par les armes plasmiques extraterrestres."
+
+[GrimyShieldBattery_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Batterie pour Bouclier"
+FriendlyNamePlural="Batteries pour Bouclier"
+BriefSummary="Confère 1 charge de la capacité Barrière, qui donne 5 points de bouclier pour 3 tours."
+TinySummary="Usage temporaire de bouclier"
+LootToolTip="Cette amélioration d'armure permet à son porteur de créer un bouclier temporaire."
+
+[GrimyShieldBattery_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Batterie pour Bouclier Avancée"
+FriendlyNamePlural="Batteries pour Bouclier Avancées"
+BriefSummary="Confère 2 charges de la capacité Barrière, qui donne 5 points de bouclier pour 3 tours."
+TinySummary="Usage temporaire de bouclier"
+LootToolTip="Cette amélioration d'armure permet à son porteur de créer un bouclier temporaire."
+
+[GrimyShieldBattery_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Batterie pour Bouclier Supérieure"
+FriendlyNamePlural="Batteries pour Bouclier Supérieures"
+BriefSummary="Confère 3 charges de la capacité Barrière, qui donne 5 points de bouclier pour 3 tours."
+TinySummary="Usage temporaire de bouclier"
+LootToolTip="Cette amélioration d'armure permet à son porteur de créer un bouclier temporaire."
+
+[GrimyLegServos_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Jambes Asservies"
+FriendlyNamePlural="Jambes Asservies"
+BriefSummary="Confère à l'utilisateur la capacité d'augmenter sa mobilité de 3 pour 1 tour, 1 fois par mission."
+TinySummary="Permet de Sprinter"
+LootToolTip="Cette amélioration d'armure permet à son porteur de sprinter par courte période."
+
+[GrimyLegServos_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Jambes Asservies Avancées"
+FriendlyNamePlural="Jambes Asservies Avancées"
+BriefSummary="Confère à l'utilisateur la capacité d'augmenter sa mobilité de 3 pour 1 tour, 2 fois par mission."
+TinySummary="Permet de Sprinter"
+LootToolTip="Cette amélioration d'armure permet à son porteur de sprinter par courte période."
+
+[GrimyLegServos_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Jambes Asservies Supérieures"
+FriendlyNamePlural="Jambes Asservies Supérieures"
+BriefSummary="Confère à l'utilisateur la capacité d'augmenter sa mobilité de 3 pour 1 tour, 3 fois par mission."
+TinySummary="Permet de Sprinter"
+LootToolTip="Cette amélioration d'armure permet à son porteur de sprinter par courte période."
+
+[GrimyDigitalCamo_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Camouflage Numérique"
+FriendlyNamePlural="Camouflages Numériques"
+BriefSummary="Diminue le rayon de détection des ennemis de 10%."
+TinySummary="Diminue le rayon de détection"
+LootToolTip="Cette amélioration d'armure permet à son porteur de se rapprocher encore plus près de l'ennemi sans se faire détecter."
+
+[GrimyDigitalCamo_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Camouflage Numérique Avancé"
+FriendlyNamePlural="Camouflages Numériques Avancés"
+BriefSummary="Diminue le rayon de détection des ennemis de 20%."
+TinySummary="Diminue le rayon de détection"
+LootToolTip="Cette amélioration d'armure permet à son porteur de se rapprocher encore plus près de l'ennemi sans se faire détecter."
+
+[GrimyDigitalCamo_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Camouflage Numérique Supérieur"
+FriendlyNamePlural="Camouflages Numériques Supérieurs"
+BriefSummary="Diminue le rayon de détection des ennemis de 30%."
+TinySummary="Diminue le rayon de détection"
+LootToolTip="Cette amélioration d'armure permet à son porteur de se rapprocher encore plus près de l'ennemi sans se faire détecter."
+
+[GrimyStasis_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Veste Médicale"
+FriendlyNamePlural="Vestes Médicales"
+BriefSummary="Soigne passivement son porteur de 2 points de vie par tour, jusqu'à un maximum de 6 points de vie."
+TinySummary="Soins passifs"
+LootToolTip="Cette amélioration d'armure soigne son porteur passivement."
+
+[GrimyStasis_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Veste Médicale Avancée"
+FriendlyNamePlural="Vestes Médicales Avancées"
+BriefSummary="Soigne passivement son porteur de 2 points de vie par tour, jusqu'à un maximum de 8 points de vie."
+TinySummary="Soins passifs"
+LootToolTip="Cette amélioration d'armure soigne son porteur passivement."
+
+[GrimyStasis_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Veste Médicale Supérieure"
+FriendlyNamePlural="Vestes Médicales Supérieures"
+BriefSummary="Soigne passivement son porteur de 2 points de vie par tour, jusqu'à un maximum de 10 points de vie."
+TinySummary="Soins passifs"
+LootToolTip="Cette amélioration d'armure soigne son porteur passivement."
+
+[GrimyMediSatchel_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sac Médical"
+FriendlyNamePlural="Sacs Médicaux"
+BriefSummary="Augmente la capacité d'emport de médikits de 1."
+TinySummary="Augmente la capacité d'emport de médikits"
+LootToolTip="Cette amélioration d'amure permet à son porteur d'emporter plus de médikits."
+
+[GrimyMediSatchel_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sac Médical Avancé"
+FriendlyNamePlural="Sacs Médicaux Avancés"
+BriefSummary="Augmente la capacité d'emport de médikits de 2."
+TinySummary="Augmente la capacité d'emport de médikits"
+LootToolTip="Cette amélioration d'amure permet à son porteur d'emporter plus de médikits."
+
+[GrimyMediSatchel_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sac Médical Supérieur"
+FriendlyNamePlural="Sacs Médicaux Supérieurs"
+BriefSummary="Augmente la capacité d'emport de médikits de 3."
+TinySummary="Augmente la capacité d'emport de médikits"
+LootToolTip="Cette amélioration d'amure permet à son porteur d'emporter plus de médikits."
+
+[GrimySmokeSatchel_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Grenades Fumigènes"
+FriendlyNamePlural="Sacs à Grenades Fumigènes"
+BriefSummary="Augmente la capacité d'emport de grenades fumigènes de 1."
+TinySummary="Augmente la capacité d'emport de grenades fumigènes"
+LootToolTip="Cette amélioration d'armure permet à son porteur d'emporter plus de grenades fumigènes."
+
+[GrimySmokeSatchel_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Grenades Fumigènes Avancé"
+FriendlyNamePlural="Sacs à Grenades Fumigènes Avancés"
+BriefSummary="Augmente la capacité d'emport de grenades fumigènes de 2."
+TinySummary="Augmente la capacité d'emport de grenades fumigènes"
+LootToolTip="Cette amélioration d'armure permet à son porteur d'emporter plus de grenades fumigènes."
+
+[GrimySmokeSatchel_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sac à Grenades Fumigènes Supérieur"
+FriendlyNamePlural="Sacs à Grenades Fumigènes Supérieurs"
+BriefSummary="Augmente la capacité d'emport de grenades fumigènes de 3."
+TinySummary="Augmente la capacité d'emport de grenades fumigènes"
+LootToolTip="Cette amélioration d'armure permet à son porteur d'emporter plus de grenades fumigènes."
+
+[GrimySpotterSatchel_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sac de Guetteur"
+FriendlyNamePlural="Sacs de Guetteur"
+BriefSummary="Augmente la capacité d'emport du Scanner de 1."
+TinySummary="Augmente la capacité d'emport du Scanner"
+LootToolTip="Cette amélioration d'armure permet à son porteur d'emporter plus de Scanners."
+
+[GrimySpotterSatchel_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sac de Guetteur Avancé"
+FriendlyNamePlural="Sacs de Guetteur Avancés"
+BriefSummary="Augmente la capacité d'emport du Scanner de 2."
+TinySummary="Augmente la capacité d'emport du Scanner"
+LootToolTip="Cette amélioration d'armure permet à son porteur d'emporter plus de Scanners."
+
+[GrimySpotterSatchel_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Sac de Guetteur Supérieur"
+FriendlyNamePlural="Sacs de Guetteur Supérieurs"
+BriefSummary="Augmente la capacité d'emport du Scanner de 3."
+TinySummary="Augmente la capacité d'emport du Scanner"
+LootToolTip="Cette amélioration d'armure permet à son porteur d'emporter plus de Scanners."
+
+[GrimyRiotHarness_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Harnais Anti-Emeute"
+FriendlyNamePlural="Harnais Anti-Emeute"
+BriefSummary="Augemente la capacité d'emport des grenades flash de 1 et leurs dégâts de 1."
+TinySummary="Augemente la capacité d'emport des grenades flash et leurs dégâts"
+LootToolTip="Cette amélioration d'armure permet à son utilisateur d'emporter plus de grenades flash et d'augmenter leurs dégâts."
+
+[GrimyRiotHarness_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Harnais Anti-Emeute Avancé"
+FriendlyNamePlural="Harnais Anti-Emeute Avancés"
+BriefSummary="Augemente la capacité d'emport des grenades flash de 1 et leurs dégâts de 2."
+TinySummary="Augemente la capacité d'emport des grenades flash et leurs dégâts"
+LootToolTip="Cette amélioration d'armure permet à son utilisateur d'emporter plus de grenades flash et d'augmenter leurs dégâts."
+
+[GrimyRiotHarness_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Harnais Anti-Emeute Supérieur"
+FriendlyNamePlural="Harnais Anti-Emeute Supérieurs"
+BriefSummary="Augemente la capacité d'emport des grenades flash de 1 et leurs dégâts de 3."
+TinySummary="Augemente la capacité d'emport des grenades flash et leurs dégâts"
+LootToolTip="Cette amélioration d'armure permet à son utilisateur d'emporter plus de grenades flash et d'augmenter leurs dégâts."
+
+[GrimyRageStimulant_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Stimulant de Rage"
+FriendlyNamePlural="Stimulants de Rage"
+BriefSummary="+10% de visée et de chances de critiques quand le soldat est blessé."
+TinySummary="Augmente la visée et les chances de critiques en cas de blessure"
+LootToolTip="Cette amélioration d'armure permet à son porteur de gagner en visée et chances de critiques lorsqu'il est blessé."
+
+[GrimyRageStimulant_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Stimulant de Rage Avancé"
+FriendlyNamePlural="Stimulants de Rage Avancés"
+BriefSummary="+15% de visée et de chances de critiques quand le soldat est blessé"
+TinySummary="Augmente la visée et les chances de critiques en cas de blessure"
+LootToolTip="Cette amélioration d'armure permet à son porteur de gagner en visée et chances de critiques lorsqu'il est blessé."
+
+[GrimyRageStimulant_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Stimulant de Rage Supérieur"
+FriendlyNamePlural="Stimulants de Rage Supérieurs"
+BriefSummary="+20% de visée et de chances de critiques quand le soldat est blessé."
+TinySummary="Augmente la visée et les chances de critiques en cas de blessure"
+LootToolTip="Cette amélioration d'armure permet à son porteur de gagner en visée et chances de critiques lorsqu'il est blessé."
+
+[GrimyStimplant_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Implant Stimulant"
+FriendlyNamePlural="Implants Stimulants"
+BriefSummary="Confère 1 utilisation de l'Implant Stimulant, qui augmente la mobilité de 3 et l'amure de 3 pour 1 tour."
+TinySummary="Confère 1 charge d'augmentation de mobilité et d'amure"
+LootToolTip="Cette amélioration d'armure permet à son porteur de gagner temporairement en mobilité et en armure."
+
+[GrimyStimplant_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Implant Stimulant Avancé"
+FriendlyNamePlural="Implants Stimulants Avancés"
+BriefSummary="Confère 1 utilisation de l'Implant Stimulant, qui augmente la mobilité de 3 et l'amure de 4 pour 1 tour."
+TinySummary="Confère 1 charge d'augmentation de mobilité et d'amure"
+LootToolTip="Cette amélioration d'armure permet à son porteur de gagner temporairement en mobilité et en armure."
+
+[GrimyStimplant_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Implant Stimulant Supérieur"
+FriendlyNamePlural="Implants Stimulants Supérieurs"
+BriefSummary="Confère 1 utilisation de l'Implant Stimulant, qui augmente la mobilité de 3 et l'amure de 5 pour 1 tour."
+TinySummary="Confère 1 charge d'augmentation de mobilité et d'amure"
+LootToolTip="Cette amélioration d'armure permet à son porteur de gagner temporairement en mobilité et en armure."
+
+[GrimyReactiveServos_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Système Asservi Réactif"
+FriendlyNamePlural="Systèmes Asservis Réactifs"
+BriefSummary="Améliore la précision de Vigilance de 5% et permet à son porteur d'effectuer des tirs réflexes avec son arme principale contre les ennemis attaquants."
+TinySummary="Tir Réflexe"
+LootToolTip="Cette amélioration d'armure confère Tir Réflexe à son porteur et augmente la précision de sa Vigilance."
+
+[GrimyReactiveServos_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Système Asservi Réactif Avancé"
+FriendlyNamePlural="Systèmes Asservis Réactifs Avancés"
+BriefSummary="Améliore la précision de Vigilance de 10% et permet à son porteur d'effectuer des tirs réflexes avec son arme principale contre les ennemis attaquants."
+TinySummary="Tir Réflexe"
+LootToolTip="Cette amélioration d'armure confère Tir Réflexe à son porteur et augmente la précision de sa Vigilance."
+
+[GrimyReactiveServos_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Système Asservi Réactif Supérieur"
+FriendlyNamePlural="Systèmes Asservis Réactifs Supérieurs"
+BriefSummary="Améliore la précision de Vigilance de 15% et permet à son porteur d'effectuer des tirs réflexes avec son arme principale contre les ennemis attaquants."
+TinySummary="Tir Réflexe"
+LootToolTip="Cette amélioration d'armure confère Tir Réflexe à son porteur et augmente la précision de sa Vigilance."
+
+[GrimyAbsorptionField_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Champ d'Absorption"
+FriendlyNamePlural="Champs d'Absorption"
+BriefSummary="N'importe quelle attaque faisant plus de 40% de points de vies de son porteur, se verra réduite à ce montant."
+TinySummary="Plafond de dégâts"
+LootToolTip="Cette amélioration d'armure plafonne les dégâts reçus par son porteur."
+
+[GrimyAbsorptionField_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Champ d'Absorption Avancé"
+FriendlyNamePlural="Champs d'Absorption Avancés"
+BriefSummary="N'importe quelle attaque faisant plus de 35% de points de vies de son porteur, se verra réduite à ce montant."
+TinySummary="Plafond de dégâts"
+LootToolTip="Cette amélioration d'armure plafonne les dégâts reçus par son porteur."
+
+[GrimyAbsorptionField_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Champ d'Absorption Supérieur"
+FriendlyNamePlural="Champs d'Absorption Supérieurs"
+BriefSummary="N'importe quelle attaque faisant plus de 30% de points de vies de son porteur, se verra réduite à ce montant."
+TinySummary="Plafond de dégâts"
+LootToolTip="Cette amélioration d'armure plafonne les dégâts reçus par son porteur."
+
+[GrimyShieldGate_BscArmor X2WeaponUpgradeTemplate]
+FriendlyName="Barrière de Bouclier"
+FriendlyNamePlural="Barrières de Bouclier"
+BriefSummary="Confère 1 point de bouclier. Son porteur ne peut pas perdre de points de vie lorsqu'il dispose de points de bouclier."
+TinySummary="Annulation de perte de points de vie avec bouclier actif"
+LootToolTip="Cette amélioration d'armure confère des points de boucliers et l'impossibilité de blesser son porteur si ce bouclier est actif."
+
+[GrimyShieldGate_AdvArmor X2WeaponUpgradeTemplate]
+FriendlyName="Barrière de Bouclier Avancée"
+FriendlyNamePlural="Barrières de Bouclier Avancées"
+BriefSummary="Confère 2 points de bouclier. Son porteur ne peut pas perdre de points de vie lorsqu'il dispose de points de bouclie."
+TinySummary="Annulation de perte de points de vie avec bouclier actif"
+LootToolTip="Cette amélioration d'armure confère des points de boucliers et l'impossibilité de blesser son porteur si ce bouclier est actif."
+
+[GrimyShieldGate_SupArmor X2WeaponUpgradeTemplate]
+FriendlyName="Barrière de Bouclier Supérieure"
+FriendlyNamePlural="Barrières de Bouclier Supérieures"
+BriefSummary="Confère 3 points de bouclier. Son porteur ne peut pas perdre de points de vie lorsqu'il dispose de points de bouclie."
+TinySummary="Annulation de perte de points de vie avec bouclier actif"
+LootToolTip="Cette amélioration d'armure confère des points de boucliers et l'impossibilité de blesser son porteur si ce bouclier est actif."
+
+[GrimyStimplant3 X2AbilityTemplate]
+LocFriendlyName="Implant Stimulant"
+LocHelpText="Augmente l'armure de 3 et la mobilité de 3 pour 1 tour."
+
+[GrimyStimplant4 X2AbilityTemplate]
+LocFriendlyName="Implant Stimulant"
+LocHelpText="Augmente l'armure de 4 et la mobilité de 3 pour 1 tour."
+
+[GrimyStimplant5 X2AbilityTemplate]
+LocFriendlyName="Implant Stimulant"
+LocHelpText="Augmente l'armure de 5 et la mobilité de 3 pour 1 tour."
+
+[GrimyShieldBattery1 X2AbilityTemplate]
+LocFriendlyName="Batterie de Bouclier"
+LocHelpText="+5 points de boucliers pour 3 tours."
+
+[GrimyShieldBattery2 X2AbilityTemplate]
+LocFriendlyName="Batterie de Bouclier"
+LocHelpText="+5 points de boucliers pour 3 tours."
+
+[GrimyShieldBattery3 X2AbilityTemplate]
+LocFriendlyName="Batterie de Bouclier"
+LocHelpText="+5 points de boucliers pour 3 tours."
+
+[GrimyLegServos1 X2AbilityTemplate]
+LocFriendlyName="Jambes Asservies"
+LocHelpText="+3 mobilité pour 1 tour."
+
+[GrimyLegServos2 X2AbilityTemplate]
+LocFriendlyName="Jambes Asservies"
+LocHelpText="+3 mobilité pour 1 tour."
+
+[GrimyLegServos3 X2AbilityTemplate]
+LocFriendlyName="Jambes Asservies"
+LocHelpText="+3 mobilité pour 1 tour."
+
+[GrimyInjuredBonus10 X2AbilityTemplate]
+LocFriendlyName="Stimulant Rage"
+
+[GrimyInjuredBonus15 X2AbilityTemplate]
+LocFriendlyName="Stimulant Rage"
+
+[GrimyInjuredBonus20 X2AbilityTemplate]
+LocFriendlyName="Stimulant Rage"
+
+[GrimyBonusCrit10Sword X2AbilityTemplate]
+LocFriendlyName="Bord Acéré"
+
+[GrimyBonusCrit20Sword X2AbilityTemplate]
+LocFriendlyName="Bord Acéré"
+
+[GrimyBonusCrit30Sword X2AbilityTemplate]
+LocFriendlyName="Bord Acéré"
+
+[GrimyBonusCrit10GL X2AbilityTemplate]
+LocFriendlyName="Explosif Liquide"
+
+[GrimyBonusCrit15GL X2AbilityTemplate]
+LocFriendlyName="Explosif Liquide"
+
+[GrimyBonusCrit20GL X2AbilityTemplate]
+LocFriendlyName="Explosif Liquide"
+
+[GrimyVitalPoint_Adv X2AbilityTemplate]
+LocFriendlyName="Cibleur de Points Vitaux Avancé"
+
+[GrimyVitalPoint_Sup X2AbilityTemplate]
+LocFriendlyName="Cibleur de Points Vitaux Supérieur"
+
+[GrimyDecreaseAim_Bsc X2AbilityTemplate]
+LocFriendlyName="Elérium Lourd"
+
+[GrimyDecreaseAim_Adv X2AbilityTemplate]
+LocFriendlyName="Elérium Lourd Avancé"
+
+[GrimyDecreaseAim_Sup X2AbilityTemplate]
+LocFriendlyName="Elérium Lourd Supérieur"
+
+[GrimyFrontload_Bsc X2AbilityTemplate]
+LocFriendlyName="Chargeur Frontal"
+
+[GrimyFrontload_Adv X2AbilityTemplate]
+LocFriendlyName="Chargeur Frontal Avancé"
+
+[GrimyFrontload_Sup X2AbilityTemplate]
+LocFriendlyName="Chargeur Frontal Supérieur"
+
+[GrimyReserve_Bsc X2AbilityTemplate]
+LocFriendlyName="Chargeur de Réserve"
+
+[GrimyReserve_Adv X2AbilityTemplate]
+LocFriendlyName="Chargeur de Réserve Avancé"
+
+[GrimyReserve_Sup X2AbilityTemplate]
+LocFriendlyName="Chargeur de Réserve Supérieur"
+
+[GrimyHangfire_Bsc X2AbilityTemplate]
+LocFriendlyName="Propulseur de Coup de Feu"
+
+[GrimyHangfire_Adv X2AbilityTemplate]
+LocFriendlyName="Propulseur de Coup de Feu Avancé"
+
+[GrimyHangfire_Sup X2AbilityTemplate]
+LocFriendlyName="Propulseur de Coup de Feu Supérieur"
+
+[GrimyHighCycle_Bsc X2AbilityTemplate]
+LocFriendlyName="Chambre à Recyclage"
+
+[GrimyHighCycle_Adv X2AbilityTemplate]
+LocFriendlyName="Chambre à Recyclage Avancée"
+
+[GrimyHighCycle_Sup X2AbilityTemplate]
+LocFriendlyName="Chambre à Recyclage Supérieure"
+
+[GrimyMaxCaliber_Crit X2AbilityTemplate]
+LocFriendlyName="Chargeur de Calibre Maximum"
+
+[GrimyBigGameHunter_BscSword' X2AbilityTemplate]
+LocFriendlyName="Chasseur de Gros Gibier"
+
+[GrimyBigGameHunter_AdvSword' X2AbilityTemplate]
+LocFriendlyName="Chasseur de Gros Gibier Avancé"
+
+[GrimyBigGameHunter_SupSword' X2AbilityTemplate]
+LocFriendlyName="Chasseur de Gros Gibier Supérieur"
+
+[GrimyRedDot_Bsc X2AbilityTemplate]
+LocFriendlyName="Viseur de Points Vitaux"
+
+[GrimyRedDot_Adv X2AbilityTemplate]
+LocFriendlyName="Viseur de Points Vitaux Avancés"
+
+[GrimyRedDot_Sup X2AbilityTemplate]
+LocFriendlyName="Viseur de Points Vitaux Supérieurs"
+
+[GrimyRedDot_BscPistol X2AbilityTemplate]
+LocFriendlyName="Viseur de Points Vitaux"
+
+[GrimyRedDot_AdvPistol X2AbilityTemplate]
+LocFriendlyName="Viseur de Points Vitaux Avancés"
+
+[GrimyRedDot_SupPistol X2AbilityTemplate]
+LocFriendlyName="Viseur de Points Vitaux Supérieurs"
+
+;---------------------------------------------
+;---               WEAPONS                 ---
+;---------------------------------------------
+[Gremlin_CV X2GremlinTemplate]
+BriefSummary="Le drone Gremlin permet aux Spécialistes d'exécuter une variétés de tâches à distance sur le terrain."
+
+[PsiAmp_CV X2WeaponTemplate]
+BriefSummary="Un Amplificateur Psionique permet aux agents Psi d'utiliser leurs capacités Psioniques."
+
+[SparkBit_CV X2WeaponTemplate]
+BriefSummary="Le Bot Autonome permet aux Sparks d'exécuter une variétés de tâches à distance sur le terrain."
+
+[SparkBit_MG X2WeaponTemplate]
+BriefSummary="Le Bot Autonome permet aux Sparks d'exécuter une variétés de tâches à distance sur le terrain."
+
+[SparkBit_BM X2WeaponTemplate]
+BriefSummary="Le Bot Autonome permet aux Sparks d'exécuter une variétés de tâches à distance sur le terrain."
+;---------------------------------------------
+;---               RESEARCH                ---
+;---------------------------------------------
+
+[Tech_IdentifyRareLockbox X2TechTemplate]
+DisplayName="Décryptage de coffre ADVENT"
+Summary="ADVENT équipe déjà son matériel d'explosifs, mais leur technologie la plus avancée est encore plus protégée dans des coffres cryptés. Notre équipe de recherche peut les cracker, mais cela prendra du temps."
+CodeName="Deckard"
+LongDescription="ADVENT équipe déjà son matériel d'explosifs, mais leur technologie la plus avancée est encore plus protégée dans des coffres cryptés. Notre équipe de recherche peut les cracker, mais cela prendra du temps."
+UnlockedDescription="<XGParam:StrValue0/!ItemName/>"
+
+[Tech_IdentifyEpicLockbox X2TechTemplate]
+DisplayName="Décryptage de coffre extraterrestre"
+Summary="Les Extraterrestres possédent une technologie de cryptage encore plus avancée que celle d'ADVENT. Déverrouiller cet appareil ne sera pas chose aisée."
+CodeName="Pandora"
+LongDescription="Les Extraterrestres possédent une technologie de cryptage encore plus avancée que celle d'ADVENT. Déverrouiller cet appareil ne sera pas chose aisée."
+UnlockedDescription="<XGParam:StrValue0/!ItemName/>"
+
+[Tech_IdentifyLegendaryLockbox X2TechTemplate]
+DisplayName="Décryptage de Reliquaire Ethéré"
+Summary="Cet appareil requiert un code envoyé directement depuis le réseau Psionique d'ADVENT. Hacker ce réseau prendra longtemps, espérons donc que ce qu'il y a dedans en vaille la peine."
+CodeName="Horadrim"
+LongDescription="Cet appareil requiert un code envoyé directement depuis le réseau Psionique d'ADVENT. Hacker ce réseau prendra longtemps, espérons donc que ce qu'il y a dedans en vaille la peine."
+UnlockedDescription="<XGParam:StrValue0/!ItemName/>"
+
+[Tech_IdentifyEpicLockboxInstant X2TechTemplate]
+DisplayName="Forcer coffre extraterrestre"
+Summary="Les Extraterrestres possédent une technologie de cryptage encore plus avancée que celle d'ADVENT. Déverrouiller cet appareil ne sera pas chose aisée."
+CodeName="Pandora"
+LongDescription="Les Extraterrestres possédent une technologie de cryptage encore plus avancée que celle d'ADVENT. Déverrouiller cet appareil ne sera pas chose aisée."
+UnlockedDescription="<XGParam:StrValue0/!ItemName/>"
+
+[Tech_IdentifyLegendaryLockboxInstant X2TechTemplate]
+DisplayName="Forcer Reliquaire Ethéré"
+Summary="Cet appareil requiert un code envoyé directement depuis le réseau Psionique d'ADVENT. Hacker ce réseau prendra longtemps, espérons donc que ce qu'il y a dedans en vaille la peine."
+CodeName="Horadrim"
+LongDescription="Cet appareil requiert un code envoyé directement depuis le réseau Psionique d'ADVENT. Hacker ce réseau prendra longtemps, espérons donc que ce qu'il y a dedans en vaille la peine."
+UnlockedDescription="<XGParam:StrValue0/!ItemName/>"
+
+;---------------------------------------------
+;---               ARTIFACTS               ---
+;---------------------------------------------
+[GrimyUnidentifiedLockboxRare X2ItemTemplate]
+FriendlyName="Coffre ADVENT"
+FriendlyNamePlural="Coffres ADVENT"
+BriefSummary="ADVENT équipe déjà son matériel d'explosifs, mais leur technologie la plus avancée est encore plus protégée dans des coffres cryptés. Notre équipe de recherche peut les cracker, mais cela prendra du temps."
+
+[GrimyUnidentifiedLockboxEpic X2ItemTemplate]
+FriendlyName="Coffre Extraterrestre"
+FriendlyNamePlural="Coffres Extraterrestres"
+BriefSummary="Les Extraterrestres possédent une technologie de cryptage encore plus avancée que celle d'ADVENT. Déverrouiller cet appareil ne sera pas chose aisée."
+
+[GrimyUnidentifiedLockboxLegendary X2ItemTemplate]
+FriendlyName="Reliquaire Ethéré"
+FriendlyNamePlural="Reliquaires Ethérés"
+BriefSummary="Cet appareil requiert un code envoyé directement depuis le réseau Psionique d'ADVENT. Hacker ce réseau prendra longtemps, espérons donc que ce qu'il y a dedans en vaille la peine."

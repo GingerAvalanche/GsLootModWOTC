@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>17c4e2ff-c47b-420b-870c-e8ae6a68dffc</Guid>
+    <Name>GsLootModWOTC</Name>
+    <Description>This is a port of GrimyBunyip's "[url=http://steamcommunity.com/sharedfiles/filedetails/?id=650277509]Grimy's Loot Mod[/url]" for WOTC made to work with the Highlander.
+
+As Grimy is no longer modding for XCOM 2 and has given permission for others to use his assets as long as they give credit to him, that is what this is. Thanks, Grimy!
+
+[b]IMPORTANT NOTES:[/b]
+--This mod adds a *disgusting* amount of weapon upgrades to the game. I haven't been able to test them all. Let me know if some are broken.
+--WOTC changes a ton of things, and I don't have the time to test every case. I can definitely say it works, but there are some issues.
+
+[b]Known Issues:[/b]
+--Some of the upgrades' pictures are broken. I didn't touch any pictures, so either that was around in the original mod, or it broke in WOTC and I haven't figured out why cuz I'm a scrub.
+--XComGameState_Item.OnCreation(X2ItemTemplate) throws a redscreen every time this mod calls it. As far as I can tell, the redscreen has nothing to do with anything this mod passes to it or calls it on. It's just a broken function. This doesn't seem to affect anything, and unless you're playing with redscreens on, you won't notice it. Fix your game, Jake.
+
+-----------
+
+[h1][b]This mod adds Diablo Style Loot to the game.[/b][/h1]
+
+Lockboxes are opened with research.
+Lockboxes contain weapons already filled with randomized upgrades.
+Higher tier lockboxes won't appear until later into the game.
+
+[h1][b]Includes[/b][/h1]
+[b]96[/b] new upgrades for primary weapons
+[b]81[/b] new upgrades for armors
+[b]45[/b] new upgrades for pistols
+[b]45[/b] new upgrades for swords
+[b]87[/b] new upgrades for gremlins
+[b]45[/b] new upgrades for psi amps
+[b]45[/b] new upgrades for grenade launchers
+
+[h1][b]2 New Continent Bonuses[/b][/h1]
+[b]Prowler's Profit[/b] - Lockbox loot contains only advanced and superior upgrades
+[b]Safe Cracker[/b] - Lockbox decryption time is halved.
+
+[h1][b]Expansion Packs[/b][/h1]
+[strike]Alien Rulers Expansion[/strike]
+[strike]PCS Expansion[/strike]
+
+----------
+
+[h1][b]Balance Thoughts:[/b][/h1]
+
+Supply/Intel rewards are not as relevant in the lategame. This mod helps offset that
+
+Epic and Legendary Tier upgrades don't drop until the mid and late game, but are intentionally very powerful. Legendary tier upgrades are around as powerful as colonel level perks.
+
+The two continent bonuses: Armed to the Teeth, Lock and Load would be a bit too powerful with this mod, and are consequently disabled by default. You can re-enable them via the INI file.
+
+----------
+
+[h1][b]Compatibility:[/b][/h1]
+
+[b]Source Overrides:[/b]
+X2Item_DefaultSchematics
+UIArmory_WeaponUpgrade
+UIArmory_LoadoutItem
+UIArmory_LoadoutItemTooltip
+UIBlackMarket_Sell
+
+[h1][b]Includes MCM Support[/b][/h1]
+
+[b]Drop table Overrides:[/b]
+BlackMarketLoot_01, BlackMarketLoot_02, BlackMarketLoot_03
+BasicWeaponUpgrades, AdvancedWeaponUpgrades, SuperiorWeaponUpgrades
+ADVENTEarlyTimedLoot, ADVENTMidTimedLoot, ADVENTLateTimedLoot
+EarlyAlienWeaponUpgrades, MidAlienWeaponUpgrades, LateAlienWeapnUpgrades
+--This should make it compatible with most loot mods, as they directly modify enemy loot tables, whereas this mod now modifies the tables that enemies draw from.--
+
+----------
+
+[h1][b]Console Commands[/b][/h1]
+[b]GiveItemNickname(string SoldierName, string Nickname, string HexColor, int SlotNum)[/b]
+Use to give an item a colored nickname
+Soldier Name - "Firstname Lastname", capitalization matters!
+Nickname - New nickname for your item
+Hexcolor - New color for item name
+SlotNum - 1 = armor, 2 = primary, 3 = secondary, 4 = heavy, 5 = utility, 9 = grenade, 10 = sim, 11 = ammo
+
+[b]UpgradeItemsForSchematic(string SchematicName)[/b]
+You can use this to force any items to upgrade.
+Example: UpgradeItemsForSchematic AssaultRifle_BM_Schematic
+
+[b]GrimyLootUpdateResearch()[/b]
+Use in case you can't see your research
+
+----------
+
+[h1][b]FAQ:[/b][/h1]
+[b]Q[/b] - Do I need to start a new campaign, or can I use it with my existing campaign?
+[b]A[/b] - If you use it with your existing campaign, you'll need to use the GrimyLootUpdateResearch console command after you pick up your first lockbox. Other than that, I used and tested it with my own in-progress campaign, so it definitely works either way.
+
+[b]Q[/b] - How to I add weapons/armors from other mods to the lockbox drops?
+[b]A[/b] - Please give this link to the author of the other mod if that mod doesn't already add their items to my loot mod automatically.
+You can also edit the INI yourself to add new items to lockbox drops as well.
+
+[b]Q[/b] - How do I attach upgrades to sidearms and armor?
+[b]A[/b] - You will need all the required mods, listed in the required mods section
+
+[b]Q[/b] - How do I get randomized appearances for sidearms?
+[b]A[/b] - You need a highlander mod that supports it. I don't know if WOTCCommunityHighlander supports it, as I do not use that mod. You can try it.
+
+[b]Q[/b] - I'm not getting any drops!
+[b]A[/b] - Try deleting the following folder:
+C:\Users\User\Documents\My Games\XCOM2\XComGame\Config
+
+[b]Q[/b] - I'm still not getting any drops!
+[b]A[/b] - You have another mod that is modifying the loot drop tables and is being loaded before this one. Delete your Config folder again and also uninstall any mods that modify the loot tables.
+
+[b]Q[/b] - But the conflicting mod is Loot Pinata and Loot Pinata is the bee's knees!
+[b]A[/b] - You can make them compatible by merging the changes they make to the loot tables. The changes are in XComGameCore.ini but beware, there's a lot of changes.
+
+[b]Q[/b] - How do I change drop rates and other settings?
+[b]A[/b] - You can find the relevant ini files in the following directory:
+\steamapps\workshop\content\268500\1142377029
+
+[b]Q[/b] - Why are my swords showing +20/100 aim?
+[b]A[/b] - Not caused by this mod, probably caused by balanced ranger swords or something else in your load order.
+
+[b]Q[/b] - I'm getting so much more / so much less loot now, please fix!
+[b]A[/b] - This mod doesn't alter drop rates of vanilla items. Either another mod is doing that or it's just RNG.
+
+[b]Q[/b] - I can't open my loot crates!
+[b]A[/b] - Use the GrimyLootUpdateResearch console command.
+No it doesn't disable your achievements.
+
+[b]Q[/b] - Are you just porting or are you updating too?
+[b]A[/b] - I'll try to update to add new stuff and compatibility where it makes sense. My main concern is to keep the spirit and focus of the original mod.
+
+[b]Q[/b] - Why doesn't your mod description look as nice as Grimy's?
+[b]A[/b] - [url=http://s2.quickmeme.com/img/73/7368bba925cab9dd176e32f7ce8c4d1fbf9917c0870d39ecfe8254874e42b907.jpg]This is why.[/url]
+
+[b]Q[/b] - Your mod description looks as nice as Grimy's now. Why don't you change that FAQ question?
+[b]A[/b] - [url=http://s2.quickmeme.com/img/2f/2fcd13646941af34c79358fe7c1cd976abff2402724dc767d61a097af538f9b0.jpg]This is why.[/url]
+
+------------
+
+[h1][b]Special Thanks to:[/b][/h1]
+GrimyBunyip - The original creator and therefore the creator of most of this mod
+RealityMachina - Answerer of dumb questions, extraordinaire
+PopeUrban, Haddox - Art Assets
+Thunderbeast - Korean Translations
+Вожбан-Литрус Вопурт-Тритьюдар - Russian Translation
+Wraxil - Implementation for continent bonuses</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>GsLootModWOTC</AssemblyName>
+    <RootNamespace>GsLootModWOTC</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Config\XComEditor.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComEngine.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGame.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameCore.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData_WeaponData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGsLootModWOTC.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGsLootUpgradeSetup.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComModAchievementSystem.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\GrimyLootConvWeapons.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\GrimyLootPackage.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\CHN\GsLootModWOTC.chn">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\CHN\XComGame.chn">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\FRA\GsLootModWOTC.fra">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\FRA\XComGame.fra">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\INT\GsLootModWOTC.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\INT\ModAchievementSystem.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\INT\XComGame.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\KOR\GsLootModWOTC.kor">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\KOR\XComGame.kor">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\RUS\GsLootModWOTC.rus">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\RUS\ModAchievementSystem.rus">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\RUS\XComGame.rus">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModPreview.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLootUtilities.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesActiveReanimate.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesActiveTeleport.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesArmor.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesGrenades.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesGrenadier.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesPrimary.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesPsiOperative.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesRanger.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesSecondary.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesSharpshooter.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesSpark.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesSpecialist.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilityCooldown.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilityCost_Rapid.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilityCost_Stunned.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Artifacts.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_ChargeCost.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_DominationCooldown.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_AbsorptionField.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_AddAmmo.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_AddItem.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_AmmoSynthesizer.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_ArmorPiercing.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusAimFrontload.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusAimReserve.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusArmor.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusDamage.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusDamageAbility.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusDamageAbilityFeedback.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusDamageConcealed.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusDamageOnCrit.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusDamageOnHit.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusDamagePercent.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusDamageTierMult.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusDamageWeapon.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusHitResult.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusItemCharges.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusOnHitResult.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusShred.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_BonusToStunned.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_DeathsHand.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_HealingCircle.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_InTheZonePistol.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_Momentum.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_Overdrive.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_ReduceMeleeDamage.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_RefundActionGrenade.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_RefundActionPoint.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_Resistance.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_SetAbilityCharges.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_ShieldGate.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_Solace.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_ToHitModifier.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Effect_UnflankableBonusCrit.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_GameState_Ammo.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_GameState_LootStore.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_ItemTemplateHelper.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_PCS_HackRewards.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Research.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_ScreenListener.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_ScreenListener_MCM.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_ScreenListener_MCM_Hook.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_ScreenListener_TacticalHUD.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_ScreenListener_UIInventory_Storage.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_TacticalHUDInventory.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_TargetCursor.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_UIBlackMarket_Sell.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_UIBlackMarket_SellItem.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_UIItemCard.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_UIScreen.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_WeaponUpgradeTemplate.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\X2DownloadableContentInfo_GsLootModWOTC.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\X2EventListener_GsLootWOTC.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\GsLootModWOTC\Classes\X2Item_GrimyUpgrades.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModAchievementSystemAPI\Classes\MAS_API_AchievementName.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_Button.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_Checkbox.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_Dropdown.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_Instance.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_Label.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_Setting.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_SettingsGroup.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_SettingsPage.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_Slider.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\Classes\MCM_API_Spinner.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\MCM_API_CfgHelpers.uci">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ModConfigMenuAPI\MCM_API_Includes.uci">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config" />
+    <Folder Include="Content" />
+    <Folder Include="Localization" />
+    <Folder Include="Localization\CHN" />
+    <Folder Include="Localization\INT" />
+    <Folder Include="Localization\KOR" />
+    <Folder Include="Localization\FRA" />
+    <Folder Include="Localization\RUS" />
+    <Folder Include="Src" />
+    <Folder Include="Src\GsLootModWOTC" />
+    <Folder Include="Src\GsLootModWOTC\Classes" />
+    <Folder Include="Src\ModAchievementSystemAPI\Classes" />
+    <Folder Include="Src\ModConfigMenuAPI" />
+    <Folder Include="Src\ModConfigMenuAPI\Classes" />
+    <Folder Include="Src\ModAchievementSystemAPI" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>

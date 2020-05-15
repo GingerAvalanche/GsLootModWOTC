@@ -1,0 +1,35 @@
+[MAS_GrimyLootRare MAS_X2AchievementTemplate]
+strTitle="I choose you!"
+strShortDesc="Open a lockbox.\nLockboxes around the world wait for you, Commander."
+strLongDesc="Open a lockbox.\nLockboxes around the world wait for you, Commander."
+strCategory="Grimy Loot Achievements"
+
+[MAS_GrimyLootEpic MAS_X2AchievementTemplate]
+strTitle="The power that's inside"
+strShortDesc="Open an Alien Strongbox."
+strLongDesc="Open an Alien Strongbox."
+strCategory="Grimy Loot Achievements"
+
+[MAS_GrimyLootLegendary MAS_X2AchievementTemplate]
+strTitle="That belongs in a museum"
+strShortDesc="Open an Ethereal Reliquary."
+strLongDesc="Open an Ethereal Reliquary."
+strCategory="Grimy Loot Achievements"
+
+[MAS_GrimyLoot150 MAS_X2AchievementTemplate]
+strTitle="Gotta Catch'em All!"
+strShortDesc="Discover 150 different upgrades."
+strLongDesc="Discover 150 different upgrades."
+strCategory="Grimy Loot Achievements"
+
+[MAS_GrimyLoot300 MAS_X2AchievementTemplate]
+strTitle="Searching far and wide"
+strShortDesc="Discover 300 different upgrades."
+strLongDesc="Discover 300 different upgrades."
+strCategory="Grimy Loot Achievements"
+
+[MAS_GrimyLoot450 MAS_X2AchievementTemplate]
+strTitle="I know it's my destiny"
+strShortDesc="Discover 450 different upgrades."
+strLongDesc="Discover 450 different upgrades."
+strCategory="Grimy Loot Achievements"

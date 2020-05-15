@@ -1,0 +1,92 @@
+;---------------------------------------------
+;---           WEAPON PREFIX NAME          ---
+;---------------------------------------------
+[GrimyLoot_Research]
+m_strRareName=Rare
+m_strEpicName=Epique
+m_strLegendaryName=Légendaire
+
+[GrimyLoot_UIScreen]
+m_strRareName=Rare
+m_strEpicName=Epique
+m_strLegendaryName=Légendaire
+
++ChoiceNames="Construire Fusil d'assaut"
++ChoiceNames="Construire Fusil"
++ChoiceNames="Construire Mitrailleuse"
++ChoiceNames="Construire Fusil de Sniper"
++ChoiceNames="Construire Mitraillette"
++ChoiceNames="Construire Fusil Vektor"
++ChoiceNames="Construire Bullpup"
+
++ChoiceNames="Construire Armure Légère"
++ChoiceNames="Construire Armure Moyenne"
++ChoiceNames="Construire Armure Lourde"
++ChoiceNames="Construire Armure de Reaper"
++ChoiceNames="Construire Armure d'Escarmoucheur"
++ChoiceNames="Construire Armure de Templier"
+
++ChoiceNames="Construire Pistolet"
++ChoiceNames="Construire Pistolet Automatique"
++ChoiceNames="Construire Epée"
++ChoiceNames="Construire Ripjkack"
++ChoiceNames="Construire Gantelets à éclats"
++ChoiceNames="Construire Gremlin"
++ChoiceNames="Construire Lance-Grenades"
++ChoiceNames="Construire Amplificateur Psionique"
+
++ChoiceNames="Construire Spark Bit"
++ChoiceNames="Construire Mitrailleuse de Spark"
++ChoiceNames="Construire Chassis de Spark"
+
+[GrimyLoot_ScreenListener_MCM]
+MOD_NAME="Grimy's Loot Mod"
+
+ARTIFACTS_HEADER="Prix des Coffres"
+ARTIFACTS_TITLE1="Prix des Coffres Rares"
+ARTIFACTS_TITLE2="Prix des Coffres Epiques"
+ARTIFACTS_TITLE3="Prix des coffres Légendaires"
+ARTIFACTS_DESCRIPTION="Valeur en ressources pour les Coffres, redémarrez pour appliquer"
+
+UPGRADES_HEADER="Prix des Améliorations"
+UPGRADES_TITLE1="Prix des Améliorations Rares"
+UPGRADES_TITLE2="Prix des Améliorations Epiques"
+UPGRADES_TITLE3="Prix des Améliorations Légendaires"
+UPGRADES_DESCRIPTION="Valeur en ressources pour les Améliorations, redémarrez pour appliquer"
+
+EQUIPMENT_HEADER="Prix de l'Equipement"
+EQUIPMENT_TITLE1="Prix de l'Equipement Rare"
+EQUIPMENT_TITLE2="Prix de l'Equipement Epique"
+EQUIPMENT_TITLE3="Prix de l'Equipement Légendaire"
+EQUIPMENT_DESCRIPTION="Valeur en ressources pour l'Equipement, redémarrez pour appliquer"
+
+RESEARCH_HEADER="Temps de Recherche"
+
+RESEARCH_TITLE1="Temps de Recherche Rares"
+RESEARCH_TITLE2="Temps de Recherche Epiques"
+RESEARCH_TITLE3="Temps de Recherche Légendaires"
+RESEARCH_DESCRIPTION="Temps de base pour ouvrir les Coffres, redémarrez pour appliquer"
+
+RESEARCH_INC_TITLE1="Augmentation de Temps de Recherche Rares"
+RESEARCH_INC_TITLE2="Augmentation de Temps de Recherche Epiques"
+RESEARCH_INC_TITLE3="Augmentation de Temps de Recherche Légendaires"
+RESEARCH_INC_DESCRIPTION="Augmentation de Temps de Recherche de ce montant après chaque projet, redémarrez pour appliquer"
+
+ARMOR_HEADER="Chances d'Armure"
+ARMOR_DESCRIPTION1="Chances que l'Armure du Coffre soit une Armure Légère"
+ARMOR_DESCRIPTION2="Chances que l'Armure du Coffre soit une Armure Lourde"
+ARMOR_TITLE1="Chances d'obtention d'Armure Légère"
+ARMOR_TITLE2="Chances d'obtention d'Armure Lourde"
+
+UNLOCK_HEADER="Chances d'Equipement"
+UNLOCK_DESCRIPTION1="Chances que le coffre contienne une arme primaire; roll déterminée avant le roll de l'Armure"
+UNLOCK_DESCRIPTION2="Chances que le Coffre contienne une Armure. Si ce roll échoue, vous recevez une Arme Lourde."
+UNLOCK_TITLE1="Chances d'obtention d'Arme"
+UNLOCK_TITLE2="Chances d'obtention d'Armure"
+
+;---------------------------------------------
+;---             ENCYCLOPEDIA              ---
+;---------------------------------------------
+[GrimyLoot_ScreenListener_UIInventory_Storage]
+kToggle="Activer l'Encyclopedie      "
+kCompletion=" Complétude"

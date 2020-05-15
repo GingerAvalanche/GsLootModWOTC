@@ -1,0 +1,92 @@
+;---------------------------------------------
+;---           WEAPON PREFIX NAME          ---
+;---------------------------------------------
+[GrimyLoot_Research]
+m_strRareName=Rare
+m_strEpicName=Epic
+m_strLegendaryName=Legendary
+
+[GrimyLoot_UIScreen]
+m_strRareName=Rare
+m_strEpicName=Epic
+m_strLegendaryName=Legendary
+
++ChoiceNames="Build Assault Rifle"
++ChoiceNames="Build Shotgun"
++ChoiceNames="Build Cannon"
++ChoiceNames="Build Sniper Rifle"
++ChoiceNames="Build Sub-Machine Gun"
++ChoiceNames="Build Vektor Rifle"
++ChoiceNames="Build Bullpup"
+
++ChoiceNames="Build Light Armor"
++ChoiceNames="Build Medium Armor"
++ChoiceNames="Build Heavy Armor"
++ChoiceNames="Build Reaper Armor"
++ChoiceNames="Build Skirmisher Armor"
++ChoiceNames="Build Templar Armor"
+
++ChoiceNames="Build Pistol"
++ChoiceNames="Build Sidearm"
++ChoiceNames="Build Sword"
++ChoiceNames="Build Wrist Blade"
++ChoiceNames="Build Shard Gauntlet"
++ChoiceNames="Build Gremlin"
++ChoiceNames="Build Grenade Launcher"
++ChoiceNames="Build Psi Amp"
+
++ChoiceNames="Build Spark Bit"
++ChoiceNames="Build Spark Autocannon"
++ChoiceNames="Build Spark Chasis"
+
+[GrimyLoot_ScreenListener_MCM]
+MOD_NAME="Grimy's Loot Mod"
+
+ARTIFACTS_HEADER="Lockbox Prices"
+ARTIFACTS_TITLE1="Rare Lockbox Price"
+ARTIFACTS_TITLE2="Epic Lockbox Price"
+ARTIFACTS_TITLE3="Legendary Lockbox Price"
+ARTIFACTS_DESCRIPTION="Trading post value of lockbox in supplies, you will need to restart for this to apply."
+
+UPGRADES_HEADER="Upgrade Prices"
+UPGRADES_TITLE1="Rare Upgrade Price"
+UPGRADES_TITLE2="Epic Upgrade Price"
+UPGRADES_TITLE3="Legendary Upgrade Price"
+UPGRADES_DESCRIPTION="Trading post value of Upgrade in supplies, you will need to restart for this to apply."
+
+EQUIPMENT_HEADER="Equipment Prices"
+EQUIPMENT_TITLE1="Rare Equipment Price"
+EQUIPMENT_TITLE2="Epic Equipment Price"
+EQUIPMENT_TITLE3="Legendary Equipment Price"
+EQUIPMENT_DESCRIPTION="Trading post value of Equipment in supplies, you will need to restart for this to apply."
+
+RESEARCH_HEADER="Research Time"
+
+RESEARCH_TITLE1="Rare Research Time"
+RESEARCH_TITLE2="Epic Research Time"
+RESEARCH_TITLE3="Legendary Research Time"
+RESEARCH_DESCRIPTION="Base time cost for unlocking a lockbox, you will need to restart for this to apply."
+
+RESEARCH_INC_TITLE1="Rare Research Time Increase"
+RESEARCH_INC_TITLE2="Epic Research Time Increase"
+RESEARCH_INC_TITLE3="Legendary Research Time Increase"
+RESEARCH_INC_DESCRIPTION="Time cost increases by this amount after each project, you will need to restart for this to apply."
+
+ARMOR_HEADER="Armor Chances"
+ARMOR_DESCRIPTION1="Chance that a lockbox armor is a light armor"
+ARMOR_DESCRIPTION2="Chance that a lockbox armor is a heavy armor"
+ARMOR_TITLE1="Light Armor Chance"
+ARMOR_TITLE2="Heavy Armor Chance"
+
+UNLOCK_HEADER="Equipment Chances"
+UNLOCK_DESCRIPTION1="Chance that a lockbox contains a primary weapon, rolls before armor"
+UNLOCK_DESCRIPTION2="Chance that a lockbox contains an armor. If this roll fails, you get a sidearm."
+UNLOCK_TITLE1="Weapon Unlock Chance"
+UNLOCK_TITLE2="Armor Unlock Chance"
+
+;---------------------------------------------
+;---             ENCYCLOPEDIA              ---
+;---------------------------------------------
+[GrimyLoot_ScreenListener_UIInventory_Storage]
+kToggle="Toggle Encyclopedia      "
+kCompletion=" Completion"
