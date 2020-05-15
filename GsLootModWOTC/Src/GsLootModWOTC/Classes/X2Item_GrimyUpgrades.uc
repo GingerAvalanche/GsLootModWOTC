@@ -1,4 +1,30 @@
-class GrimyLoot_UpgradesPrimary extends X2Item dependson GrimyLootUtilities config(GsLootModWOTC);
+class X2Item_GrimyUpgrades extends X2Item config(GsLootUpgradeSetup);
+
+struct UpgradeSetup
+{
+	var name				UpgradeName;
+	var string				ImagePath;
+	var string				MeshPath;
+	var string				IconPath;
+	var int					Tier;
+	var int					UpgradeValue;
+	var int					AimBonus;
+	var int					CritChanceBonus;
+	var int					ClipSizeBonus;
+	var array<ArtifactCost>	ResourceCosts;
+	var array<ArtifactCost>	ArtifactCosts;
+	var array<name>			RequiredTechs;
+	var WeaponDamageValue	DamageValue;
+	var WeaponDamageValue	MissDamageValue;
+	var array<name>			BonusAbilities;
+	var array<name>			MutuallyExclusiveUpgrades;
+	var bool				MaxClipSizeOne;
+};
+
+struct MutualExclusionGroup
+{
+	var array<name>		ExclusionGroupMembers;
+};
 
 var config array<UpgradeSetup> PRIMARY_WEAPON_SETUPS;
 var config array<UpgradeSetup> PISTOL_WEAPON_SETUPS;
@@ -20,55 +46,59 @@ var config array<name> GRENADELAUNCHER_WEAPON_TEMPLATE_NAMES;
 var config array<name> SOLDIER_ARMOR_TEMPLATE_NAMES;
 var config array<name> SPARK_ARMOR_TEMPLATE_NAMES;
 
+var config array<MutualExclusionGroup> EXCLUSION_GROUPS;
+
+delegate UpgradeApply(X2WeaponUpgradeTemplate UpgradeTemplate, XComGameState_Item Weapon, int SlotIndex);
+
 static function array<X2DataTemplate> CreateTemplates()
 {
 	local array<X2DataTemplate> Items;
 
 	foreach default.PRIMARY_WEAPON_SETUPS(WeaponSetup)
 	{
-		Items.additem(class'GrimyLootUtilities'.static.CreateUpgrade(WeaponSetup, default.PRIMARY_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToWeapon));
+		Items.additem(CreateUpgrade(WeaponSetup, default.PRIMARY_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToWeapon));
 	}
 
 	foreach default.PISTOL_WEAPON_SETUPS(WeaponSetup)
 	{
-		Items.additem(class'GrimyLootUtilities'.static.CreateUpgrade(WeaponSetup, default.PISTOL_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToPistol));
+		Items.additem(CreateUpgrade(WeaponSetup, default.PISTOL_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToPistol));
 	}
 
 	foreach default.SWORD_WEAPON_SETUPS(WeaponSetup)
 	{
-		Items.additem(class'GrimyLootUtilities'.static.CreateUpgrade(WeaponSetup, default.SWORD_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToSword));
+		Items.additem(CreateUpgrade(WeaponSetup, default.SWORD_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToSword));
 	}
 
 	foreach default.GREMLIN_WEAPON_SETUPS(WeaponSetup)
 	{
-		Items.additem(class'GrimyLootUtilities'.static.CreateUpgrade(WeaponSetup, default.GREMLIN_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToGremlin));
+		Items.additem(CreateUpgrade(WeaponSetup, default.GREMLIN_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToGremlin));
 	}
 
 	foreach default.PSIAMP_WEAPON_SETUPS(WeaponSetup)
 	{
-		Items.additem(class'GrimyLootUtilities'.static.CreateUpgrade(WeaponSetup, default.PSIAMP_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToPsiAmp));
+		Items.additem(CreateUpgrade(WeaponSetup, default.PSIAMP_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToPsiAmp));
 	}
 
 	foreach default.GRENADELAUNCHER_WEAPON_SETUPS(WeaponSetup)
 	{
-		Items.additem(class'GrimyLootUtilities'.static.CreateUpgrade(WeaponSetup, default.GRENADELAUNCHER_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToGrenadeLauncher));
+		Items.additem(CreateUpgrade(WeaponSetup, default.GRENADELAUNCHER_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToGrenadeLauncher));
 	}
 	
 	foreach default.SOLDIER_ARMOR_SETUPS(ArmorSetup)
 	{
-		Items.AddItem(class'GrimyLootUtilities'.static.CreateUpgrade(ArmorSetup, default.SOLDIER_ARMOR_TEMPLATE_NAMES, CanApplyUpgradeToArmor))
+		Items.AddItem(CreateUpgrade(ArmorSetup, default.SOLDIER_ARMOR_TEMPLATE_NAMES, CanApplyUpgradeToArmor))
 	}
 	
 	if ( class'GrimyLoot_AbilitiesSpark'.static.HasDLC3() )
 	{
 		foreach default.SPARK_ARMOR_SETUPS(ArmorSetup)
 		{
-			Items.AddItem(class'GrimyLootUtilities'.static.CreateUpgrade(ArmorSetup, default.SPARK_ARMOR_TEMPLATE_NAMES, CanApplyUpgradeToArmor))
+			Items.AddItem(CreateUpgrade(ArmorSetup, default.SPARK_ARMOR_TEMPLATE_NAMES, CanApplyUpgradeToArmor))
 		}
 
 		foreach default.BIT_WEAPON_SETUPS(WeaponSetup)
 		{
-			Items.additem(class'GrimyLootUtilities'.static.CreateUpgrade(WeaponSetup, default.BIT_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToBit));
+			Items.additem(CreateUpgrade(WeaponSetup, default.BIT_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToBit));
 		}
 	}
 	
@@ -79,21 +109,196 @@ static function array<X2DataTemplate> CreateTemplates()
 // -------------------- GENERIC SETUP FUNCTIONS ------------------------------------------
 // #######################################################################################
 
-static function SetUpWeaponUpgradePrimary(out X2WeaponUpgradeTemplate Template, optional bool bSidearmOnly=false)
+static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, array<name> ItemTemplateNames, delegate<UpgradeApply> ApplyFunction)
 {
-	if ( bSidearmOnly )
+	local X2WeaponUpgradeTemplate	Template;
+	local name						AbilityName, SaberName;
+	local UpgradeSetup				TypeSetup;
+	local ArtifactCost				Cost;
+	local name						Tech;
+	local DamageValue				NoneDamageValue, NoneMissDamageValue;
+
+	NoneMissDamageValue.Tag = 'MISS';
+	
+	`log("-------------------------------------------------------------------------", default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "setting up" @ ThisUpgradeSetup.UpgradeName, default.bLogUpgrades, 'GsLootModWOTC');
+	
+	`CREATE_X2TEMPLATE(class'X2WeaponUpgradeTemplate', Template, ThisUpgradeSetup.UpgradeName);
+	Template.LootStaticMesh = StaticMesh'UI_3D.Loot.WeapFragmentA';
+	Template.strImage = ThisUpgradeSetup.ImagePath;
+	Template.TradingPostValue = ThisUpgradeSetup.UpgradeValue;
+	Template.Tier = ThisUpgradeSetup.Tier;
+	Template.ItemCat = 'utility';
+
+	if (ThisUpgradeSetup.MissDamageValue != NoneMissDamageValue)
 	{
-		Template.CanApplyUpgradeToWeaponFn = class'GrimyLoot_UpgradesSecondary'.static.CanApplyUpgradeToWeaponPistol;
-	}
-	else
-	{
-		Template.CanApplyUpgradeToWeaponFn = CanApplyUpgradeToWeaponPrimary;
+		Template.BonusDamage = ThisUpgradeSetup.DamageValue;
+		Template.GetBonusAmountFn = class'X2Item_DefaultUpgrades'.static.GetDamageBonusAmount;
 	}
 
-	Template.CanBeBuilt = false;
+	if (ThisUpgradeSetup.DamageValue != NoneDamageValue)
+	{
+		Template.CHBonusDamage = ThisUpgradeSetup.DamageValue;
+		Template.AddCHDamageModifierFn = DamageUpgradeModifier;
+	}
+
+	`log(default.class @ GetFuncName() @ "AimBonus" @ ThisUpgradeSetup.AimBonus, default.bLogUpgrades, 'GsLootModWOTC');
+
+	if (ThisUpgradeSetup.AimBonus != 0)
+	{
+		Template.AimBonus = ThisUpgradeSetup.AimBonus;
+		Template.AddHitChanceModifierFn = AimUpgradeHitModifier;
+	}
+	
+	`log(default.class @ GetFuncName() @ "CritBonus" @ ThisUpgradeSetup.CritChanceBonus, default.bLogUpgrades, 'GsLootModWOTC');
+	
+	if (ThisUpgradeSetup.CritChanceBonus != 0)
+	{
+		Template.CritBonus = ThisUpgradeSetup.CritChanceBonus;
+		Template.AddCritChanceModifierFn = CritUpgradeModifier;
+	}
+
+	`log(default.class @ GetFuncName() @ "ClipSizeBonus" @ ThisUpgradeSetup.ClipSizeBonus, default.bLogUpgrades, 'GsLootModWOTC');
+	
+	if (ThisUpgradeSetup.ClipSizeBonus != 0)
+	{
+		Template.ClipSizeBonus = ThisUpgradeSetup.ClipSizeBonus;
+		Template.AdjustClipSizeFn = AdjustClipSize;
+		Template.GetBonusAmountFn = GetClipBonus;
+	}
+
+	`log(default.class @ GetFuncName() @ "MaxClipSizeOne" @ ThisUpgradeSetup.MaxClipSizeOne, default.bLogUpgrades, 'GsLootModWOTC');
+	
+	if (ThisUpgradeSetup.MaxClipSizeOne)
+	{
+		Template.AdjustClipSizeFn = MaxOneClipSize;
+	}
+
+	foreach ThisUpgradeSetup.BonusAbilities(AbilityName)
+	{
+		`log(default.class @ GetFuncName() @ "Bonus Ability" @ AbilityName, default.bLogUpgrades, 'GsLootModWOTC');
+		Template.BonusAbilities.AddItem(AbilityName);
+	}
+
+	foreach default.EXCLUSION_GROUPS(ExclusionGroup)
+	{
+		if (ExclusionGroup.ExclusionGroupMembers.find(ThisUpgradeSetup.UpgradeName) != INDEX_NONE)
+		{
+			foreach ExclusionGroup.ExclusionGroupMembers(MemberName)
+			{
+				Template.MutuallyExclusiveUpgrades.AddItem(MemberName);
+			}
+		}
+	}
+
+	foreach ItemTemplateNames(ItemName)
+	{
+		Template.AddUpgradeAttachment(SocketName, 'UIPawnLocation_WeaponUpgrade_Shotgun', ThisUpgradeSetup.MeshPath, "", ItemName, , "", ThisUpgradeSetup.ImagePath, ThisUpgradeSetup.IconPath);
+	}
+	
+	`log(default.class @ GetFuncName() @ "ResourceCosts 0 index check" @ ThisUpgradeSetup.ResourceCosts[0].ItemTemplateName, default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "ArtifactCosts 0 index check" @ ThisUpgradeSetup.ArtifactCosts[0].ItemTemplateName, default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "RequiredTechs 0 index check" @ ThisUpgradeSetup.RequiredTechs[0], default.bLogUpgrades, 'GsLootModWOTC');
+
+	// even if you specify an empty array in the ini, it'll give you an array of length 1
+	if (ThisUpgradeSetup.ResourceCosts[0].ItemTemplateName != '')
+	{
+		foreach ThisUpgradeSetup.ResourceCosts(Cost)
+		{
+			if (Cost.ItemTemplateName != '')
+			{
+				Template.CanBeBuilt = true;
+				Template.PointsToComplete = 0;
+				Template.Cost.ResourceCosts.AddItem(Cost);
+			}
+		}
+	}
+
+	if (ThisUpgradeSetup.ArtifactCosts[0].ItemTemplateName != '')
+	{
+		foreach ThisUpgradeSetup.ArtifactCosts(Cost)
+		{
+			if (Cost.ItemTemplateName != '')
+			{
+				Template.CanBeBuilt = true;
+				Template.PointsToComplete = 0;
+				Template.Cost.ArtifactCosts.AddItem(Cost);
+			}
+		}
+	}
+
+	if (ThisUpgradeSetup.RequiredTechs[0] != '')
+	{
+		foreach ThisUpgradeSetup.RequiredTechs(Tech)
+		{
+			Template.Requirements.RequiredTechs.AddItem(Tech);
+		}
+	}
+
+	Template.CanApplyUpgradeToWeaponFn = ApplyFunction;
 	Template.MaxQuantity = 1;
-
 	Template.BlackMarketTexts = class'X2Item_DefaultUpgrades'.default.UpgradeBlackMarketTexts;
+	//Template.UpgradeCats.AddItem('lightsaber'); //TODO: Remember what I made UpgradeCats for, and set this if necessary
+	
+	`log(default.class @ GetFuncName() @ "finished setting up" @ ThisUpgradeSetup.UpgradeName, default.bLogUpgrades, 'GsLootModWOTC');
+
+	return Template;
+}
+
+static function bool DamageUpgradeModifier(X2WeaponUpgradeTemplate UpgradeTemplate, out int DamageMod, name StatType)
+{
+	switch (StatType)
+	{
+		case 'Damage':
+			DamageMod = UpgradeTemplate.CHBonusDamage.Damage;
+			return true;
+		case 'Spread':
+			DamageMod = UpgradeTemplate.CHBonusDamage.Spread;
+			return true;
+		case 'Crit':
+			DamageMod = UpgradeTemplate.CHBonusDamage.Crit;
+			return true;
+		case 'Pierce':
+			DamageMod = UpgradeTemplate.CHBonusDamage.Pierce;
+			return true;
+		case 'Rupture':
+			DamageMod = UpgradeTemplate.CHBonusDamage.Rupture;
+			return true;
+		case 'Shred':
+			DamageMod = UpgradeTemplate.CHBonusDamage.Shred;
+			return true;
+		default:
+			return false;
+	}
+}
+
+static function bool AimUpgradeHitModifier(X2WeaponUpgradeTemplate UpgradeTemplate, const GameRulesCache_VisibilityInfo VisInfo, out int HitChanceMod)
+{
+	HitChanceMod = UpgradeTemplate.AimBonus;
+	return true;
+}
+
+static function bool CritUpgradeModifier(X2WeaponUpgradeTemplate UpgradeTemplate, out int CritChanceMod)
+{
+	CritChanceMod = UpgradeTemplate.CritBonus;
+	return true;
+}
+
+static function int GetClipBonus(X2WeaponUpgradeTemplate UpgradeTemplate)
+{
+	return UpgradeTemplate.ClipSizeBonus;
+}
+
+static function bool AdjustClipSize(X2WeaponUpgradeTemplate UpgradeTemplate, XComGameState_Item Weapon, const int CurrentClipSize, out int AdjustedClipSize)
+{
+	AdjustedClipSize = CurrentClipSize+UpgradeTemplate.ClipSizeBonus;
+	return true;
+}
+
+static function bool MaxOneClipSize(X2WeaponUpgradeTemplate UpgradeTemplate, XComGameState_Item Weapon, const int CurrentClipSize, out int AdjustedClipSize)
+{
+	AdjustedClipSize = 1;
+	return true;
 }
 
 // #######################################################################################
