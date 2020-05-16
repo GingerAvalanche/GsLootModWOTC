@@ -93,7 +93,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	{
 		foreach default.SPARK_ARMOR_SETUPS(ArmorSetup)
 		{
-			Items.AddItem(CreateUpgrade(ArmorSetup, default.SPARK_ARMOR_TEMPLATE_NAMES, CanApplyUpgradeToArmor))
+			Items.AddItem(CreateUpgrade(ArmorSetup, default.SPARK_ARMOR_TEMPLATE_NAMES, CanApplyUpgradeToChassis))
 		}
 
 		foreach default.BIT_WEAPON_SETUPS(WeaponSetup)
@@ -312,12 +312,8 @@ static function bool CanApplyUpgradeToWeapon(X2WeaponUpgradeTemplate UpgradeTemp
 	local int iSlot;
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
-
-	if ( Weapon.GetWeaponCategory() == 'grenade_launcher' )
-	{
-		return false;
-	}
-	if ( Weapon.InventorySlot != eInvSlot_PrimaryWeapon )
+	
+	if ( default.PRIMARY_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -352,10 +348,9 @@ static function bool CanApplyUpgradeToWeaponOrPistol(X2WeaponUpgradeTemplate Upg
 	local int iSlot;
 	
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
-
-	if ( Weapon.InventorySlot != eInvSlot_PrimaryWeapon &&
-		Weapon.GetWeaponCategory() != 'pistol' &&
-		Weapon.GetWeaponCategory() != 'sidearm' )
+	
+	if ( default.PRIMARY_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE &&
+		default.PISTOL_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -389,8 +384,8 @@ static function bool CanApplyUpgradeToPistol(X2WeaponUpgradeTemplate UpgradeTemp
 	local int iSlot;
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
-
-	if ( Weapon.GetWeaponCategory() != 'pistol' && Weapon.GetWeaponCategory() != 'sidearm' )
+	
+	if ( default.PISTOL_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -425,7 +420,7 @@ static function bool CanApplyUpgradeToSword(X2WeaponUpgradeTemplate UpgradeTempl
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( Weapon.GetWeaponCategory() != 'sword' && Weapon.GetWeaponCategory() != 'wristblade' && Weapon.GetWeaponCategory() != 'gauntlet' )
+	if ( default.SWORD_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -460,7 +455,7 @@ static function bool CanApplyUpgradeToGremlin(X2WeaponUpgradeTemplate UpgradeTem
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( !Weapon.GetMyTemplate().IsA('X2GremlinTemplate') )
+	if ( default.GREMLIN_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -495,7 +490,7 @@ static function bool CanApplyUpgradeToPsiAmp(X2WeaponUpgradeTemplate UpgradeTemp
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( Weapon.GetWeaponCategory() != 'psiamp' )
+	if ( default.PSIAMP_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -530,7 +525,7 @@ static function bool CanApplyUpgradeToGrenadeLauncher(X2WeaponUpgradeTemplate Up
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( Weapon.GetWeaponCategory() != 'grenade_launcher' )
+	if ( default.GRENADELAUNCHER_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -560,12 +555,47 @@ static function bool CanApplyUpgradeToGrenadeLauncher(X2WeaponUpgradeTemplate Up
 static function bool CanApplyUpgradeToArmor(X2WeaponUpgradeTemplate UpgradeTemplate, XComGameState_Item Weapon, int SlotIndex)
 {
 	local array<X2WeaponUpgradeTemplate> AttachedUpgradeTemplates;
-	local X2WeaponUpgradeTemplate AttachedUpgrade; 
+	local X2WeaponUpgradeTemplate AttachedUpgrade;
+	local int iSlot;
+		
+	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
+	
+	if ( default.SOLDIER_ARMOR_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	{
+		return false;
+	}
+
+	foreach AttachedUpgradeTemplates(AttachedUpgrade, iSlot)
+	{
+		// Slot Index indicates the upgrade slot the player intends to replace with this new upgrade
+		if (iSlot == SlotIndex)
+		{
+			// The exact upgrade already equipped in a slot cannot be equipped again
+			// This allows different versions of the same upgrade type to be swapped into the slot
+			if (AttachedUpgrade == UpgradeTemplate)
+			{
+				return false;
+			}
+		}
+		else if (UpgradeTemplate.MutuallyExclusiveUpgrades.Find(AttachedUpgrade.DataName) != INDEX_NONE)
+		{
+			// If the new upgrade is mutually exclusive with any of the other currently equipped upgrades, it is not allowed
+			return false;
+		}
+	}
+
+	return true;
+}
+
+static function bool CanApplyUpgradeToChassis(X2WeaponUpgradeTemplate UpgradeTemplate, XComGameState_Item Weapon, int SlotIndex)
+{
+	local array<X2WeaponUpgradeTemplate> AttachedUpgradeTemplates;
+	local X2WeaponUpgradeTemplate AttachedUpgrade;
 	local int iSlot;
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 
-	if ( Weapon.InventorySlot != eInvSlot_Armor )
+	if ( default.SPARK_ARMOR_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -600,7 +630,7 @@ static function bool CanApplyUpgradeToBit(X2WeaponUpgradeTemplate UpgradeTemplat
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( Weapon.GetWeaponCategory() != 'sparkbit' )
+	if ( default.BIT_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
 	{
 		return false;
 	}

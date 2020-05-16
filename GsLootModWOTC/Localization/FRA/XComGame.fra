@@ -40,6 +40,342 @@ LocFriendlyName="Overclock Supérieur"
 LocLongDescription="Effectuez 4 actions ce tour, aucune d'entre elle ne termine votre tour. Des tirs multiples induisent une pénalité de recul."
 LocHelpText="Effectuez 4 actions ce tour, aucune d'entre elle ne termine votre tour. Des tirs multiples induisent une pénalité de recul."
 
+[GrimyTrojan_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Troyen"
+FriendlyNamePlural="Protocoles Troyens"
+BriefSummary="Piratage +5."
+TinySummary="Améliore le Piratage"
+LootTooltip="Cette amélioration rend nos capacités de hacking plus performantes."
+
+[GrimyTrojan_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Troyen Avancé"
+FriendlyNamePlural="Protocoles Troyens Avancés"
+BriefSummary="Piratage +10."
+TinySummary="Améliore le Piratage"
+LootTooltip="Cette amélioration rend nos capacités de hacking plus performantes."
+
+[GrimyTrojan_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Troyen Supérieur"
+FriendlyNamePlural="Protocoles Troyens Supérieurs"
+BriefSummary="Piratage +15."
+TinySummary="Améliore le Piratage"
+LootTooltip="Cette amélioration rend nos capacités de hacking plus performantes."
+
+[GrimyShock_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Choc"
+FriendlyNamePlural="Shock Protocols"
+BriefSummary="1 charge supplémentaire à la capacité Protocole de Combat."
+TinySummary="Augmente les charges de la capacité Protocole de Combat"
+LootTooltip="Cette amélioration confère à son utilisateurs plus de charges de Protocole de Combat."
+
+[GrimyShock_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Choc Avancé"
+FriendlyNamePlural="Advanced Shock Protocols"
+BriefSummary="2 charges supplémentaires à la capacité Protocole de Combat."
+TinySummary="Augmente les charges de la capacité Protocole de Combat"
+LootTooltip="Cette amélioration confère à son utilisateurs plus de charges de Protocole de Combat."
+
+[GrimyShock_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Superior Shock Protocol"
+FriendlyNamePlural="Protocole de Choc Supérieur"
+BriefSummary="3 charges supplémentaires à la capacité Protocole de Combat."
+TinySummary="Augmente les charges de la capacité Protocole de Combat"
+LootTooltip="Cette amélioration confère à son utilisateurs plus de charges de Protocole de Combat."
+
+[GrimyBlindingProtocol_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Aveuglement"
+FriendlyNamePlural="Protocoles d'Aveuglement"
+BriefSummary="Confère 1 charge de Protocole d'Aveuglement, qui réduit la visée de l'ennemi de 50% pour 1 tour."
+TinySummary="Confère des charges de Protocole d'Aveuglement"
+LootTooltip="Cette amélioration confère des charges de Protocole d'Aveuglement."
+
+[GrimyBlindingProtocol_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Aveuglement Avancé"
+FriendlyNamePlural="Protocoles d'Aveuglement Avancés"
+BriefSummary="Confère 2 charge de Protocole d'Aveuglement, qui réduit la visée de l'ennemi de 50% pour 1 tour."
+TinySummary="Confère des charges de Protocole d'Aveuglement"
+LootTooltip="Cette amélioration confère des charges de Protocole d'Aveuglement."
+
+[GrimyBlindingProtocol_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Aveuglement Supérieur"
+FriendlyNamePlural="Protocoles d'Aveuglement Supérieurs"
+BriefSummary="Confère 1 charge de Protocole d'Aveuglement, qui réduit la visée de l'ennemi de 50% pour 1 tour."
+TinySummary="Confère des charges de Protocole d'Aveuglement"
+LootTooltip="Cette amélioration confère des charges de Protocole d'Aveuglement."
+
+[GrimyTripwireProtocol_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Restriction de Mouvements"
+FriendlyNamePlural="Protocoles de Restriction de Mouvements"
+BriefSummary="Confère 1 charge de Protocole de Restriction de Mouvements, qui réduit la mobilité de l'ennemi ciblé de 4 pour 1 tour."
+TinySummary="Confère des charges de Protocole de Restriction de Mouvements"
+LootTooltip="Cette amélioration confère des charges de Protocole de Restriction de Mouvements."
+
+[GrimyTripwireProtocol_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Restriction de Mouvements Avancé"
+FriendlyNamePlural="Protocoles de Restriction de Mouvements Avancés"
+BriefSummary="Confère 2 charge de Protocole de Restriction de Mouvements, qui réduit la mobilité de l'ennemi ciblé de 4 pour 1 tour."
+TinySummary="Confère des charges de Protocole de Restriction de Mouvements"
+LootTooltip="Cette amélioration confère des charges de Protocole de Restriction de Mouvements."
+
+[GrimyTripwireProtocol_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Restriction de Mouvements Supérieur"
+FriendlyNamePlural="Protocoles de Restriction de Mouvements Supérieurs"
+BriefSummary="Confère 3 charge de Protocole de Restriction de Mouvements, qui réduit la mobilité de l'ennemi ciblé de 4 pour 1 tour."
+TinySummary="Confère des charges de Protocole de Restriction de Mouvements"
+LootTooltip="Cette amélioration confère des charges de Protocole de Restriction de Mouvements."
+
+[GrimySuperCapacitors_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Super Condensateur"
+FriendlyNamePlural="Super Condensateurs"
+BriefSummary="Les Bits font 1 dégât de plus."
+TinySummary="Augmente les dégâts du Bit"
+LootTooltip="Cette amélioration augmente les dégâts du Bit."
+
+[GrimySuperCapacitors_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Super Condensateur Avancé"
+FriendlyNamePlural="uper Condensateurs Avancés"
+BriefSummary="Les Bits font 2 dégâts de plus."
+TinySummary="Augmente les dégâts du Bit"
+LootTooltip="Cette amélioration augmente les dégâts du Bit."
+
+[GrimySuperCapacitors_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Super Condensateur Supérieurs"
+FriendlyNamePlural="Super Condensateurs Supérieurs"
+BriefSummary="Les Bits font 3 dégâts de plus."
+TinySummary="Augmente les dégâts du Bit"
+LootTooltip="Cette amélioration augmente les dégâts du Bit."
+
+[GrimyRevival_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Répartition"
+FriendlyNamePlural="Protocoles de Répartition"
+BriefSummary="Confère 1 charge supplémentaire au Protocole de Stimulus. Requiert la capacité Protocole de Stimulus."
+TinySummary="Confère des charges au Protocole de Stimulus"
+LootTooltip="Cette amélioration confère des charges au Protocole de Stimulus."
+
+[GrimyRevival_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Répartition Avancé"
+FriendlyNamePlural="Protocoles de Répartition Avancés"
+BriefSummary="Confère 2 charges supplémentaires au Protocole de Stimulus. Requiert la capacité Protocole de Stimulus."
+TinySummary="Confère des charges au Protocole de Stimulus"
+LootTooltip="Cette amélioration confère des charges au Protocole de Stimulus."
+
+[GrimyRevival_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Répartition Supérieur"
+FriendlyNamePlural="Protocoles de Répartition Supérieurs"
+BriefSummary="Confère 3 charges supplémentaires au Protocole de Stimulus. Requiert la capacité Protocole de Stimulus."
+TinySummary="Confère des charges au Protocole de Stimulus"
+LootTooltip="Cette amélioration confère des charges au Protocole de Stimulus."
+
+[GrimyScanning_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Liaison Satellite"
+FriendlyNamePlural="Liaisons Satellite"
+BriefSummary="Confère 1 charge supplémentaire au Protocole de Scan. Requiert la capacité Protocole de Scan."
+TinySummary="Confère des charges au Protocole de Scan"
+LootTooltip="Cette amélioration confère des charges au Protocole de Scan."
+
+[GrimyScanning_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Liaison Satellite Avancée"
+FriendlyNamePlural="Liaisons Satellite Avancées"
+BriefSummary="Confère 2 charges supplémentaires au Protocole de Scan. Requiert la capacité Protocole de Scan."
+TinySummary="Confère des charges au Protocole de Scan"
+LootTooltip="Cette amélioration confère des charges au Protocole de Scan."
+
+[GrimyScanning_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Liaison Satellite Supérieure"
+FriendlyNamePlural="Liaisons Satellite Supérieures"
+BriefSummary="Confère 3 charges supplémentaires au Protocole de Scan. Requiert la capacité Protocole de Scan."
+TinySummary="Confère des charges au Protocole de Scan"
+LootTooltip="Cette amélioration confère des charges au Protocole de Scan."
+
+[GrimyShieldProtocol_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Blindage"
+FriendlyNamePlural="Protocoles de Blindage"
+BriefSummary="Le Protocole d'Assistance confère aussi 3 points de bouclier pour 3 tours."
+TinySummary="Le Protocole d'Assistance confère des points de bouclier"
+LootTooltip="Cette améliroation permet à nos Bit de conférer du blindage à nos alliés."
+
+[GrimyShieldProtocol_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Blindage Avancé"
+FriendlyNamePlural="Protocoles de Blindage Avancés"
+BriefSummary="Le Protocole d'Assistance confère aussi 4 points de bouclier pour 3 tours."
+TinySummary="Le Protocole d'Assistance confère des points de bouclier"
+LootTooltip="Cette améliroation permet à nos Bit de conférer du blindage à nos alliés."
+
+[GrimyShieldProtocol_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Blindage Supérieur"
+FriendlyNamePlural="Protocoles de Blindage Supérieurs"
+BriefSummary="Le Protocole d'Assistance confère aussi 5 points de bouclier pour 3 tours."
+TinySummary="Le Protocole d'Assistance confère des points de bouclier"
+LootTooltip="Cette améliroation permet à nos Bit de conférer du blindage à nos alliés."
+
+[GrimyOverride_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Contournement"
+FriendlyNamePlural="Protocoles de Contournement"
+BriefSummary="Confère 1 charge de Protocole de contournement, qui rend une unité immune à la prochaine attaque."
+TinySummary="Confère des charges de Protocole de Contournement"
+LootTooltip="Cette amélioration permet à nos Bits de protéger nos alliés des attaques ennemies."
+
+[GrimyOverride_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Contournement Avancé"
+FriendlyNamePlural="Protocoles de Contournement Avancés"
+BriefSummary="Confère 2 charges de Protocole de contournement, qui rend une unité immune à la prochaine attaque."
+TinySummary="Confère des charges de Protocole de Contournement"
+LootTooltip="Cette amélioration permet à nos Bits de protéger nos alliés des attaques ennemies."
+
+[GrimyOverride_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Contournement Supérieur"
+FriendlyNamePlural="Protocoles de Contournement Supérieurs"
+BriefSummary="Confère 3 charges de Protocole de contournement, qui rend une unité immune à la prochaine attaque."
+TinySummary="Confère des charges de Protocole de Contournement"
+LootTooltip="Cette amélioration permet à nos Bits de protéger nos alliés des attaques ennemies."
+
+[GrimyDistortion_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Distorsion"
+FriendlyNamePlural="Protocoles de Distorsion"
+BriefSummary="Confère 1 charge de Protocole de Distorsion, qui panique l'ennemi ciblé pour 1 tour."
+TinySummary="Confère des charges de Protocole de Distorsion"
+LootTooltip="Cette amélioration permet à nos Bits de faire paniquer les ennemis."
+
+[GrimyDistortion_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Distorsion Avancé"
+FriendlyNamePlural="Protocoles de Distorsion Avancés"
+BriefSummary="Confère 2 charges de Protocole de Distorsion, qui panique l'ennemi ciblé pour 1 tour."
+TinySummary="Confère des charges de Protocole de Distorsion"
+LootTooltip="Cette amélioration permet à nos Bits de faire paniquer les ennemis."
+
+[GrimyDistortion_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Distorsion Supérieur"
+FriendlyNamePlural="Protocoles de Distorsion Supérieurs"
+BriefSummary="Confère 2 charges de Protocole de Distorsion, qui panique l'ennemi ciblé pour 1 tour."
+TinySummary="Confère des charges de Protocole de Distorsion"
+LootTooltip="Cette amélioration permet à nos Bits de faire paniquer les ennemis."
+
+[GrimyTargetingProtocol_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée"
+FriendlyNamePlural="Protocoles de Visée"
+BriefSummary="Le Protocole d'Assistance confère aussi +5% de visée et de chances de critiques pour 1 tour."
+TinySummary="Le Protocole d'Assistance confère une amélioration de visée et de chances de critiques"
+LootTooltip="Cette amélioration permet à nos Bits d'assister la visée de nos unités alliées."
+
+[GrimyTargetingProtocol_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée Avancé"
+FriendlyNamePlural="Protocoles de Visée Avancés"
+BriefSummary="Le Protocole d'Assistance confère aussi +10% de visée et de chances de critiques pour 1 tour."
+TinySummary="Le Protocole d'Assistance confère une amélioration de visée et de chances de critiques"
+LootTooltip="Cette amélioration permet à nos Bits d'assister la visée de nos unités alliées."
+
+[GrimyTargetingProtocol_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée Supérieur"
+FriendlyNamePlural="Protocoles de Visée Supérieurs"
+BriefSummary="Le Protocole d'Assistance confère aussi +15% de visée et de chances de critiques pour 1 tour."
+TinySummary="Le Protocole d'Assistance confère une amélioration de visée et de chances de critiques"
+LootTooltip="Cette amélioration permet à nos Bits d'assister la visée de nos unités alliées."
+
+[GrimyMascot_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mascotte"
+FriendlyNamePlural="Protocoles Mascotte"
+BriefSummary="Confère 1 charge de Protocole Mascotte, qui donne 1 point d'action supplémentaire à un allié."
+TinySummary="Confère des charges de Protocole Mascotte"
+LootTooltip="Cette amélioration permet à nos Bits d'améliorer la versatilité de nos unités."
+
+[GrimyMascot_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mascotte Avancé"
+FriendlyNamePlural="Protocoles Mascotte Avancés"
+BriefSummary="Confère 2 charges de Protocole Mascotte, qui donne 1 point d'action supplémentaire à un allié."
+TinySummary="Confère des charges de Protocole Mascotte"
+LootTooltip="Cette amélioration permet à nos Bits d'améliorer la versatilité de nos unités."
+
+[GrimyMascot_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mascotte Supérieur"
+FriendlyNamePlural="Protocoles Mascotte Supérieurs"
+BriefSummary="Confère 3 charges de Protocole Mascotte, qui donne 1 point d'action supplémentaire à un allié."
+TinySummary="Confère des charges de Protocole Mascotte"
+LootTooltip="Cette amélioration permet à nos Bits d'améliorer la versatilité de nos unités."
+
+[GrimyMjolnir_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mjolnir"
+FriendlyNamePlural="Protocoles Mjolnir"
+BriefSummary="Confère 1 charge supplémentaire de Décharge. Requiert la capacité Décharge."
+TinySummary="Confère des charges supplémentaires à la capacité Décharge"
+LootTooltip="Cette amélioration permet à nos Bits de conférer plus d'utilisations de Décharge à nos Colonels Spécialistes."
+
+[GrimyMjolnir_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mjolnir Avancé"
+FriendlyNamePlural="Protocoles Mjolnir Avancés"
+BriefSummary="Confère 2 charges supplémentaires de Décharge. Requiert la capacité Décharge."
+TinySummary="Confère des charges supplémentaires à la capacité Décharge"
+LootTooltip="Cette amélioration permet à nos Bits de conférer plus d'utilisations de Décharge à nos Colonels Spécialistes."
+
+[GrimyMjolnir_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Mjolnir Supérieur"
+FriendlyNamePlural="Protocoles Mjolnir Supérieurs"
+BriefSummary="Confère 3 charges supplémentaires de Décharge. Requiert la capacité Décharge."
+TinySummary="Confère des charges supplémentaires à la capacité Décharge"
+LootTooltip="Cette amélioration permet à nos Bits de conférer plus d'utilisations de Décharge à nos Colonels Spécialistes."
+
+[GrimyAegis_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Egide"
+FriendlyNamePlural="Protocoles d'Egide"
+BriefSummary="Confère 1 charge de Protocole d'Egide, qui donne 6 points de bouclier pour 4 tours aux alliés proches."
+TinySummary="Confère des charges de Protocole d'Egide"
+LootTooltip="Cette amélioration permet à nos Bits de fournir du blindage à plusieurs alliés simultanément."
+
+[GrimyAegis_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Egide Avancé"
+FriendlyNamePlural="Protocoles d'Egide Avancés"
+BriefSummary="Confère 2 charges de Protocole d'Egide, qui donne 6 points de bouclier pour 4 tours aux alliés proches."
+TinySummary="Confère des charges de Protocole d'Egide"
+LootTooltip="Cette amélioration permet à nos Bits de fournir du blindage à plusieurs alliés simultanément."
+
+[GrimyAegis_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole d'Egide Supérieur"
+FriendlyNamePlural="Protocoles d'Egide Supérieurs"
+BriefSummary="Confère 3 charges de Protocole d'Egide, qui donne 6 points de bouclier pour 4 tours aux alliés proches."
+TinySummary="Confère des charges de Protocole d'Egide"
+LootTooltip="Cette amélioration permet à nos Bits de fournir du blindage à plusieurs alliés simultanément."
+
+[GrimyBastion_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Bastion"
+FriendlyNamePlural="Protocoles Bastion"
+BriefSummary="Soigne les alliés dans un rayon de 5 cases d'1 point de vie par tour."
+TinySummary="Soigne les alliés proches"
+LootTooltip="Cette amélioration permet à nos Bits de soigner nos alliés proches."
+
+[GrimyBastion_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Bastion Avancé"
+FriendlyNamePlural="Protocoles Bastion Avancés"
+BriefSummary="Soigne les alliés dans un rayon de 5 cases de 2 points de vie par tour."
+TinySummary="Soigne les alliés proches"
+LootTooltip="Cette amélioration permet à nos Bits de soigner nos alliés proches."
+
+[GrimyBastion_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole Bastion Supérieur"
+FriendlyNamePlural="Protocoles Bastion Supérieurs"
+BriefSummary="Soigne les alliés dans un rayon de 5 cases de 3 points de vie par tour."
+TinySummary="Soigne les alliés proches"
+LootTooltip="Cette amélioration permet à nos Bits de soigner nos alliés proches."
+
+[GrimySquadTargeting_BscBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée d'Escouade"
+FriendlyNamePlural="Protocoles de Visée d'Escouade"
+BriefSummary="Confère 1 charge de Protocole de Visée d'Escouade, qui donne +15% de visée et de chances de critiques aux alliés proches pour 1 tour."
+TinySummary="Charges de Protocole de Visée d'Escouade"
+LootTooltip="Cette amélioration permet à nos Bits d'assister plusieurs unités alliées dans la visée de nos ennemis."
+
+[GrimySquadTargeting_AdvBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée d'Escouade Avancé"
+FriendlyNamePlural="Protocoles de Visée d'Escouade Avancés"
+BriefSummary="Confère 1 charge de Protocole de Visée d'Escouade, qui donne +15% de visée et de chances de critiques aux alliés proches pour 1 tour."
+TinySummary="Charges de Protocole de Visée d'Escouade"
+LootTooltip="Cette amélioration permet à nos Bits d'assister plusieurs unités alliées dans la visée de nos ennemis."
+
+[GrimySquadTargeting_SupBit X2WeaponUpgradeTemplate]
+FriendlyName="Protocole de Visée d'Escouade Supérieur"
+FriendlyNamePlural="Protocoles de Visée d'Escouade Supérieurs"
+BriefSummary="Confère 1 charge de Protocole de Visée d'Escouade, qui donne +15% de visée et de chances de critiques aux alliés proches pour 1 tour."
+TinySummary="Charges de Protocole de Visée d'Escouade"
+LootTooltip="Cette amélioration permet à nos Bits d'assister plusieurs unités alliées dans la visée de nos ennemis."
+
 [GrimySpotter_BscBit X2WeaponUpgradeTemplate]
 FriendlyName="Protocole d'Observateur"
 FriendlyNamePlural="Protocoles d'Observateur"
@@ -313,63 +649,63 @@ BriefSummary="Augmente la statistique de piratage de 90."
 TinySummary="Augmente la statistique de Piratage"
 LootTooltip="Cette amélioration permet à nos ingénieurs de hacker à distance."
 
-[GrimyNorthStar_BscArmor X2WeaponUpgradeTemplate]
+[GrimyNorthStar_BscChassis X2WeaponUpgradeTemplate]
 FriendlyName="Etoile Polaire"
 FriendlyNamePlural="Etoiles Polaires"
 BriefSummary="Diminiue le temps de rechargement de Frappe de 2."
 TinySummary="Diminiue le temps de rechargement de Frappe"
 LootTooltip="Cette amélioration permet à nos Sparks d'aller au corps-à-corps plus fréquemment."
 
-[GrimyNorthStar_AdvArmor X2WeaponUpgradeTemplate]
+[GrimyNorthStar_AdvChassis X2WeaponUpgradeTemplate]
 FriendlyName="Etoile Polaire Avancée"
 FriendlyNamePlural="Etoiles Polaires Avancées"
 BriefSummary="Diminiue le temps de rechargement de Frappe de 3."
 TinySummary="Diminiue le temps de rechargement de Frappe"
 LootTooltip="Cette amélioration permet à nos Sparks d'aller au corps-à-corps plus fréquemment."
 
-[GrimyNorthStar_SupArmor X2WeaponUpgradeTemplate]
+[GrimyNorthStar_SupChassis X2WeaponUpgradeTemplate]
 FriendlyName="Etoile Polaire Supérieure"
 FriendlyNamePlural="Etoiles Polaires Supérieures"
 BriefSummary="Diminiue le temps de rechargement de Frappe de 4."
 TinySummary="Diminiue le temps de rechargement de Frappe"
 LootTooltip="Cette amélioration permet à nos Sparks d'aller au corps-à-corps plus fréquemment."
 
-[GrimyStranglehold_BscArmor X2WeaponUpgradeTemplate]
+[GrimyStranglehold_BscChassis X2WeaponUpgradeTemplate]
 FriendlyName="Domination"
 FriendlyNamePlural="Dominations"
 BriefSummary="Frappe étourdit les ennemis pour 2 points d'action, et augmente la défense de 20."
 TinySummary="Améliore la capacité Frappe"
 LootTooltip="Cette amélioration permet à nos Sparks de temporairement maîtriser même les plus gros ennemis."
 
-[GrimyStranglehold_AdvArmor X2WeaponUpgradeTemplate]
+[GrimyStranglehold_AdvChassis X2WeaponUpgradeTemplate]
 FriendlyName="Domination Avancée"
 FriendlyNamePlural="Dominations Avancées"
 BriefSummary="Frappe étourdit les ennemis pour 2 points d'action, et augmente la défense de 25."
 TinySummary="Améliore la capacité Frappe"
 LootTooltip="Cette amélioration permet à nos Sparks de temporairement maîtriser même les plus gros ennemis."
 
-[GrimyStranglehold_SupArmor X2WeaponUpgradeTemplate]
+[GrimyStranglehold_SupChassis X2WeaponUpgradeTemplate]
 FriendlyName="Domination Supérieure"
 FriendlyNamePlural="Dominations Supérieures"
 BriefSummary="Frappe étourdit les ennemis pour 2 points d'action, et augmente la défense de 30."
 TinySummary="Améliore la capacité Frappe"
 LootTooltip="Cette amélioration permet à nos Sparks de temporairement maîtriser même les plus gros ennemis."
 
-[GrimyArmServos_BscArmor X2WeaponUpgradeTemplate]
+[GrimyArmServos_BscChassis X2WeaponUpgradeTemplate]
 FriendlyName="Moteurs Asservis de Bras"
 FriendlyNamePlural="Moteurs Asservis de Bras"
 BriefSummary="Augmente les dégâts de Frappe de 1."
 TinySummary="Augmente les dégâts de Frappe"
 LootTooltip="Cette amélioration permet à nos Sparks de frapper avec plus de force au corps-à-corps."
 
-[GrimyArmServos_AdvArmor X2WeaponUpgradeTemplate]
+[GrimyArmServos_AdvChassis X2WeaponUpgradeTemplate]
 FriendlyName="Moteurs Asservis de Bras Avancés"
 FriendlyNamePlural="Moteurs Asservis de Bras Avancés"
 BriefSummary="Augmente les dégâts de Frappe de 2."
 TinySummary="Augmente les dégâts de Frappe"
 LootTooltip="Cette amélioration permet à nos Sparks de frapper avec plus de force au corps-à-corps."
 
-[GrimyArmServos_SupArmor X2WeaponUpgradeTemplate]
+[GrimyArmServos_SupChassis X2WeaponUpgradeTemplate]
 FriendlyName="Moteurs Asservis de Bras Supérieurs"
 FriendlyNamePlural="Moteurs Asservis de Bras Supérieurs"
 BriefSummary="Augmente les dégâts de Frappe de 3."

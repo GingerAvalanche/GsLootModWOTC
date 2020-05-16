@@ -1,6 +1,6 @@
 class GrimyLoot_Research extends X2StrategyElement config(GsLootModWOTC);
 
-struct ResearchCosts
+struct ItemCount
 {
 	var name ItemName;
 	var int Count;
@@ -50,7 +50,7 @@ enum ELockboxRarity
 	eRarity_Legendary,
 };
 
-var config array<ResearchCosts> LW_RARE_RESEARCH_COST, LW_EPIC_RESEARCH_COST, LW_LEGENDARY_RESEARCH_COST;
+var config array<ItemCount> LW_RARE_RESEARCH_COST, LW_EPIC_RESEARCH_COST, LW_LEGENDARY_RESEARCH_COST;
 
 var config int RARE_RESEARCH_COST, EPIC_RESEARCH_COST, LEGENDARY_RESEARCH_COST;
 var config int RARE_RESEARCH_COST_INCREASE, EPIC_RESEARCH_COST_INCREASE, LEGENDARY_RESEARCH_COST_INCREASE;
@@ -61,16 +61,15 @@ var config bool RANDOMIZE_WEAPON_APPEARANCE, RANDOMIZE_NICKNAMES;
 var config string RARE_COLOR, EPIC_COLOR, LEGENDARY_COLOR;
 
 var config array<name> SCHEMATIC_NAMES;
-var config array<name> PrimaryAffixOne, PrimaryAffixTwo, PrimaryAffixThree, PrimaryAffixFour;
-var config array<name> PistolAffixOne, PistolAffixTwo, PistolAffixThree;
-var config array<name> SwordAffixOne, SwordAffixTwo, SwordAffixThree, SwordAffixFour;
-var config array<name> GremlinAffixOne, GremlinAffixTwo, GremlinAffixThree;
-var config array<name> PsiAmpAffixOne, PsiAmpAffixTwo, PsiAmpAffixThree;
-var config array<name> GrenadeLauncherAffixOne, GrenadeLauncherAffixTwo, GrenadeLauncherAffixThree;
-var config array<name> ArmorAffixOne, ArmorAffixTwo, ArmorAffixThree, ArmorAffixFour;
-
-var config array<name> BitAffixOne, BitAffixTwo, BitAffixThree;
-var config array<name> ChassisAffixOne, ChassisAffixTwo, ChassisAffixThree;
+var config array<ItemCount> PRIMARY_SLOT_ONE, PRIMARY_SLOT_TWO, PRIMARY_SLOT_THREE, PRIMARY_SLOT_FOUR;
+var config array<ItemCount> PISTOL_SLOT_ONE, PISTOL_SLOT_TWO, PISTOL_SLOT_THREE, PISTOL_SLOT_FOUR;
+var config array<ItemCount> SWORD_SLOT_ONE, SWORD_SLOT_TWO, SWORD_SLOT_THREE, SWORD_SLOT_FOUR;
+var config array<ItemCount> GREMLIN_SLOT_ONE, GREMLIN_SLOT_TWO, GREMLIN_SLOT_THREE, GREMLIN_SLOT_FOUR;
+var config array<ItemCount> BIT_SLOT_ONE, BIT_SLOT_TWO, BIT_SLOT_THREE, BIT_SLOT_FOUR;
+var config array<ItemCount> GRENADELAUNCHER_SLOT_ONE, GRENADELAUNCHER_SLOT_TWO, GRENADELAUNCHER_SLOT_THREE, GRENADELAUNCHER_SLOT_FOUR;
+var config array<ItemCount> PSIAMP_SLOT_ONE, PSIAMP_SLOT_TWO, PSIAMP_SLOT_THREE, PSIAMP_SLOT_FOUR;
+var config array<ItemCount> ARMOR_SLOT_ONE, ARMOR_SLOT_TWO, ARMOR_SLOT_THREE, ARMOR_SLOT_FOUR;
+var config array<ItemCount> CHASSIS_SLOT_ONE, CHASSIS_SLOT_TWO, CHASSIS_SLOT_THREE, CHASSIS_SLOT_FOUR;
 
 var config array<name> AR_T1, SG_T1, LMG_T1, SR_T1, SMG_T1, VR_T1, BP_T1;
 var config array<name> Pistol_T1, Sidearm_T1, Sword_T1, SGauntlet_T1, TGauntlet_T1, Gremlin_T1, PA_T1, GL_T1;
