@@ -8,10 +8,10 @@ struct ItemCount
 
 struct AffixStruct
 {
-	var array<name> AffixesOne;
-	var array<name> AffixesTwo;
-	var array<name> AffixesThree;
-	var array<name> AffixesFour;
+	var array<ItemCount> AffixesOne;
+	var array<ItemCount> AffixesTwo;
+	var array<ItemCount> AffixesThree;
+	var array<ItemCount> AffixesFour;
 };
 
 enum EGearType
@@ -347,186 +347,186 @@ static function XComGameState_Item IdentifyByIndex(XComGameState_Tech TechState,
 
 	switch ( GearType ) {
 		case eGear_AssaultRifle:
-			Affixes.AffixesOne = default.PrimaryAffixOne;
-			Affixes.AffixesTwo = default.PrimaryAffixTwo;
-			Affixes.AffixesThree = default.PrimaryAffixThree;
-			Affixes.AffixesFour = default.PrimaryAffixFour;
+			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
+			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
+			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
+			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
 			ConfigArray = default.AR_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Shotgun:
-			Affixes.AffixesOne = default.PrimaryAffixOne;
-			Affixes.AffixesTwo = default.PrimaryAffixTwo;
-			Affixes.AffixesThree = default.PrimaryAffixThree;
-			Affixes.AffixesFour = default.PrimaryAffixFour;
+			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
+			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
+			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
+			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
 			ConfigArray = default.SG_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_MachineGun:
-			Affixes.AffixesOne = default.PrimaryAffixOne;
-			Affixes.AffixesTwo = default.PrimaryAffixTwo;
-			Affixes.AffixesThree = default.PrimaryAffixThree;
-			Affixes.AffixesFour = default.PrimaryAffixFour;
+			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
+			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
+			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
+			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
 			ConfigArray = default.LMG_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_SniperRifle:
-			Affixes.AffixesOne = default.PrimaryAffixOne;
-			Affixes.AffixesTwo = default.PrimaryAffixTwo;
-			Affixes.AffixesThree = default.PrimaryAffixThree;
-			Affixes.AffixesFour = default.PrimaryAffixFour;
+			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
+			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
+			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
+			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
 			ConfigArray = default.SR_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_SMG:
-			Affixes.AffixesOne = default.PrimaryAffixOne;
-			Affixes.AffixesTwo = default.PrimaryAffixTwo;
-			Affixes.AffixesThree = default.PrimaryAffixThree;
-			Affixes.AffixesFour = default.PrimaryAffixFour;
+			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
+			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
+			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
+			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
 			ConfigArray = default.SMG_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Vektor:
-			Affixes.AffixesOne = default.PrimaryAffixOne;
-			Affixes.AffixesTwo = default.PrimaryAffixTwo;
-			Affixes.AffixesThree = default.PrimaryAffixThree;
-			Affixes.AffixesFour = default.PrimaryAffixFour;
+			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
+			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
+			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
+			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
 			ConfigArray = default.VR_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Bullpup:
-			Affixes.AffixesOne = default.PrimaryAffixOne;
-			Affixes.AffixesTwo = default.PrimaryAffixTwo;
-			Affixes.AffixesThree = default.PrimaryAffixThree;
-			Affixes.AffixesFour = default.PrimaryAffixFour;
+			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
+			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
+			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
+			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
 			ConfigArray = default.BP_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_LightArmor:
-			Affixes.AffixesOne = default.ArmorAffixOne;
-			Affixes.AffixesTwo = default.ArmorAffixTwo;
-			Affixes.AffixesThree = default.ArmorAffixThree;
-			Affixes.AffixesFour = default.ArmorAffixFour;
+			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
+			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
+			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
+			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
 			ConfigArray = DetermineConfigArrayByArmorTierOwned(default.LA_T1, default.LA_T2, default.LA_T3);
 			BonusSlots = 1;
 			break;
 		case eGear_MediumArmor:
-			Affixes.AffixesOne = default.ArmorAffixOne;
-			Affixes.AffixesTwo = default.ArmorAffixTwo;
-			Affixes.AffixesThree = default.ArmorAffixThree;
-			Affixes.AffixesFour = default.ArmorAffixFour;
+			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
+			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
+			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
+			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
 			ConfigArray = default.MA_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_HeavyArmor:
-			Affixes.AffixesOne = default.ArmorAffixOne;
-			Affixes.AffixesTwo = default.ArmorAffixTwo;
-			Affixes.AffixesThree = default.ArmorAffixThree;
-			Affixes.AffixesFour = default.ArmorAffixFour;
+			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
+			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
+			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
+			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
 			ConfigArray = DetermineConfigArrayByArmorTierOwned(default.HA_T1, default.HA_T2, default.HA_T3);
 			BonusSlots = 1;
 			break;
 		case eGear_ReaperArmor:
-			Affixes.AffixesOne = default.ArmorAffixOne;
-			Affixes.AffixesTwo = default.ArmorAffixTwo;
-			Affixes.AffixesThree = default.ArmorAffixThree;
-			Affixes.AffixesFour = default.ArmorAffixFour;
+			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
+			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
+			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
+			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
 			ConfigArray = default.RA_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_SkirmisherArmor:
-			Affixes.AffixesOne = default.ArmorAffixOne;
-			Affixes.AffixesTwo = default.ArmorAffixTwo;
-			Affixes.AffixesThree = default.ArmorAffixThree;
-			Affixes.AffixesFour = default.ArmorAffixFour;
+			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
+			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
+			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
+			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
 			ConfigArray = default.SA_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_TemplarArmor:
-			Affixes.AffixesOne = default.ArmorAffixOne;
-			Affixes.AffixesTwo = default.ArmorAffixTwo;
-			Affixes.AffixesThree = default.ArmorAffixThree;
-			Affixes.AffixesFour = default.ArmorAffixFour;
+			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
+			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
+			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
+			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
 			ConfigArray = default.TA_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Pistol:
-			Affixes.AffixesOne = default.PistolAffixOne;
-			Affixes.AffixesTwo = default.PistolAffixTwo;
-			Affixes.AffixesThree = default.PistolAffixThree;
-			//Affixes.AffixesFour = default.PistolAffixFour;
+			Affixes.AffixesOne = default.PISTOL_SLOT_ONE;
+			Affixes.AffixesTwo = default.PISTOL_SLOT_TWO;
+			Affixes.AffixesThree = default.PISTOL_SLOT_THREE;
+			Affixes.AffixesFour = default.PISTOL_SLOT_FOUR;
 			ConfigArray = default.Pistol_T1;
 			break;
 		case eGear_Sidearm:
-			Affixes.AffixesOne = default.PistolAffixOne;
-			Affixes.AffixesTwo = default.PistolAffixTwo;
-			Affixes.AffixesThree = default.PistolAffixThree;
-			//Affixes.AffixesFour = default.PistolAffixFour;
+			Affixes.AffixesOne = default.PISTOL_SLOT_ONE;
+			Affixes.AffixesTwo = default.PISTOL_SLOT_TWO;
+			Affixes.AffixesThree = default.PISTOL_SLOT_THREE;
+			Affixes.AffixesFour = default.PISTOL_SLOT_FOUR;
 			ConfigArray = default.Sidearm_T1;
 			break;
 		case eGear_Sword:
-			Affixes.AffixesOne = default.SwordAffixOne;
-			Affixes.AffixesTwo = default.SwordAffixTwo;
-			Affixes.AffixesThree = default.SwordAffixThree;
-			//Affixes.AffixesFour = default.SwordAffixFour;
+			Affixes.AffixesOne = default.SWORD_SLOT_ONE;
+			Affixes.AffixesTwo = default.SWORD_SLOT_TWO;
+			Affixes.AffixesThree = default.SWORD_SLOT_THREE;
+			Affixes.AffixesFour = default.SWORD_SLOT_FOUR;
 			ConfigArray = default.Sword_T1;
 			break;
 		case eGear_WristBlade:
-			Affixes.AffixesOne = default.SwordAffixOne;
-			Affixes.AffixesTwo = default.SwordAffixTwo;
-			Affixes.AffixesThree = default.SwordAffixThree;
-			//Affixes.AffixesFour = default.SwordAffixFour;
+			Affixes.AffixesOne = default.SWORD_SLOT_ONE;
+			Affixes.AffixesTwo = default.SWORD_SLOT_TWO;
+			Affixes.AffixesThree = default.SWORD_SLOT_THREE;
+			Affixes.AffixesFour = default.SWORD_SLOT_FOUR;
 			ConfigArray = default.SGauntlet_T1;
 			break;
 		case eGear_ShardGauntlet:
-			Affixes.AffixesOne = default.SwordAffixOne;
-			Affixes.AffixesTwo = default.SwordAffixTwo;
-			Affixes.AffixesThree = default.SwordAffixThree;
-			Affixes.AffixesFour = default.SwordAffixFour;
+			Affixes.AffixesOne = default.SWORD_SLOT_ONE;
+			Affixes.AffixesTwo = default.SWORD_SLOT_TWO;
+			Affixes.AffixesThree = default.SWORD_SLOT_THREE;
+			Affixes.AffixesFour = default.SWORD_SLOT_FOUR;
 			ConfigArray = default.TGauntlet_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Gremlin:
-			Affixes.AffixesOne = default.GremlinAffixOne;
-			Affixes.AffixesTwo = default.GremlinAffixTwo;
-			Affixes.AffixesThree = default.GremlinAffixThree;
-			//Affixes.AffixesFour = default.GremlinAffixFour;
+			Affixes.AffixesOne = default.GREMLIN_SLOT_ONE;
+			Affixes.AffixesTwo = default.GREMLIN_SLOT_TWO;
+			Affixes.AffixesThree = default.GREMLIN_SLOT_THREE;
+			Affixes.AffixesFour = default.GREMLIN_SLOT_FOUR;
 			ConfigArray = default.Gremlin_T1;
 			break;
 		case eGear_GrenadeLauncher:
-			Affixes.AffixesOne = default.GrenadeLauncherAffixOne;
-			Affixes.AffixesTwo = default.GrenadeLauncherAffixTwo;
-			Affixes.AffixesThree = default.GrenadeLauncherAffixThree;
-			//Affixes.AffixesFour = default.GrenadeLauncherAffixFour;
+			Affixes.AffixesOne = default.GRENADELAUNCHER_SLOT_ONE;
+			Affixes.AffixesTwo = default.GRENADELAUNCHER_SLOT_TWO;
+			Affixes.AffixesThree = default.GRENADELAUNCHER_SLOT_THREE;
+			Affixes.AffixesFour = default.GRENADELAUNCHER_SLOT_FOUR;
 			ConfigArray = default.GL_T1;
 			break;
 		case eGear_PsiAmp:
-			Affixes.AffixesOne = default.PsiAmpAffixOne;
-			Affixes.AffixesTwo = default.PsiAmpAffixTwo;
-			Affixes.AffixesThree = default.PsiAmpAffixThree;
-			//Affixes.AffixesFour = default.PsiAmpAffixFour;
+			Affixes.AffixesOne = default.PSIAMP_SLOT_ONE;
+			Affixes.AffixesTwo = default.PSIAMP_SLOT_TWO;
+			Affixes.AffixesThree = default.PSIAMP_SLOT_THREE;
+			Affixes.AffixesFour = default.PSIAMP_SLOT_FOUR;
 			ConfigArray = default.PA_T1;
 			break;
 		case eGear_SparkBit:
-			Affixes.AffixesOne = default.BitAffixOne;
-			Affixes.AffixesTwo = default.BitAffixTwo;
-			Affixes.AffixesThree = default.BitAffixThree;
-			//Affixes.AffixesFour = default.BitAffixFour;
+			Affixes.AffixesOne = default.BIT_SLOT_ONE;
+			Affixes.AffixesTwo = default.BIT_SLOT_TWO;
+			Affixes.AffixesThree = default.BIT_SLOT_THREE;
+			Affixes.AffixesFour = default.BIT_SLOT_FOUR;
 			ConfigArray = default.SparkBit_T1;
 			break;
 		case eGear_SparkRifle:
-			Affixes.AffixesOne = default.PrimaryAffixOne;
-			Affixes.AffixesTwo = default.PrimaryAffixTwo;
-			Affixes.AffixesThree = default.PrimaryAffixThree;
-			//Affixes.AffixesFour = default.PrimaryAffixFour;
+			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
+			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
+			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
+			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
 			ConfigArray = default.SparkRifle_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_SparkChassis:
-			Affixes.AffixesOne = default.ChassisAffixOne;
-			Affixes.AffixesTwo = default.ChassisAffixTwo;
-			Affixes.AffixesThree = default.ChassisAffixThree;
-			//Affixes.AffixesFour = default.ChassisAffixFour;
+			Affixes.AffixesOne = default.CHASSIS_SLOT_ONE;
+			Affixes.AffixesTwo = default.CHASSIS_SLOT_TWO;
+			Affixes.AffixesThree = default.CHASSIS_SLOT_THREE;
+			Affixes.AffixesFour = default.CHASSIS_SLOT_FOUR;
 			ConfigArray = default.SparkArmor_T1;
 			BonusSlots = 1;
 			break;
@@ -549,9 +549,10 @@ static function XComGameState_Item Identify(XComGameState NewGameState, ELockbox
 	local XComGameState_Item ItemState;
 	local X2ItemTemplate ItemTemplate;
 	local name ItemName;
-	local GrimyLoot_GameState_LootStore LootStoreState;
+	local XComGameState_GLootStore LootStoreState;
 	local LootStruct LootStats;
 	local int NumSlots;
+	local array<name> UpgradeListOne, UpgradeListTwo, UpgradeListThree, UpgradeListFour;
 	
 	XComHQ = `XCOMHQ;
 	XComHQ = XComGameState_HeadquartersXCom(NewGameState.ModifyStateObject(class'XComGameState_HeadquartersXCom', XComHQ.ObjectID));
@@ -576,7 +577,7 @@ static function XComGameState_Item Identify(XComGameState NewGameState, ELockbox
 	
 	ItemState = ItemTemplate.CreateInstanceFromTemplate(NewGameState);
 
-	LootStoreState = class'GrimyLootUtilities'.static.GetLootStore();
+	LootStoreState = class'X2Utilities_GsLoot'.static.GetLootStore();
 	NumSlots = Rarity + BonusSlots;
 	if ( LootStoreState.ObjectID > 0 )
 	{
@@ -611,18 +612,47 @@ static function XComGameState_Item Identify(XComGameState NewGameState, ELockbox
 		ItemState.WeaponAppearance.iWeaponDeco = `SYNC_RAND_STATIC(`CONTENT.GetColorPalette(ePalette_ArmorTint).Entries.length);
 		ItemState.WeaponAppearance.nmWeaponPattern = GetRandPatternName();
 	}
+
+	foreach Affixes.AffixesOne(Item)
+	{
+		for (int i = 0; i < Item.Count; ++i)
+		{
+			UpgradeListOne.AddItem(Item.ItemName);
+		}
+	}
+	foreach Affixes.AffixesTwo(Item)
+	{
+		for (int i = 0; i < Item.Count; ++i)
+		{
+			UpgradeListTwo.AddItem(Item.ItemName);
+		}
+	}
+	foreach Affixes.AffixesThree(Item)
+	{
+		for (int i = 0; i < Item.Count; ++i)
+		{
+			UpgradeListThree.AddItem(Item.ItemName);
+		}
+	}
+	foreach Affixes.AffixesFour(Item)
+	{
+		for (int i = 0; i < Item.Count; ++i)
+		{
+			UpgradeListFour.AddItem(Item.ItemName);
+		}
+	}
 	
 	switch ( NumSlots )
 	{
 		case 4:
-			ApplyNovelUpgrade(ItemState, Affixes.AffixesFour);
+			ApplyNovelUpgrade(ItemState, UpgradeListFour);
 		case 3:
-			ApplyNovelUpgrade(ItemState, Affixes.AffixesThree);
+			ApplyNovelUpgrade(ItemState, UpgradeListThree);
 		case 2:
-			ApplyNovelUpgrade(ItemState, Affixes.AffixesTwo);
+			ApplyNovelUpgrade(ItemState, UpgradeListTwo);
 		case 1:
 		default:
-			ApplyNovelUpgrade(ItemState, Affixes.AffixesOne);
+			ApplyNovelUpgrade(ItemState, UpgradeListOne);
 	}
 	
 	ItemState.OnItemBuilt(NewGameState);

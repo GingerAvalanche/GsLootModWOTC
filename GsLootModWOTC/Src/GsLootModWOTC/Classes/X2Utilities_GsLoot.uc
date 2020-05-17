@@ -1,21 +1,28 @@
-class GrimyLootUtilities extends Object;
+class X2Utilities_GsLoot extends Object config(GsLootModWOTC);
+
+struct TemplateImage
+{
+	var name TemplateName;
+	var string strImage;
+};
 
 var config bool bLogUpgrades;
+var config array<TemplateImage> ITEM_IMAGES;
 
-static function GrimyLoot_GameState_LootStore GetLootStore()
+static function XComGameState_GLootStore GetLootStore()
 {
-	return GrimyLoot_GameState_LootStore(`XCOMHISTORY.GetSingleGameStateObjectForClass(class'GrimyLoot_GameState_LootStore', true));
+	return XComGameState_GLootStore(`XCOMHISTORY.GetSingleGameStateObjectForClass(class'XComGameState_GLootStore', true));
 }
 
 static function CreateLootStore(out XComGameState NewGameState)
 {
-	local GrimyLoot_GameState_LootStore LootStoreState;
+	local XComGameState_GLootStore LootStoreState;
 
-	LootStoreState = GrimyLoot_GameState_LootStore(`XCOMHISTORY.GetSingleGameStateObjectForClass(class'GrimyLoot_GameState_LootStore', true));
+	LootStoreState = XComGameState_GLootStore(`XCOMHISTORY.GetSingleGameStateObjectForClass(class'XComGameState_GLootStore', true));
 
 	if ( LootStoreState.ObjectID == 0 )
 	{
-		LootStoreState = GrimyLoot_GameState_LootStore(NewGameState.CreateNewStateObject(class'GrimyLoot_GameState_LootStore'));
+		LootStoreState = XComGameState_GLootStore(NewGameState.CreateNewStateObject(class'XComGameState_GLootStore'));
 		NewGameState.AddStateObject(LootStoreState);
 	}
 }
@@ -23,7 +30,7 @@ static function CreateLootStore(out XComGameState NewGameState)
 static function AddExistingGameStatesToLootStore()
 {
 	local LootStruct LootStats;
-	local GrimyLoot_GameState_LootStore LootStoreState;
+	local XComGameState_GLootStore LootStoreState;
 	local XComGameState_Item ItemState;
 
 	LootStoreState = GetLootStore();

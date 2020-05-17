@@ -120,8 +120,8 @@ static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, arra
 
 	NoneMissDamageValue.Tag = 'MISS';
 	
-	`log("-------------------------------------------------------------------------", default.bLogUpgrades, 'GsLootModWOTC');
-	`log(default.class @ GetFuncName() @ "setting up" @ ThisUpgradeSetup.UpgradeName, default.bLogUpgrades, 'GsLootModWOTC');
+	`log("-------------------------------------------------------------------------", class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "setting up" @ ThisUpgradeSetup.UpgradeName, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
 	
 	`CREATE_X2TEMPLATE(class'X2WeaponUpgradeTemplate', Template, ThisUpgradeSetup.UpgradeName);
 	Template.LootStaticMesh = StaticMesh'UI_3D.Loot.WeapFragmentA';
@@ -142,7 +142,7 @@ static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, arra
 		Template.AddCHDamageModifierFn = DamageUpgradeModifier;
 	}
 
-	`log(default.class @ GetFuncName() @ "AimBonus" @ ThisUpgradeSetup.AimBonus, default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "AimBonus" @ ThisUpgradeSetup.AimBonus, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
 
 	if (ThisUpgradeSetup.AimBonus != 0)
 	{
@@ -150,7 +150,7 @@ static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, arra
 		Template.AddHitChanceModifierFn = AimUpgradeHitModifier;
 	}
 	
-	`log(default.class @ GetFuncName() @ "CritBonus" @ ThisUpgradeSetup.CritChanceBonus, default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "CritBonus" @ ThisUpgradeSetup.CritChanceBonus, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
 	
 	if (ThisUpgradeSetup.CritChanceBonus != 0)
 	{
@@ -158,7 +158,7 @@ static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, arra
 		Template.AddCritChanceModifierFn = CritUpgradeModifier;
 	}
 
-	`log(default.class @ GetFuncName() @ "ClipSizeBonus" @ ThisUpgradeSetup.ClipSizeBonus, default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "ClipSizeBonus" @ ThisUpgradeSetup.ClipSizeBonus, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
 	
 	if (ThisUpgradeSetup.ClipSizeBonus != 0)
 	{
@@ -167,7 +167,7 @@ static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, arra
 		Template.GetBonusAmountFn = GetClipBonus;
 	}
 
-	`log(default.class @ GetFuncName() @ "MaxClipSizeOne" @ ThisUpgradeSetup.MaxClipSizeOne, default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "MaxClipSizeOne" @ ThisUpgradeSetup.MaxClipSizeOne, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
 	
 	if (ThisUpgradeSetup.MaxClipSizeOne)
 	{
@@ -176,7 +176,7 @@ static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, arra
 
 	foreach ThisUpgradeSetup.BonusAbilities(AbilityName)
 	{
-		`log(default.class @ GetFuncName() @ "Bonus Ability" @ AbilityName, default.bLogUpgrades, 'GsLootModWOTC');
+		`log(default.class @ GetFuncName() @ "Bonus Ability" @ AbilityName, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
 		Template.BonusAbilities.AddItem(AbilityName);
 	}
 
@@ -196,9 +196,9 @@ static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, arra
 		Template.AddUpgradeAttachment(SocketName, 'UIPawnLocation_WeaponUpgrade_Shotgun', ThisUpgradeSetup.MeshPath, "", ItemName, , "", ThisUpgradeSetup.ImagePath, ThisUpgradeSetup.IconPath);
 	}
 	
-	`log(default.class @ GetFuncName() @ "ResourceCosts 0 index check" @ ThisUpgradeSetup.ResourceCosts[0].ItemTemplateName, default.bLogUpgrades, 'GsLootModWOTC');
-	`log(default.class @ GetFuncName() @ "ArtifactCosts 0 index check" @ ThisUpgradeSetup.ArtifactCosts[0].ItemTemplateName, default.bLogUpgrades, 'GsLootModWOTC');
-	`log(default.class @ GetFuncName() @ "RequiredTechs 0 index check" @ ThisUpgradeSetup.RequiredTechs[0], default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "ResourceCosts 0 index check" @ ThisUpgradeSetup.ResourceCosts[0].ItemTemplateName, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "ArtifactCosts 0 index check" @ ThisUpgradeSetup.ArtifactCosts[0].ItemTemplateName, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "RequiredTechs 0 index check" @ ThisUpgradeSetup.RequiredTechs[0], class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
 
 	// even if you specify an empty array in the ini, it'll give you an array of length 1
 	if (ThisUpgradeSetup.ResourceCosts[0].ItemTemplateName != '')
@@ -240,7 +240,7 @@ static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, arra
 	Template.BlackMarketTexts = class'X2Item_DefaultUpgrades'.default.UpgradeBlackMarketTexts;
 	//Template.UpgradeCats.AddItem('lightsaber'); //TODO: Remember what I made UpgradeCats for, and set this if necessary
 	
-	`log(default.class @ GetFuncName() @ "finished setting up" @ ThisUpgradeSetup.UpgradeName, default.bLogUpgrades, 'GsLootModWOTC');
+	`log(default.class @ GetFuncName() @ "finished setting up" @ ThisUpgradeSetup.UpgradeName, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
 
 	return Template;
 }

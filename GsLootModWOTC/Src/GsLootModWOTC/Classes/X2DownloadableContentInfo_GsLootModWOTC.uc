@@ -21,9 +21,9 @@ static event OnLoadedSavedGameToStrategy()
 
 	NewGameState = class'XComGameStateContext_ChangeContainer'.static.CreateChangeState("LootStore Instantiation");
 
-	if ( class'GrimyLootUtilities'.static.GetLootStore().ObjectID == 0 )
+	if ( class'X2Utilities_GsLoot'.static.GetLootStore().ObjectID == 0 )
 	{
-	    class'GrimyLootUtilities'.static.CreateLootStore(NewGameState);
+	    class'X2Utilities_GsLoot'.static.CreateLootStore(NewGameState);
 	}
 
 	if ( NewGameState.GetNumGameStateObjects() > 0 ) //this is redundant with the previous conditional, I think? doesn't hurt to be sure
@@ -40,7 +40,7 @@ static event OnLoadedSavedGameToStrategy()
 
 static event InstallNewCampaign(XcomGameState StartState)
 {
-	class'GrimyLootUtilities'.static.CreateLootStore(StartState);
+	class'X2Utilities_GsLoot'.static.CreateLootStore(StartState);
 }
 
 static event OnExitPostMissionSequence()
@@ -48,15 +48,15 @@ static event OnExitPostMissionSequence()
 	local XComGameState NewGameState;
 	local array<int> LootStoreIDs;
 	local int LootStoreID;
-	local GrimyLoot_GameState_LootStore LootStoreState;
+	local XComGameState_GLootStore LootStoreState;
 	local XComGameState_BaseObject ObjectState;
 
 	NewGameState = class'XComGameStateContext_ChangeContainer'.static.CreateChangeState("LootStore Instantiation");
-	LootStoreState = class'GrimyLootUtilities'.static.GetLootStore();
+	LootStoreState = class'X2Utilities_GsLoot'.static.GetLootStore();
 
 	if ( LootStoreState.ObjectID == 0 ) // If it doesn't exist, create it
 	{
-	    class'GrimyLootUtilities'.static.CreateLootStore(NewGameState);
+	    class'X2Utilities_GsLoot'.static.CreateLootStore(NewGameState);
 
 		if ( NewGameState.GetNumGameStateObjects() > 0 ) //this is redundant with the previous conditional, I think? doesn't hurt to be sure
 		{
@@ -703,10 +703,10 @@ exec function UpgradeItemsForSchematic(string SchematicName)
 
 exec function GrimyLootLogLootStore()
 {
-	local GrimyLoot_GameState_LootStore LootStoreState;
+	local XComGameState_GLootStore LootStoreState;
 	local XComGameState_BaseObject ObjectState;
 
-	LootStoreState = class'GrimyLootUtilities'.static.GetLootStore();
+	LootStoreState = class'X2Utilities_GsLoot'.static.GetLootStore();
 
 	if ( LootStoreState.ObjectID == 0 )
 	{
@@ -725,7 +725,7 @@ exec function GrimyLootLogLootStore()
 
 exec function GrimyLootBuildLootStoreFromHistory()
 {
-	class'GrimyLootUtilities'.static.AddExistingGameStatesToLootStore();
+	class'X2Utilities_GsLoot'.static.AddExistingGameStatesToLootStore();
 }
 
 static function UpdateInventoryCategoryImages()

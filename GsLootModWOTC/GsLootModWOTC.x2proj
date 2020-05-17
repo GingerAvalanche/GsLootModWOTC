@@ -223,7 +223,7 @@ Wraxil - Implementation for continent bonuses</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="ReadMe.txt" />
-    <Content Include="Src\GsLootModWOTC\Classes\GrimyLootUtilities.uc">
+    <Content Include="Src\GsLootModWOTC\Classes\X2Utilities_GsLoot.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_AbilitiesActiveReanimate.uc">
@@ -391,7 +391,7 @@ Wraxil - Implementation for continent bonuses</Description>
     <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_GameState_Ammo.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_GameState_LootStore.uc">
+    <Content Include="Src\GsLootModWOTC\Classes\XComGameState_GLootStore.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_ItemTemplateHelper.uc">
@@ -422,12 +422,6 @@ Wraxil - Implementation for continent bonuses</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_TargetCursor.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_UIBlackMarket_Sell.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_UIBlackMarket_SellItem.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_UIItemCard.uc">

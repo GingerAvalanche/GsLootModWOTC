@@ -1,4 +1,4 @@
-class GrimyLoot_GameState_LootStore extends XComGameState_BaseObject;
+class XComGameState_GLootStore extends XComGameState_BaseObject;
 
 var int Length;
 

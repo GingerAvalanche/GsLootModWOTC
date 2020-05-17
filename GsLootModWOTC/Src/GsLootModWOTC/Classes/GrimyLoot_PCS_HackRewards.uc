@@ -88,7 +88,7 @@ function GiveRarePCS(XComGameState_Unit Hacker, XComGameState_BaseObject HackTar
 	local XComGameState_Item ItemState;
 	local X2ItemTemplate ItemTemplate;
 	local MAS_API_AchievementName AchNameObj;
-	local GrimyLoot_GameState_LootStore LootStoreState;
+	local XComGameState_GLootStore LootStoreState;
 	local LootStruct LootStats;
 	
 	//Create a new item instance
@@ -99,7 +99,7 @@ function GiveRarePCS(XComGameState_Unit Hacker, XComGameState_BaseObject HackTar
 	ItemState = ItemTemplate.CreateInstanceFromTemplate(NewGameState);
 	ItemState.OnCreation(ItemTemplate);
 
-	LootStoreState = class'GrimyLootUtilities'.static.GetLootStore();
+	LootStoreState = class'X2Utilities_GsLoot'.static.GetLootStore();
 	if ( LootStoreState.ObjectID > 0 )
 	{
 		LootStats.IDOwner = ItemState.ObjectID;
@@ -131,7 +131,7 @@ function GiveEpicPCS(XComGameState_Unit Hacker, XComGameState_BaseObject HackTar
 	local XComGameState_Item ItemState;
 	local X2ItemTemplate ItemTemplate;
 	local MAS_API_AchievementName AchNameObj;
-	local GrimyLoot_GameState_LootStore LootStoreState;
+	local XComGameState_GLootStore LootStoreState;
 	local LootStruct LootStats;
 	
 	//Create a new item instance
@@ -142,7 +142,7 @@ function GiveEpicPCS(XComGameState_Unit Hacker, XComGameState_BaseObject HackTar
 	ItemState = ItemTemplate.CreateInstanceFromTemplate(NewGameState);
 	ItemState.OnCreation(ItemTemplate);
 
-	LootStoreState = class'GrimyLootUtilities'.static.GetLootStore();
+	LootStoreState = class'X2Utilities_GsLoot'.static.GetLootStore();
 	if ( LootStoreState.ObjectID > 0 )
 	{
 		LootStats.IDOwner = ItemState.ObjectID;
@@ -175,7 +175,7 @@ function GiveLegendaryPCS(XComGameState_Unit Hacker, XComGameState_BaseObject Ha
 	local X2ItemTemplateManager ItemTemplateManager;
 	local XComGameState_Item ItemState;
 	local X2ItemTemplate ItemTemplate;
-	local GrimyLoot_GameState_LootStore LootStoreState;
+	local XComGameState_GLootStore LootStoreState;
 	local LootStruct LootStats;
 	
 	//Create a new item instance
@@ -186,7 +186,7 @@ function GiveLegendaryPCS(XComGameState_Unit Hacker, XComGameState_BaseObject Ha
 	ItemState = ItemTemplate.CreateInstanceFromTemplate(NewGameState);
 	ItemState.OnCreation(ItemTemplate);
 
-	LootStoreState = class'GrimyLootUtilities'.static.GetLootStore();
+	LootStoreState = class'X2Utilities_GsLoot'.static.GetLootStore();
 	if ( LootStoreState.ObjectID > 0 )
 	{
 		LootStats.IDOwner = ItemState.ObjectID;
