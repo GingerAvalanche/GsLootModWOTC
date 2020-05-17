@@ -430,9 +430,6 @@ Wraxil - Implementation for continent bonuses</Description>
     <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_UIScreen.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_WeaponUpgradeTemplate.uc">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Src\GsLootModWOTC\Classes\X2DownloadableContentInfo_GsLootModWOTC.uc">
       <SubType>Content</SubType>
     </Content>

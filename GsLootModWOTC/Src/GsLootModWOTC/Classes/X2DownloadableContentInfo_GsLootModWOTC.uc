@@ -98,6 +98,7 @@ static event OnPostTemplatesCreated()
 
 	class'GrimyLoot_UpgradesPrimary'.static.UpdateOldTemplates();
 	class'GrimyLoot_Research'.static.EnableAlienRulers();
+	class'X2Item_GrimyUpgrades'.static.GenerateAttachmentsForUpgrades();
 }
 
 static function UpdateSchematics()

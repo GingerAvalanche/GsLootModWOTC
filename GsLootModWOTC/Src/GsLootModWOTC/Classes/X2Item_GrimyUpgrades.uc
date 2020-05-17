@@ -3,9 +3,14 @@ class X2Item_GrimyUpgrades extends X2Item config(GsLootUpgradeSetup);
 struct UpgradeSetup
 {
 	var name				UpgradeName;
-	var string				ImagePath;
+	var string				InventoryIconPath;
+	var name				SocketName;
+	var name				UIArmoryCameraPointTag;
 	var string				MeshPath;
+	var string				ProjectilePath;
+	var bool				AttachToPawn;
 	var string				IconPath;
+	var string				InventoryCategoryIcon;
 	var int					Tier;
 	var int					UpgradeValue;
 	var int					AimBonus;
@@ -26,25 +31,25 @@ struct MutualExclusionGroup
 	var array<name>		ExclusionGroupMembers;
 };
 
-var config array<UpgradeSetup> PRIMARY_WEAPON_SETUPS;
-var config array<UpgradeSetup> PISTOL_WEAPON_SETUPS;
-var config array<UpgradeSetup> SWORD_WEAPON_SETUPS;
-var config array<UpgradeSetup> GREMLIN_WEAPON_SETUPS;
-var config array<UpgradeSetup> BIT_WEAPON_SETUPS;
-var config array<UpgradeSetup> PSIAMP_WEAPON_SETUPS;
-var config array<UpgradeSetup> GRENADELAUNCHER_WEAPON_SETUPS;
-var config array<UpgradeSetup> SOLDIER_ARMOR_SETUPS;
-var config array<UpgradeSetup> SPARK_ARMOR_SETUPS;
+var config array<UpgradeSetup> PRIMARY_UPGRADE_SETUPS;
+var config array<UpgradeSetup> PISTOL_UPGRADE_SETUPS;
+var config array<UpgradeSetup> SWORD_UPGRADE_SETUPS;
+var config array<UpgradeSetup> GREMLIN_UPGRADE_SETUPS;
+var config array<UpgradeSetup> BIT_UPGRADE_SETUPS;
+var config array<UpgradeSetup> GRENADELAUNCHER_UPGRADE_SETUPS;
+var config array<UpgradeSetup> PSIAMP_UPGRADE_SETUPS;
+var config array<UpgradeSetup> ARMOR_UPGRADE_SETUPS;
+var config array<UpgradeSetup> CHASSIS_UPGRADE_SETUPS;
 
-var config array<name> PRIMARY_WEAPON_TEMPLATE_NAMES;
-var config array<name> PISTOL_WEAPON_TEMPLATE_NAMES;
-var config array<name> SWORD_WEAPON_TEMPLATE_NAMES;
-var config array<name> GREMLIN_WEAPON_TEMPLATE_NAMES;
-var config array<name> BIT_WEAPON_TEMPLATE_NAMES;
-var config array<name> PSIAMP_WEAPON_TEMPLATE_NAMES;
-var config array<name> GRENADELAUNCHER_WEAPON_TEMPLATE_NAMES;
-var config array<name> SOLDIER_ARMOR_TEMPLATE_NAMES;
-var config array<name> SPARK_ARMOR_TEMPLATE_NAMES;
+var config array<name> PRIMARY_WEAPON_CATEGORIES;
+var config array<name> PISTOL_WEAPON_CATEGORIES;
+var config array<name> SWORD_WEAPON_CATEGORIES;
+var config array<name> GREMLIN_WEAPON_CATEGORIES;
+var config array<name> BIT_WEAPON_CATEGORIES;
+var config array<name> GRENADELAUNCHER_WEAPON_CATEGORIES;
+var config array<name> PSIAMP_WEAPON_CATEGORIES;
+var config array<name> ARMOR_CATEGORIES;
+var config array<name> CHASSIS_CATEGORIES;
 
 var config array<MutualExclusionGroup> EXCLUSION_GROUPS;
 
@@ -54,51 +59,51 @@ static function array<X2DataTemplate> CreateTemplates()
 {
 	local array<X2DataTemplate> Items;
 
-	foreach default.PRIMARY_WEAPON_SETUPS(WeaponSetup)
+	foreach default.PRIMARY_UPGRADE_SETUPS(WeaponSetup)
 	{
-		Items.additem(CreateUpgrade(WeaponSetup, default.PRIMARY_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToWeapon));
+		Items.additem(CreateUpgrade(WeaponSetup, CanApplyUpgradeToWeapon));
 	}
 
-	foreach default.PISTOL_WEAPON_SETUPS(WeaponSetup)
+	foreach default.PISTOL_UPGRADE_SETUPS(WeaponSetup)
 	{
-		Items.additem(CreateUpgrade(WeaponSetup, default.PISTOL_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToPistol));
+		Items.additem(CreateUpgrade(WeaponSetup, CanApplyUpgradeToPistol));
 	}
 
-	foreach default.SWORD_WEAPON_SETUPS(WeaponSetup)
+	foreach default.SWORD_UPGRADE_SETUPS(WeaponSetup)
 	{
-		Items.additem(CreateUpgrade(WeaponSetup, default.SWORD_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToSword));
+		Items.additem(CreateUpgrade(WeaponSetup, CanApplyUpgradeToSword));
 	}
 
-	foreach default.GREMLIN_WEAPON_SETUPS(WeaponSetup)
+	foreach default.GREMLIN_UPGRADE_SETUPS(WeaponSetup)
 	{
-		Items.additem(CreateUpgrade(WeaponSetup, default.GREMLIN_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToGremlin));
+		Items.additem(CreateUpgrade(WeaponSetup, CanApplyUpgradeToGremlin));
 	}
 
-	foreach default.PSIAMP_WEAPON_SETUPS(WeaponSetup)
+	foreach default.PSIAMP_UPGRADE_SETUPS(WeaponSetup)
 	{
-		Items.additem(CreateUpgrade(WeaponSetup, default.PSIAMP_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToPsiAmp));
+		Items.additem(CreateUpgrade(WeaponSetup, CanApplyUpgradeToPsiAmp));
 	}
 
-	foreach default.GRENADELAUNCHER_WEAPON_SETUPS(WeaponSetup)
+	foreach default.GRENADELAUNCHER_UPGRADE_SETUPS(WeaponSetup)
 	{
-		Items.additem(CreateUpgrade(WeaponSetup, default.GRENADELAUNCHER_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToGrenadeLauncher));
+		Items.additem(CreateUpgrade(WeaponSetup, CanApplyUpgradeToGrenadeLauncher));
 	}
 	
-	foreach default.SOLDIER_ARMOR_SETUPS(ArmorSetup)
+	foreach default.ARMOR_UPGRADE_SETUPS(ArmorSetup)
 	{
-		Items.AddItem(CreateUpgrade(ArmorSetup, default.SOLDIER_ARMOR_TEMPLATE_NAMES, CanApplyUpgradeToArmor))
+		Items.AddItem(CreateUpgrade(ArmorSetup, CanApplyUpgradeToArmor))
 	}
 	
 	if ( class'GrimyLoot_AbilitiesSpark'.static.HasDLC3() )
 	{
-		foreach default.SPARK_ARMOR_SETUPS(ArmorSetup)
+		foreach default.CHASSIS_UPGRADE_SETUPS(ArmorSetup)
 		{
-			Items.AddItem(CreateUpgrade(ArmorSetup, default.SPARK_ARMOR_TEMPLATE_NAMES, CanApplyUpgradeToChassis))
+			Items.AddItem(CreateUpgrade(ArmorSetup, CanApplyUpgradeToChassis))
 		}
 
-		foreach default.BIT_WEAPON_SETUPS(WeaponSetup)
+		foreach default.BIT_UPGRADE_SETUPS(WeaponSetup)
 		{
-			Items.additem(CreateUpgrade(WeaponSetup, default.BIT_WEAPON_TEMPLATE_NAMES, CanApplyUpgradeToBit));
+			Items.additem(CreateUpgrade(WeaponSetup, CanApplyUpgradeToBit));
 		}
 	}
 	
@@ -109,7 +114,7 @@ static function array<X2DataTemplate> CreateTemplates()
 // -------------------- GENERIC SETUP FUNCTIONS ------------------------------------------
 // #######################################################################################
 
-static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, array<name> ItemTemplateNames, delegate<UpgradeApply> ApplyFunction)
+static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, delegate<UpgradeApply> ApplyFunction)
 {
 	local X2WeaponUpgradeTemplate	Template;
 	local name						AbilityName, SaberName;
@@ -189,11 +194,6 @@ static function X2DataTemplate CreateUpgrade(UpgradeSetup ThisUpgradeSetup, arra
 				Template.MutuallyExclusiveUpgrades.AddItem(MemberName);
 			}
 		}
-	}
-
-	foreach ItemTemplateNames(ItemName)
-	{
-		Template.AddUpgradeAttachment(SocketName, 'UIPawnLocation_WeaponUpgrade_Shotgun', ThisUpgradeSetup.MeshPath, "", ItemName, , "", ThisUpgradeSetup.ImagePath, ThisUpgradeSetup.IconPath);
 	}
 	
 	`log(default.class @ GetFuncName() @ "ResourceCosts 0 index check" @ ThisUpgradeSetup.ResourceCosts[0].ItemTemplateName, class'X2Utilities_GsLoot'.default.bLogUpgrades, 'GsLootModWOTC');
@@ -313,7 +313,7 @@ static function bool CanApplyUpgradeToWeapon(X2WeaponUpgradeTemplate UpgradeTemp
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( default.PRIMARY_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.PRIMARY_WEAPON_CATEGORIES.Find(X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -346,11 +346,13 @@ static function bool CanApplyUpgradeToWeaponOrPistol(X2WeaponUpgradeTemplate Upg
 	local array<X2WeaponUpgradeTemplate> AttachedUpgradeTemplates;
 	local X2WeaponUpgradeTemplate AttachedUpgrade; 
 	local int iSlot;
+	local string WeaponCat;
 	
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
+	WeaponCat = X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat;
 	
-	if ( default.PRIMARY_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE &&
-		default.PISTOL_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.PRIMARY_WEAPON_CATEGORIES.Find(WeaponCat) == INDEX_NONE &&
+		default.PISTOL_WEAPON_CATEGORIES.Find(WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -385,7 +387,7 @@ static function bool CanApplyUpgradeToPistol(X2WeaponUpgradeTemplate UpgradeTemp
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( default.PISTOL_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.PISTOL_WEAPON_CATEGORIES.Find(X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -420,7 +422,7 @@ static function bool CanApplyUpgradeToSword(X2WeaponUpgradeTemplate UpgradeTempl
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( default.SWORD_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.SWORD_WEAPON_CATEGORIES.Find(X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -455,7 +457,7 @@ static function bool CanApplyUpgradeToGremlin(X2WeaponUpgradeTemplate UpgradeTem
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( default.GREMLIN_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.GREMLIN_WEAPON_CATEGORIES.Find(X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -490,7 +492,7 @@ static function bool CanApplyUpgradeToPsiAmp(X2WeaponUpgradeTemplate UpgradeTemp
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( default.PSIAMP_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.PSIAMP_WEAPON_CATEGORIES.Find(X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -525,7 +527,7 @@ static function bool CanApplyUpgradeToGrenadeLauncher(X2WeaponUpgradeTemplate Up
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( default.GRENADELAUNCHER_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.GRENADELAUNCHER_WEAPON_CATEGORIES.Find(X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -560,7 +562,7 @@ static function bool CanApplyUpgradeToArmor(X2WeaponUpgradeTemplate UpgradeTempl
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( default.SOLDIER_ARMOR_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.ARMOR_CATEGORIES.Find(X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -595,7 +597,7 @@ static function bool CanApplyUpgradeToChassis(X2WeaponUpgradeTemplate UpgradeTem
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 
-	if ( default.SPARK_ARMOR_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.CHASSIS_CATEGORIES.Find(X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -630,7 +632,7 @@ static function bool CanApplyUpgradeToBit(X2WeaponUpgradeTemplate UpgradeTemplat
 		
 	AttachedUpgradeTemplates = Weapon.GetMyWeaponUpgradeTemplates();
 	
-	if ( default.BIT_WEAPON_TEMPLATE_NAMES.Find(Weapon.DataName) == INDEX_NONE )
+	if ( default.BIT_WEAPON_CATEGORIES.Find(X2WeaponTemplate(Weapon.GetMyTemplate()).WeaponCat) == INDEX_NONE )
 	{
 		return false;
 	}
@@ -716,4 +718,107 @@ static function UpdateOldTemplates()
 	ItemTemplate.CanApplyUpgradeToWeaponFn = CanApplyUpgradeToWeapon;
 	ItemTemplate = X2WeaponUpgradeTemplate(ItemManager.FindItemTemplate('ReloadUpgrade_Sup'));
 	ItemTemplate.CanApplyUpgradeToWeaponFn = CanApplyUpgradeToWeapon;
+}
+
+// #######################################################################################
+// -------------------- ATTACHMENT GENERATOR ---------------------------------------------
+// #######################################################################################
+
+static function GenerateAttachmentsForUpgrades()
+{
+	local X2ItemTemplateManager			ItemMgr;
+	local X2ItemTemplate				UpgradeTemplate, ItemTemplate;
+	local array<X2WeaponTemplate>		WeaponTemplates;
+	local X2WeaponTemplate				WeaponTemplate;
+	local array<X2EquipmentTemplate>	ArmorTemplates;
+	local X2EquipmentTemplate			EquipmentTemplate;
+	local X2ArmorTemplate				ArmorTemplate;
+	local X2WeaponUpgradeTemplate		UpgradeTemplate;
+	local UpgradeSetup					Setup;
+
+	ItemMgr = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
+	WeaponTemplates = ItemMgr.GetAllWeaponTemplates();
+	ArmorTemplates = ItemMgr.GetAllArmorTemplates();
+
+	foreach WeaponTemplates(WeaponTemplate)
+	{
+		if (default.PRIMARY_WEAPON_CATEGORIES.Find(WeaponTemplate.WeaponCat) != INDEX_NONE)
+		{
+			foreach default.PRIMARY_UPGRADE_SETUPS(Setup)
+			{
+				UpgradeTemplate = X2WeaponUpgradeTemplate(ItemMgr.FindItemTemplate(Setup.UpgradeName));
+				UpgradeTemplate.AddUpgradeAttachment(Setup.SocketName, Setup.UIArmoryCameraPointTag, Setup.MeshPath, Setup.ProjectilePath, WeaponTemplate.DataName, Setup.AttachToPawn, Setup.IconPath, Setup.InventoryIconPath, Setup.InventoryCategoryIcon);
+			}
+		}
+		if (default.PISTOL_WEAPON_CATEGORIES.Find(WeaponTemplate.WeaponCat) != INDEX_NONE)
+		{
+			foreach default.PISTOL_UPGRADE_SETUPS(Setup)
+			{
+				UpgradeTemplate = X2WeaponUpgradeTemplate(ItemMgr.FindItemTemplate(Setup.UpgradeName));
+				UpgradeTemplate.AddUpgradeAttachment(Setup.SocketName, Setup.UIArmoryCameraPointTag, Setup.MeshPath, Setup.ProjectilePath, WeaponTemplate.DataName, Setup.AttachToPawn, Setup.IconPath, Setup.InventoryIconPath, Setup.InventoryCategoryIcon);
+			}
+		}
+		if (default.SWORD_WEAPON_CATEGORIES.Find(WeaponTemplate.WeaponCat) != INDEX_NONE)
+		{
+			foreach default.SWORD_UPGRADE_SETUPS(Setup)
+			{
+				UpgradeTemplate = X2WeaponUpgradeTemplate(ItemMgr.FindItemTemplate(Setup.UpgradeName));
+				UpgradeTemplate.AddUpgradeAttachment(Setup.SocketName, Setup.UIArmoryCameraPointTag, Setup.MeshPath, Setup.ProjectilePath, WeaponTemplate.DataName, Setup.AttachToPawn, Setup.IconPath, Setup.InventoryIconPath, Setup.InventoryCategoryIcon);
+			}
+		}
+		if (default.GREMLIN_WEAPON_CATEGORIES.Find(WeaponTemplate.WeaponCat) != INDEX_NONE)
+		{
+			foreach default.GREMLIN_UPGRADE_SETUPS(Setup)
+			{
+				UpgradeTemplate = X2WeaponUpgradeTemplate(ItemMgr.FindItemTemplate(Setup.UpgradeName));
+				UpgradeTemplate.AddUpgradeAttachment(Setup.SocketName, Setup.UIArmoryCameraPointTag, Setup.MeshPath, Setup.ProjectilePath, WeaponTemplate.DataName, Setup.AttachToPawn, Setup.IconPath, Setup.InventoryIconPath, Setup.InventoryCategoryIcon);
+			}
+		}
+		if (default.BIT_WEAPON_CATEGORIES.Find(WeaponTemplate.WeaponCat) != INDEX_NONE)
+		{
+			foreach default.BIT_UPGRADE_SETUPS(Setup)
+			{
+				UpgradeTemplate = X2WeaponUpgradeTemplate(ItemMgr.FindItemTemplate(Setup.UpgradeName));
+				UpgradeTemplate.AddUpgradeAttachment(Setup.SocketName, Setup.UIArmoryCameraPointTag, Setup.MeshPath, Setup.ProjectilePath, WeaponTemplate.DataName, Setup.AttachToPawn, Setup.IconPath, Setup.InventoryIconPath, Setup.InventoryCategoryIcon);
+			}
+		}
+		if (default.GRENADELAUNCHER_WEAPON_CATEGORIES.Find(WeaponTemplate.WeaponCat) != INDEX_NONE)
+		{
+			foreach default.GRENADELAUNCHER_UPGRADE_SETUPS(Setup)
+			{
+				UpgradeTemplate = X2WeaponUpgradeTemplate(ItemMgr.FindItemTemplate(Setup.UpgradeName));
+				UpgradeTemplate.AddUpgradeAttachment(Setup.SocketName, Setup.UIArmoryCameraPointTag, Setup.MeshPath, Setup.ProjectilePath, WeaponTemplate.DataName, Setup.AttachToPawn, Setup.IconPath, Setup.InventoryIconPath, Setup.InventoryCategoryIcon);
+			}
+		}
+		if (default.PSIAMP_WEAPON_CATEGORIES.Find(WeaponTemplate.WeaponCat) != INDEX_NONE)
+		{
+			foreach default.PSIAMP_UPGRADE_SETUPS(Setup)
+			{
+				UpgradeTemplate = X2WeaponUpgradeTemplate(ItemMgr.FindItemTemplate(Setup.UpgradeName));
+				UpgradeTemplate.AddUpgradeAttachment(Setup.SocketName, Setup.UIArmoryCameraPointTag, Setup.MeshPath, Setup.ProjectilePath, WeaponTemplate.DataName, Setup.AttachToPawn, Setup.IconPath, Setup.InventoryIconPath, Setup.InventoryCategoryIcon);
+			}
+		}
+	}
+	
+	foreach ArmorTemplates(EquipmentTemplate)
+	{
+		ArmorTemplate = X2ArmorTemplate(EquipmentTemplate)
+
+		if (default.ARMOR_CATEGORIES.Find(ArmorTemplate.ArmorCat) != INDEX_NONE)
+		{
+			foreach default.ARMOR_UPGRADE_SETUPS(Setup)
+			{
+				UpgradeTemplate = X2WeaponUpgradeTemplate(ItemMgr.FindItemTemplate(Setup.UpgradeName));
+				UpgradeTemplate.AddUpgradeAttachment(Setup.SocketName, Setup.UIArmoryCameraPointTag, Setup.MeshPath, Setup.ProjectilePath, WeaponTemplate.DataName, Setup.AttachToPawn, Setup.IconPath, Setup.InventoryIconPath, Setup.InventoryCategoryIcon);
+			}
+		}
+		if (default.CHASSIS_CATEGORIES.Find(ArmorTemplate.ArmorCat) != INDEX_NONE)
+		{
+			foreach default.CHASSIS_UPGRADE_SETUPS(Setup)
+			{
+				UpgradeTemplate = X2WeaponUpgradeTemplate(ItemMgr.FindItemTemplate(Setup.UpgradeName));
+				UpgradeTemplate.AddUpgradeAttachment(Setup.SocketName, Setup.UIArmoryCameraPointTag, Setup.MeshPath, Setup.ProjectilePath, WeaponTemplate.DataName, Setup.AttachToPawn, Setup.IconPath, Setup.InventoryIconPath, Setup.InventoryCategoryIcon);
+			}
+		}
+	}
 }

@@ -31,7 +31,7 @@ static function EventListenerReturn OnOverrideNumUpgradeSlots(Object EventData, 
 	local XComLWTuple Tuple;
 	local XComGameState_Item ItemState;
 	local XComGameState_GLootStore LootStoreState;
-	local int ItemID;
+	local int ItemID, NumUpgradeSlots;
 
 	Tuple = XComLWTuple(EventData);
 	ItemState = XComGameState_Item(EventSource);
@@ -40,7 +40,11 @@ static function EventListenerReturn OnOverrideNumUpgradeSlots(Object EventData, 
 
 	if ( LootStoreState.DoesObjectIDHaveEntry(ItemID) )
 	{
-		Tuple.Data[0] = LootStoreState.GetNumUpgradeSlotsByOwnerID(ItemID);
+		NumUpgradeSlots = LootStoreState.GetNumUpgradeSlotsByOwnerID(ItemID)
+		if (Tuple.Data[0].i < NumUpgradeSlots)
+		}
+			Tuple.Data[0].i = NumUpgradeSlots;
+		}
 	}
 
 	return ELR_NoInterrupt;
