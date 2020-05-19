@@ -17,38 +17,77 @@ struct LootStruct
 
 var private array<LootStruct> LootStore;
 
-public function AddToLootStore(LootStruct AddStruct)
+private function int FindIndex(int ID, bNewValue)
 {
-	LootStore.AddItem(AddStruct);
-	Length = LootStore.Length;
-}
+	local int idx;
+	local float idxMod;
 
-public function bool RemoveIDFromLootStore(int ID)
-{
-	local LootStruct ItemStats;
+	idx = Length * 0.5f;
+	idxMod = float(idx);
 
-	foreach LootStore(ItemStats)
+	while ( LootStore[idx-1].IDOwner != ID )
 	{
-		if ( ItemStats.IDOwner == ID )
+		idxMod *= 0.5f;
+
+		if ( LootStore[idx-1].IDOwner > ID )
 		{
-			LootStore.RemoveItem(ItemStats);
-			Length = LootStore.Length;
-			return true;
+			if (idxMod == 0.5f)
+			{
+				if (bNewValue)
+				{
+					break; // effectively return idx-1
+				}
+				return -1;
+			}
+
+			idx -= int(idxMod);
+		}
+		else
+		{
+			if (idxMod == 0.5f)
+			{
+				if (bNewValue)
+				{
+					return idx;
+				}
+				return -1;
+			}
+
+			idx += int(idxMod);
 		}
 	}
 
-	return false;
+	return idx-1;
 }
 
 public function bool DoesObjectIDHaveEntry(int ID)
 {
-	local LootStruct ItemStats;
+	return FindIndex(ID, false) > -1;
+}
 
-	foreach LootStore(ItemStats)
+public function AddToLootStore(LootStruct AddStruct)
+{
+	local int idx;
+
+	idx = FindIndex(AddStruct.OwnerID, true);
+	LootStore.Add(idx, 1);
+	LootStore[idx] = AddStruct;
+	Length++;
+}
+
+public function bool RemoveIDFromLootStore(int ID)
+{
+	local int idx;
+
+	idx = FindIndex(ID, false);
+
+	if (idx != INDEX_NONE)
 	{
-		if ( ItemStats.IDOwner == ID )
-			return true;
+		LootStore.Remove(idx, 1);
+		Length--;
+		return true;
 	}
+
 	return false;
 }
 
@@ -67,24 +106,27 @@ public function array<int> GetAllStoreOwnerIDs()
 
 public function int GetNumUpgradeSlotsByOwnerID(int ID)
 {
-	local LootStruct ItemStats;
+	local int idx;
 
-	foreach LootStore(ItemStats)
+	idx = FindIndex(ID, false);
+
+	if (idx != INDEX_NONE)
 	{
-		if ( ItemStats.IDOwner == ID )
-			return ItemStats.NumUpgradeSlots;
+		return LootStore[idx].NumUpgradeSlots;
 	}
+
 	return -1;
 }
 
 public function int GetTradingPostValueByOwnerId(int ID)
 {
-	local LootStruct ItemStats;
+	local int idx;
 
-	foreach LootStore(ItemStats)
+	idx = FindIndex(ID, false);
+
+	if (idx != INDEX_NONE)
 	{
-		if ( ItemStats.IDOwner == ID )
-			return ItemStats.TradingPostValue;
+		return LootStore[idx].TradingPostValue;
 	}
 	return -1;
 }
