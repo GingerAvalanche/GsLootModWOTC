@@ -61,7 +61,7 @@ public function bool DoesObjectIDHaveEntry(int ID)
 
 	FindIndex(ID, bNewValue);
 
-	return bNewValue;
+	return !bNewValue;
 }
 
 public function AddToLootStore(LootStruct AddStruct)
