@@ -31,7 +31,7 @@ private function int FindIndex(int ID, out bNewValue)
 
 		if ( LootStore[idx-1].IDOwner > ID )
 		{
-			if (idxMod <= 0.5f)
+			if ( idxMod <= 0.5f )
 			{
 				bNewValue = true;
 				break;
@@ -41,7 +41,7 @@ private function int FindIndex(int ID, out bNewValue)
 		}
 		else
 		{
-			if (idxMod <= 0.5f)
+			if ( idxMod <= 0.5f )
 			{
 				bNewValue = true;
 				idx++;
@@ -71,7 +71,7 @@ public function AddToLootStore(LootStruct AddStruct)
 
 	idx = FindIndex(AddStruct.OwnerID, bNewValue);
 
-	if (bNewValue)
+	if ( bNewValue )
 	{
 		LootStore.Add(idx, 1);
 	}
@@ -87,7 +87,7 @@ public function bool RemoveIDFromLootStore(int ID)
 
 	idx = FindIndex(ID, bNewValue);
 
-	if (bNewValue)
+	if ( bNewValue )
 	{
 		return false;
 	}
@@ -117,7 +117,7 @@ public function int GetNumUpgradeSlotsByOwnerID(int ID)
 
 	idx = FindIndex(ID, bNewValue);
 
-	if (bNewValue)
+	if ( bNewValue )
 	{
 		return -1;
 	}
@@ -132,7 +132,7 @@ public function int GetTradingPostValueByOwnerId(int ID)
 
 	idx = FindIndex(ID, bNewValue);
 
-	if (bNewValue)
+	if ( bNewValue )
 	{
 		return -1;
 	}
