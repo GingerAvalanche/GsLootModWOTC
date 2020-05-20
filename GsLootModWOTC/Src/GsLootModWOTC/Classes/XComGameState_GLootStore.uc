@@ -22,7 +22,7 @@ private function int FindIndex(int ID, out bNewValue)
 	local int idx;
 	local float idxMod;
 
-	idx = int(float(Length) * 0.5f);
+	idx = Round(float(Length) * 0.5f);
 	idxMod = float(idx);
 
 	while ( LootStore[idx-1].IDOwner != ID )
@@ -37,7 +37,7 @@ private function int FindIndex(int ID, out bNewValue)
 				break;
 			}
 
-			idx -= int(idxMod);
+			idx -= Round(idxMod);
 		}
 		else
 		{
@@ -48,7 +48,7 @@ private function int FindIndex(int ID, out bNewValue)
 				break;
 			}
 
-			idx += int(idxMod);
+			idx += Round(idxMod);
 		}
 	}
 
