@@ -1,13 +1,21 @@
-class X2Utilities_GsLoot extends Object config(GsLootModWOTC);
+class X2Utilities_GsLoot extends Object
+	dependson(GsLootDataStructures)
+	config(GsLootModWOTC);
 
-struct TemplateImage
-{
-	var name TemplateName;
-	var string strImage;
-};
-
-var config bool bLogUpgrades;
+var config bool bLogUpgrades, bDropLockboxes, bDropUpgrades;
 var config array<TemplateImage> ITEM_IMAGES;
+var config float CHANCE_MOD_PER_EXISTING_UPGRADE;
+var config int PRIMARY_UPGRADE_DROP_CHANCE;
+var config int PISTOL_UPGRADE_DROP_CHANCE;
+var config int SWORD_UPGRADE_DROP_CHANCE;
+var config int GREMLIN_UPGRADE_DROP_CHANCE;
+var config int BIT_UPGRADE_DROP_CHANCE;
+var config int GRENADELAUNCHER_UPGRADE_DROP_CHANCE;
+var config int PSIAMP_UPGRADE_DROP_CHANCE;
+var config int ARMOR_UPGRADE_DROP_CHANCE;
+var config int CHASSIS_UPGRADE_DROP_CHANCE;
+var config int EARLY_LOCKBOX_CHANCE, MID_LOCKBOX_CHANCE, LATE_LOCKBOX_CHANCE;
+var config LootTable EARLY_LOCKBOXES, MID_LOCKBOXES, LATE_LOCKBOXES;
 
 static function XComGameState_GLootStore GetLootStore()
 {

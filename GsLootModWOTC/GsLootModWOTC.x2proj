@@ -162,9 +162,6 @@ Wraxil - Implementation for continent bonuses</Description>
     <Content Include="Config\XComGame.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\XComGameCore.ini">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Config\XComGameData_WeaponData.ini">
       <SubType>Content</SubType>
     </Content>
@@ -223,6 +220,9 @@ Wraxil - Implementation for continent bonuses</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="ReadMe.txt" />
+    <Content Include="Src\GsLootModWOTC\Classes\GsLootDataStructures.uc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\GsLootModWOTC\Classes\X2Utilities_GsLoot.uc">
       <SubType>Content</SubType>
     </Content>

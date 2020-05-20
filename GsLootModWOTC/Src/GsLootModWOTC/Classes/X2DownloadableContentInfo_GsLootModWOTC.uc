@@ -96,6 +96,8 @@ static event OnPostTemplatesCreated()
 	UpdateSchematics();
 	UpdateSpecialistAbilities();
 
+	OnPostLootTablesCreated();
+
 	class'GrimyLoot_UpgradesPrimary'.static.UpdateOldTemplates();
 	class'GrimyLoot_Research'.static.EnableAlienRulers();
 	class'X2Item_GrimyUpgrades'.static.GenerateAttachmentsForUpgrades();
@@ -803,4 +805,167 @@ static function UpdateInventoryCategoryImages()
 			}
 		}
 	}
+}
+
+static function OnPostLootTablesCreated()
+{
+	local LootTable				CurrentLoot, EmptyLoot;
+	local array<LootTableEntry>	CurrentEntries;
+	local LootTableEntry		CurrentEntry, DefaultItemEntry;
+	local array<name>			CurrentList, CurrentListBsc, CurrentListAdv, CurrentListSup;
+	local name					CurrentUpgradeName, CurrentLootName, TableToAddTo;
+	local array<UpgradeSetup>	CurrentSetups;
+	local UpgradeSetup			CurrentSetup;
+	local int					idx, jdx, TableChance, CurrentLootChance;
+	local int					PrimaryChance, PistolChance, SwordChance;
+	local int					GremlinChance, BitChance, GrenadeLauncherChance;
+	local int					PsiAmpChance, ArmorChance, ChassisChance;
+
+	DefaultEntry.Chance = 1;
+	DefaultEntry.ChanceModPerExistingItem = class'X2Utilities_GsLoot'.default.CHANCE_MOD_PER_EXISTING_UPGRADE;
+	DefaultEntry.MinCount = 1;
+	DefaultEntry.MaxCount = 1;
+	DefaultEntry.RollGroup = 1; //upgrades have their own tables, upgrade tables should use same group as vanilla upgrades
+	TableChance = class'X2Utilities_GsLoot'.default.TABLE_CHANCE;
+	PrimaryChance = class'X2Utilities_GsLoot'.default.PRIMARY_UPGRADE_DROP_CHANCE;
+	PistolChance = class'X2Utilities_GsLoot'.default.PISTOL_UPGRADE_DROP_CHANCE;
+	SwordChance = class'X2Utilities_GsLoot'.default.SWORD_UPGRADE_DROP_CHANCE;
+	GremlinChance = class'X2Utilities_GsLoot'.default.GREMLIN_UPGRADE_DROP_CHANCE;
+	BitChance = class'X2Utilities_GsLoot'.default.BIT_UPGRADE_DROP_CHANCE;
+	GrenadeLauncherChance = class'X2Utilities_GsLoot'.default.GRENADELAUNCHER_UPGRADE_DROP_CHANCE;
+	PsiAmpChance = class'X2Utilities_GsLoot'.default.PSIAMP_UPGRADE_DROP_CHANCE;
+	ArmorChance = class'X2Utilities_GsLoot'.default.ARMOR_UPGRADE_DROP_CHANCE;
+	ChassisChance = class'X2Utilities_GsLoot'.default.CHASSIS_UPGRADE_DROP_CHANCE;
+
+	for (idx = 0; idx < 9, ++idx) // 9 categories of upgrades
+	{
+		if (idx == 0)
+		{
+			CurrentSetups = class'X2Item_GrimyUpgrades'.default.PRIMARY_UPGRADE_SETUPS;
+			CurrentLootName = 'PrimaryUpgrades';
+			CurrentLootChance = PrimaryChance;
+		}
+		else if (idx == 1)
+		{
+			CurrentSetups = class'X2Item_GrimyUpgrades'.default.PISTOL_UPGRADE_SETUPS;
+			CurrentLootName = 'PistolUpgrades';
+			CurrentLootChance = PistolChance;
+		}
+		else if (idx == 2)
+		{
+			CurrentSetups = class'X2Item_GrimyUpgrades'.default.SWORD_UPGRADE_SETUPS;
+			CurrentLootName = 'SwordUpgrades';
+			CurrentLootChance = SwordChance;
+		}
+		else if (idx == 3)
+		{
+			CurrentSetups = class'X2Item_GrimyUpgrades'.default.GREMLIN_UPGRADE_SETUPS;
+			CurrentLootName = 'GremlinUpgrades';
+			CurrentLootChance = GremlinChance;
+		}
+		else if (idx == 4)
+		{
+			CurrentSetups = class'X2Item_GrimyUpgrades'.default.BIT_UPGRADE_SETUPS;
+			CurrentLootName = 'BitUpgrades';
+			CurrentLootChance = BitChance;
+		}
+		else if (idx == 5)
+		{
+			CurrentSetups = class'X2Item_GrimyUpgrades'.default.GRENADELAUNCHER_UPGRADE_SETUPS;
+			CurrentLootName = 'GrenadeLauncherUpgrades';
+			CurrentLootChance = GrenadeLauncherChance;
+		}
+		else if (idx == 6)
+		{
+			CurrentSetups = class'X2Item_GrimyUpgrades'.default.PSIAMP_UPGRADE_SETUPS;
+			CurrentLootName = 'PsiAmpUpgrades';
+			CurrentLootChance = PsiAmpChance;
+		}
+		else if (idx == 7)
+		{
+			CurrentSetups = class'X2Item_GrimyUpgrades'.default.ARMOR_UPGRADE_SETUPS;
+			CurrentLootName = 'ArmorUpgrades';
+			CurrentLootChance = ArmorChance;
+		}
+		else if (idx == 8)
+		{
+			CurrentSetups = class'X2Item_GrimyUpgrades'.default.CHASSIS_UPGRADE_SETUPS;
+			CurrentLootName = 'ChassisUpgrades';
+			CurrentLootChance = ChassisChance;
+		}
+
+		foreach CurrentSetups(CurrentSetup)
+		{
+			if (InStr(string(CurrentSetup.UpgradeName), "_Bsc") != INDEX_NONE)
+				CurrentListBsc.AddItem(CurrentSetup.UpgradeName);
+			else if (InStr(string(CurrentSetup.UpgradeName), "_Adv") != INDEX_NONE)
+				CurrentListAdv.AddItem(CurrentSetup.UpgradeName);
+			else if (InStr(string(CurrentSetup.UpgradeName), "_Sup") != INDEX_NONE)
+				CurrentListSup.AddItem(CurrentSetup.UpgradeName);
+		}
+
+		for (jdx = 0; jdx < 3; ++jdx) // 3 tiers of upgrades
+		{
+			TablesToAddTo.Length = 0;
+
+			if (jdx == 0)
+			{
+				CurrentList = CurrentListBsc;
+				CurrentLootName = name(string(CurrentLootName) $ "Basic");
+				TableToAddTo = 'BasicWeaponUpgrades';
+			}
+			else if (jdx == 1)
+			{
+				CurrentList = CurrentListAdv;
+				CurrentLootName = name(string(CurrentLootName) $ "Advanced");
+				TableToAddTo = 'AdvancedWeaponUpgrades';
+			}
+			else if (jdx == 2)
+			{
+				CurrentList = CurrentListSup;
+				CurrentLootName = name(string(CurrentLootName) $ "Superior");
+				TableToAddTo = 'SuperiorWeaponUpgrades';
+			
+			}
+
+			CurrentLoot = EmptyLoot;
+			CurrentLoot.TableName = CurrentLootName;
+
+			foreach CurrentList(CurrentUpgradeName)
+			{
+				CurrentEntry = DefaultEntry;
+				CurrentEntry.TemplateName = CurrentUpgradeName;
+				CurrentLoot.Loots.AddItem(CurrentEntry);
+			}
+			
+			class'X2LootTableManager'.static.RecalculateLootTableChanceStatic(CurrentLootName);
+			CurrentEntry = DefaultEntry;
+			CurrentEntry.Chance = CurrentLootChance;
+			CurrentEntry.ChanceModPerExistingItem = 1.0f;
+			CurrentEntry.TableRef = CurrentLootName;
+			class'X2LootTableManager'.static.AddEntryStatic(TableToAddTo, CurrentEntry, false);
+		}
+	}
+	
+	class'X2LootTableManager'.static.RecalculateLootTableChanceStatic('BasicWeaponUpgrades');
+	class'X2LootTableManager'.static.RecalculateLootTableChanceStatic('AdvancedWeaponUpgrades');
+	class'X2LootTableManager'.static.RecalculateLootTableChanceStatic('SuperiorWeaponUpgrades');
+	
+	CurrentEntry = DefaultEntry;
+	CurrentEntry.Chance = class'X2Utilities_GsLoot'.default.EARLY_LOCKBOX_CHANCE;
+	CurrentEntry.RollGroup = 5;
+	CurrentEntry.TableRef = class'X2Utilities_GsLoot'.default.EARLY_LOCKBOXES;
+	class'X2LootTableManager'.static.AddEntryStatic('ADVENTEarlyTimedLoot', CurrentEntry, false);
+
+	CurrentEntry = DefaultEntry;
+	CurrentEntry.Chance = class'X2Utilities_GsLoot'.default.MID_LOCKBOX_CHANCE;
+	CurrentEntry.RollGroup = 6;
+	CurrentEntry.TableRef = class'X2Utilities_GsLoot'.default.MID_LOCKBOXES;
+	class'X2LootTableManager'.static.AddEntryStatic('ADVENTMidTimedLoot', CurrentEntry, false);
+
+	CurrentEntry = DefaultEntry;
+	CurrentEntry.Chance = class'X2Utilities_GsLoot'.default.LATE_LOCKBOX_CHANCE;
+	CurrentEntry.RollGroup = 6;
+	CurrentEntry.TableRef = class'X2Utilities_GsLoot'.default.LATE_LOCKBOXES;
+	class'X2LootTableManager'.static.AddEntryStatic('ADVENTLateTimedLoot', CurrentEntry, false);
 }

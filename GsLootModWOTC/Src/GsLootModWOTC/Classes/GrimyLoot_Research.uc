@@ -1,54 +1,6 @@
-class GrimyLoot_Research extends X2StrategyElement config(GsLootModWOTC);
-
-struct ItemCount
-{
-	var name ItemName;
-	var int Count;
-};
-
-struct AffixStruct
-{
-	var array<ItemCount> AffixesOne;
-	var array<ItemCount> AffixesTwo;
-	var array<ItemCount> AffixesThree;
-	var array<ItemCount> AffixesFour;
-};
-
-enum EGearType
-{
-	eGear_AssaultRifle,
-	eGear_Shotgun,
-	eGear_MachineGun,
-	eGear_SniperRifle,
-	eGear_SMG,
-	eGear_Vektor,
-	eGear_Bullpup,
-	eGear_LightArmor,
-	eGear_MediumArmor,
-	eGear_HeavyArmor,
-	eGear_ReaperArmor,
-	eGear_SkirmisherArmor,
-	eGear_TemplarArmor,
-	eGear_Pistol,
-	eGear_Sidearm,
-	eGear_Sword,
-	eGear_WristBlade,
-	eGear_ShardGauntlet,
-	eGear_Gremlin,
-	eGear_GrenadeLauncher,
-	eGear_PsiAmp,
-	eGear_SparkBit,
-	eGear_SparkRifle,
-	eGear_SparkChassis,
-};
-
-enum ELockboxRarity
-{
-	eRarity_None,
-	eRarity_Rare,
-	eRarity_Epic,
-	eRarity_Legendary,
-};
+class GrimyLoot_Research extends X2StrategyElement
+	dependson(GsLootDataStructures)
+	config(GsLootModWOTC);
 
 var config array<ItemCount> LW_RARE_RESEARCH_COST, LW_EPIC_RESEARCH_COST, LW_LEGENDARY_RESEARCH_COST;
 
@@ -347,186 +299,114 @@ static function XComGameState_Item IdentifyByIndex(XComGameState_Tech TechState,
 
 	switch ( GearType ) {
 		case eGear_AssaultRifle:
-			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
-			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
-			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
-			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PRIMARY_UPGRADE_SETUPS);
 			ConfigArray = default.AR_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Shotgun:
-			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
-			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
-			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
-			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PRIMARY_UPGRADE_SETUPS);
 			ConfigArray = default.SG_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_MachineGun:
-			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
-			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
-			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
-			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PRIMARY_UPGRADE_SETUPS);
 			ConfigArray = default.LMG_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_SniperRifle:
-			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
-			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
-			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
-			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PRIMARY_UPGRADE_SETUPS);
 			ConfigArray = default.SR_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_SMG:
-			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
-			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
-			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
-			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PRIMARY_UPGRADE_SETUPS);
 			ConfigArray = default.SMG_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Vektor:
-			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
-			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
-			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
-			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PRIMARY_UPGRADE_SETUPS);
 			ConfigArray = default.VR_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Bullpup:
-			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
-			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
-			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
-			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PRIMARY_UPGRADE_SETUPS);
 			ConfigArray = default.BP_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_LightArmor:
-			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
-			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
-			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
-			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.ARMOR_UPGRADE_SETUPS);
 			ConfigArray = DetermineConfigArrayByArmorTierOwned(default.LA_T1, default.LA_T2, default.LA_T3);
 			BonusSlots = 1;
 			break;
 		case eGear_MediumArmor:
-			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
-			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
-			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
-			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.ARMOR_UPGRADE_SETUPS);
 			ConfigArray = default.MA_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_HeavyArmor:
-			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
-			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
-			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
-			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.ARMOR_UPGRADE_SETUPS);
 			ConfigArray = DetermineConfigArrayByArmorTierOwned(default.HA_T1, default.HA_T2, default.HA_T3);
 			BonusSlots = 1;
 			break;
 		case eGear_ReaperArmor:
-			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
-			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
-			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
-			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.ARMOR_UPGRADE_SETUPS);
 			ConfigArray = default.RA_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_SkirmisherArmor:
-			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
-			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
-			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
-			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.ARMOR_UPGRADE_SETUPS);
 			ConfigArray = default.SA_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_TemplarArmor:
-			Affixes.AffixesOne = default.ARMOR_SLOT_ONE;
-			Affixes.AffixesTwo = default.ARMOR_SLOT_TWO;
-			Affixes.AffixesThree = default.ARMOR_SLOT_THREE;
-			Affixes.AffixesFour = default.ARMOR_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.ARMOR_UPGRADE_SETUPS);
 			ConfigArray = default.TA_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Pistol:
-			Affixes.AffixesOne = default.PISTOL_SLOT_ONE;
-			Affixes.AffixesTwo = default.PISTOL_SLOT_TWO;
-			Affixes.AffixesThree = default.PISTOL_SLOT_THREE;
-			Affixes.AffixesFour = default.PISTOL_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PISTOL_UPGRADE_SETUPS);
 			ConfigArray = default.Pistol_T1;
 			break;
 		case eGear_Sidearm:
-			Affixes.AffixesOne = default.PISTOL_SLOT_ONE;
-			Affixes.AffixesTwo = default.PISTOL_SLOT_TWO;
-			Affixes.AffixesThree = default.PISTOL_SLOT_THREE;
-			Affixes.AffixesFour = default.PISTOL_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PISTOL_UPGRADE_SETUPS);
 			ConfigArray = default.Sidearm_T1;
 			break;
 		case eGear_Sword:
-			Affixes.AffixesOne = default.SWORD_SLOT_ONE;
-			Affixes.AffixesTwo = default.SWORD_SLOT_TWO;
-			Affixes.AffixesThree = default.SWORD_SLOT_THREE;
-			Affixes.AffixesFour = default.SWORD_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.SWORD_UPGRADE_SETUPS);
 			ConfigArray = default.Sword_T1;
 			break;
 		case eGear_WristBlade:
-			Affixes.AffixesOne = default.SWORD_SLOT_ONE;
-			Affixes.AffixesTwo = default.SWORD_SLOT_TWO;
-			Affixes.AffixesThree = default.SWORD_SLOT_THREE;
-			Affixes.AffixesFour = default.SWORD_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.SWORD_UPGRADE_SETUPS);
 			ConfigArray = default.SGauntlet_T1;
 			break;
 		case eGear_ShardGauntlet:
-			Affixes.AffixesOne = default.SWORD_SLOT_ONE;
-			Affixes.AffixesTwo = default.SWORD_SLOT_TWO;
-			Affixes.AffixesThree = default.SWORD_SLOT_THREE;
-			Affixes.AffixesFour = default.SWORD_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.SWORD_UPGRADE_SETUPS);
 			ConfigArray = default.TGauntlet_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_Gremlin:
-			Affixes.AffixesOne = default.GREMLIN_SLOT_ONE;
-			Affixes.AffixesTwo = default.GREMLIN_SLOT_TWO;
-			Affixes.AffixesThree = default.GREMLIN_SLOT_THREE;
-			Affixes.AffixesFour = default.GREMLIN_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.GREMLIN_UPGRADE_SETUPS);
 			ConfigArray = default.Gremlin_T1;
 			break;
 		case eGear_GrenadeLauncher:
-			Affixes.AffixesOne = default.GRENADELAUNCHER_SLOT_ONE;
-			Affixes.AffixesTwo = default.GRENADELAUNCHER_SLOT_TWO;
-			Affixes.AffixesThree = default.GRENADELAUNCHER_SLOT_THREE;
-			Affixes.AffixesFour = default.GRENADELAUNCHER_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.GRENADELAUNCHER_UPGRADE_SETUPS);
 			ConfigArray = default.GL_T1;
 			break;
 		case eGear_PsiAmp:
-			Affixes.AffixesOne = default.PSIAMP_SLOT_ONE;
-			Affixes.AffixesTwo = default.PSIAMP_SLOT_TWO;
-			Affixes.AffixesThree = default.PSIAMP_SLOT_THREE;
-			Affixes.AffixesFour = default.PSIAMP_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PSIAMP_UPGRADE_SETUPS);
 			ConfigArray = default.PA_T1;
 			break;
 		case eGear_SparkBit:
-			Affixes.AffixesOne = default.BIT_SLOT_ONE;
-			Affixes.AffixesTwo = default.BIT_SLOT_TWO;
-			Affixes.AffixesThree = default.BIT_SLOT_THREE;
-			Affixes.AffixesFour = default.BIT_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.BIT_UPGRADE_SETUPS);
 			ConfigArray = default.SparkBit_T1;
 			break;
 		case eGear_SparkRifle:
-			Affixes.AffixesOne = default.PRIMARY_SLOT_ONE;
-			Affixes.AffixesTwo = default.PRIMARY_SLOT_TWO;
-			Affixes.AffixesThree = default.PRIMARY_SLOT_THREE;
-			Affixes.AffixesFour = default.PRIMARY_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.PRIMARY_UPGRADE_SETUPS);
 			ConfigArray = default.SparkRifle_T1;
 			BonusSlots = 1;
 			break;
 		case eGear_SparkChassis:
-			Affixes.AffixesOne = default.CHASSIS_SLOT_ONE;
-			Affixes.AffixesTwo = default.CHASSIS_SLOT_TWO;
-			Affixes.AffixesThree = default.CHASSIS_SLOT_THREE;
-			Affixes.AffixesFour = default.CHASSIS_SLOT_FOUR;
+			Affixes = GenerateAffixesForSetups(class'X2Item_GrimyUpgrades'.default.CHASSIS_UPGRADE_SETUPS);
 			ConfigArray = default.SparkArmor_T1;
 			BonusSlots = 1;
 			break;
@@ -552,7 +432,6 @@ static function XComGameState_Item Identify(XComGameState NewGameState, ELockbox
 	local XComGameState_GLootStore LootStoreState;
 	local LootStruct LootStats;
 	local int NumSlots;
-	local array<name> UpgradeListOne, UpgradeListTwo, UpgradeListThree, UpgradeListFour;
 	
 	XComHQ = `XCOMHQ;
 	XComHQ = XComGameState_HeadquartersXCom(NewGameState.ModifyStateObject(class'XComGameState_HeadquartersXCom', XComHQ.ObjectID));
@@ -612,47 +491,18 @@ static function XComGameState_Item Identify(XComGameState NewGameState, ELockbox
 		ItemState.WeaponAppearance.iWeaponDeco = `SYNC_RAND_STATIC(`CONTENT.GetColorPalette(ePalette_ArmorTint).Entries.length);
 		ItemState.WeaponAppearance.nmWeaponPattern = GetRandPatternName();
 	}
-
-	foreach Affixes.AffixesOne(Item)
-	{
-		for (int i = 0; i < Item.Count; ++i)
-		{
-			UpgradeListOne.AddItem(Item.ItemName);
-		}
-	}
-	foreach Affixes.AffixesTwo(Item)
-	{
-		for (int i = 0; i < Item.Count; ++i)
-		{
-			UpgradeListTwo.AddItem(Item.ItemName);
-		}
-	}
-	foreach Affixes.AffixesThree(Item)
-	{
-		for (int i = 0; i < Item.Count; ++i)
-		{
-			UpgradeListThree.AddItem(Item.ItemName);
-		}
-	}
-	foreach Affixes.AffixesFour(Item)
-	{
-		for (int i = 0; i < Item.Count; ++i)
-		{
-			UpgradeListFour.AddItem(Item.ItemName);
-		}
-	}
 	
 	switch ( NumSlots )
 	{
 		case 4:
-			ApplyNovelUpgrade(ItemState, UpgradeListFour);
+			ApplyNovelUpgrade(ItemState, Affixes.AffixesFour);
 		case 3:
-			ApplyNovelUpgrade(ItemState, UpgradeListThree);
+			ApplyNovelUpgrade(ItemState, Affixes.AffixesThree);
 		case 2:
-			ApplyNovelUpgrade(ItemState, UpgradeListTwo);
+			ApplyNovelUpgrade(ItemState, Affixes.AffixesTwo);
 		case 1:
 		default:
-			ApplyNovelUpgrade(ItemState, UpgradeListOne);
+			ApplyNovelUpgrade(ItemState, Affixes.AffixesOne);
 	}
 	
 	ItemState.OnItemBuilt(NewGameState);
@@ -680,6 +530,52 @@ static function array<name> DetermineConfigArrayByArmorTierOwned(array<name> Arr
 	{
 		return ArrayOne;
 	}
+}
+
+static function AffixStruct GenerateAffixesForSetups(array<UpgradeSetup> Setups);
+{
+	local AffixStruct	Affixes;
+	local UpgradeSetup	Setup;
+	local int			idx;
+
+	foreach Setups(Setup)
+	{
+		if (InStr(string(Setup.UpgradeName), "_Bsc") != INDEX_NONE)
+		{
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_ONE_BASIC; ++idx)
+				Affixes.AffixesOne.AddItem(Setup.UpgradeName);
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_TWO_BASIC; ++idx)
+				Affixes.AffixesTwo.AddItem(Setup.UpgradeName);
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_THREE_BASIC; ++idx)
+				Affixes.AffixesThree.AddItem(Setup.UpgradeName);
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_FOUR_BASIC; ++idx)
+				Affixes.AffixesFour.AddItem(Setup.UpgradeName);
+		}
+		if (InStr(string(Setup.UpgradeName), "_Adv") != INDEX_NONE)
+		{
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_ONE_ADVANCED; ++idx)
+				Affixes.AffixesOne.AddItem(Setup.UpgradeName);
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_TWO_ADVANCED; ++idx)
+				Affixes.AffixesTwo.AddItem(Setup.UpgradeName);
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_THREE_ADVANCED; ++idx)
+				Affixes.AffixesThree.AddItem(Setup.UpgradeName);
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_FOUR_ADVANCED; ++idx)
+				Affixes.AffixesFour.AddItem(Setup.UpgradeName);
+		}
+		if (InStr(string(Setup.UpgradeName), "_Sup") != INDEX_NONE)
+		{
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_ONE_SUPERIOR; ++idx)
+				Affixes.AffixesOne.AddItem(Setup.UpgradeName);
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_TWO_SUPERIOR; ++idx)
+				Affixes.AffixesTwo.AddItem(Setup.UpgradeName);
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_THREE_SUPERIOR; ++idx)
+				Affixes.AffixesThree.AddItem(Setup.UpgradeName);
+			for (idx = 0; idx < default.LOCKBOX_CHANCE_SLOT_FOUR_SUPERIOR; ++idx)
+				Affixes.AffixesFour.AddItem(Setup.UpgradeName);
+		}
+	}
+
+	return Affixes;
 }
 
 //#############################################################################################

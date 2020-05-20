@@ -1,35 +1,6 @@
-class X2Item_GrimyUpgrades extends X2Item config(GsLootUpgradeSetup);
-
-struct UpgradeSetup
-{
-	var name				UpgradeName;
-	var string				InventoryIconPath;
-	var name				SocketName;
-	var name				UIArmoryCameraPointTag;
-	var string				MeshPath;
-	var string				ProjectilePath;
-	var bool				AttachToPawn;
-	var string				IconPath;
-	var string				InventoryCategoryIcon;
-	var int					Tier;
-	var int					UpgradeValue;
-	var int					AimBonus;
-	var int					CritChanceBonus;
-	var int					ClipSizeBonus;
-	var array<ArtifactCost>	ResourceCosts;
-	var array<ArtifactCost>	ArtifactCosts;
-	var array<name>			RequiredTechs;
-	var WeaponDamageValue	DamageValue;
-	var WeaponDamageValue	MissDamageValue;
-	var array<name>			BonusAbilities;
-	var array<name>			MutuallyExclusiveUpgrades;
-	var bool				MaxClipSizeOne;
-};
-
-struct MutualExclusionGroup
-{
-	var array<name>		ExclusionGroupMembers;
-};
+class X2Item_GrimyUpgrades extends X2Item
+	dependson(GsLootDataStructures)
+	config(GsLootUpgradeSetup);
 
 var config array<UpgradeSetup> PRIMARY_UPGRADE_SETUPS;
 var config array<UpgradeSetup> PISTOL_UPGRADE_SETUPS;
