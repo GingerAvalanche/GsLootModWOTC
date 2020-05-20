@@ -17,49 +17,33 @@ struct LootStruct
 
 var private array<LootStruct> LootStore;
 
-private function int FindIndex(int ID, out bNewValue)
+private function int FindIndex(int s, int e, int ID, out bNewValue)
 {
-	local int idx;
-	local float idxMod;
+	local int mid;
 
-	idx = Round(float(Length) * 0.5f);
-	idxMod = float(idx);
-
-	while ( LootStore[idx-1].IDOwner != ID )
+	if (e >= s)
 	{
-		idxMod *= 0.5f;
+		mid = s + Round((e - s) / 2);
 
-		if ( LootStore[idx-1].IDOwner > ID )
-		{
-			if ( idxMod <= 0.5f )
-			{
-				bNewValue = true;
-				break;
-			}
-
-			idx -= Round(idxMod);
-		}
+		if (LootStore[mid] == ID)
+			return mid;
+		else if (LootStore[mid] > ID)
+			return FindIndex(s, mid-1, ID, bNewValue);
 		else
-		{
-			if ( idxMod <= 0.5f )
-			{
-				bNewValue = true;
-				idx++;
-				break;
-			}
-
-			idx += Round(idxMod);
-		}
+			return FindIndex(mid+1, e, ID, bNewValue);
 	}
-
-	return idx-1;
+	else
+	{
+		bNewValue = true;
+		return s;
+	}
 }
 
 public function bool DoesObjectIDHaveEntry(int ID)
 {
 	local bool bNewValue;
 
-	FindIndex(ID, bNewValue);
+	FindIndex(0, Length-1, ID, bNewValue);
 
 	return !bNewValue;
 }
@@ -69,7 +53,7 @@ public function AddToLootStore(LootStruct AddStruct)
 	local int idx;
 	local bool bNewValue;
 
-	idx = FindIndex(AddStruct.OwnerID, bNewValue);
+	idx = FindIndex(0, Length-1, AddStruct.OwnerID, bNewValue);
 
 	if ( bNewValue )
 	{
@@ -85,7 +69,7 @@ public function bool RemoveIDFromLootStore(int ID)
 	local int idx;
 	local bool bNewValue;
 
-	idx = FindIndex(ID, bNewValue);
+	idx = FindIndex(0, Length-1, ID, bNewValue);
 
 	if ( bNewValue )
 	{
@@ -115,7 +99,7 @@ public function int GetNumUpgradeSlotsByOwnerID(int ID)
 	local int idx;
 	local bool bNewValue;
 
-	idx = FindIndex(ID, bNewValue);
+	idx = FindIndex(0, Length-1, ID, bNewValue);
 
 	if ( bNewValue )
 	{
@@ -130,7 +114,7 @@ public function int GetTradingPostValueByOwnerId(int ID)
 	local int idx;
 	local bool bNewValue;
 
-	idx = FindIndex(ID, bNewValue);
+	idx = FindIndex(0, Length-1, ID, bNewValue);
 
 	if ( bNewValue )
 	{
