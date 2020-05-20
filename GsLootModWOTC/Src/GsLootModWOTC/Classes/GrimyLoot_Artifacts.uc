@@ -55,7 +55,7 @@ static function X2DataTemplate CreateUnidentifiedLockboxRare()
 	local X2ItemTemplate Template;
 
 	`CREATE_X2TEMPLATE(class'X2ItemTemplate', Template, 'GrimyUnidentifiedLockboxRare');
-	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(Template,class'GrimyLoot_Research'.default.RARE_COLOR);
+	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(Template,class'X2Research_GsLoot'.default.RARE_COLOR);
 	InitializeLockboxTemplate(Template);
 	Template.TradingPostValue = GetRareArtifactPrice();
 	Template.strImage = "img:///GrimyLootPackage.Inv_Storage_Module";
@@ -68,7 +68,7 @@ static function X2DataTemplate CreateUnidentifiedLockboxEpic()
 	local X2ItemTemplate Template;
 
 	`CREATE_X2TEMPLATE(class'X2ItemTemplate', Template, 'GrimyUnidentifiedLockboxEpic');
-	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(Template,class'GrimyLoot_Research'.default.EPIC_COLOR);
+	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(Template,class'X2Research_GsLoot'.default.EPIC_COLOR);
 	InitializeLockboxTemplate(Template);
 	Template.TradingPostValue = GetEpicArtifactPrice();
 	Template.strImage = "img:///GrimyLootPackage.LockboxAL";
@@ -81,7 +81,7 @@ static function X2DataTemplate CreateUnidentifiedLockboxLegendary()
 	local X2ItemTemplate Template;
 
 	`CREATE_X2TEMPLATE(class'X2ItemTemplate', Template, 'GrimyUnidentifiedLockboxLegendary');
-	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(Template,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
+	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(Template,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
 	InitializeLockboxTemplate(Template);
 	Template.TradingPostValue = GetLegendaryArtifactPrice() ;
 	Template.strImage = "img:///GrimyLootPackage.LockboxER";

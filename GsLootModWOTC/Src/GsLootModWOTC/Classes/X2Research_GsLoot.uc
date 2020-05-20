@@ -1,4 +1,4 @@
-class GrimyLoot_Research extends X2StrategyElement
+class X2Research_GsLoot extends X2StrategyElement
 	dependson(GsLootDataStructures)
 	config(GsLootModWOTC);
 
@@ -55,7 +55,7 @@ static function X2DataTemplate IdentifyRareLockboxTemplate()
 	local ArtifactCost Artifacts;
 
 	`CREATE_X2TEMPLATE(class'X2TechTemplate', Template, 'Tech_IdentifyRareLockbox');
-	Template.DisplayName = "<font color='#" $ class'GrimyLoot_Research'.default.RARE_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
+	Template.DisplayName = "<font color='#" $ class'X2Research_GsLoot'.default.RARE_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
 	Template.PointsToComplete = GetRareResearchCost();
 	Template.RepeatPointsIncrease = GetRareResearchCostIncrease();
 	Template.bRepeatable = true;
@@ -80,7 +80,7 @@ static function X2DataTemplate IdentifyEpicLockboxTemplate()
 	local ArtifactCost Artifacts;
 
 	`CREATE_X2TEMPLATE(class'X2TechTemplate', Template, 'Tech_IdentifyEpicLockbox');
-	Template.DisplayName = "<font color='#" $ class'GrimyLoot_Research'.default.EPIC_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
+	Template.DisplayName = "<font color='#" $ class'X2Research_GsLoot'.default.EPIC_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
 	Template.PointsToComplete = GetEpicResearchCost();
 	Template.RepeatPointsIncrease = GetEpicResearchCostIncrease();
 	Template.bRepeatable = true;
@@ -105,7 +105,7 @@ static function X2DataTemplate IdentifyLegendaryLockboxTemplate()
 	local ArtifactCost Artifacts;
 
 	`CREATE_X2TEMPLATE(class'X2TechTemplate', Template, 'Tech_IdentifyLegendaryLockbox');
-	Template.DisplayName = "<font color='#" $ class'GrimyLoot_Research'.default.LEGENDARY_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
+	Template.DisplayName = "<font color='#" $ class'X2Research_GsLoot'.default.LEGENDARY_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
 	Template.PointsToComplete = GetLegendaryResearchCost();
 	Template.RepeatPointsIncrease = GetLegendaryResearchCostIncrease();
 	Template.bRepeatable = true;
@@ -130,7 +130,7 @@ static function X2DataTemplate IdentifyEpicLockboxInstantTemplate()
 	local ArtifactCost Artifacts;
 
 	`CREATE_X2TEMPLATE(class'X2TechTemplate', Template, 'Tech_IdentifyEpicLockboxInstant');
-	Template.DisplayName = "<font color='#" $ class'GrimyLoot_Research'.default.EPIC_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
+	Template.DisplayName = "<font color='#" $ class'X2Research_GsLoot'.default.EPIC_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
 	Template.PointsToComplete = 1;
 	Template.bRepeatable = true;
 	Template.strImage = "img:///GrimyLootPackage.LockboxAL";
@@ -161,7 +161,7 @@ static function X2DataTemplate IdentifyLegendaryLockboxInstantTemplate()
 	local ArtifactCost Artifacts;
 
 	`CREATE_X2TEMPLATE(class'X2TechTemplate', Template, 'Tech_IdentifyLegendaryLockboxInstant');
-	Template.DisplayName = "<font color='#" $ class'GrimyLoot_Research'.default.LEGENDARY_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
+	Template.DisplayName = "<font color='#" $ class'X2Research_GsLoot'.default.LEGENDARY_COLOR $ "'><b>" $ Template.DisplayName $ "</b></font>";
 	Template.PointsToComplete = 1;
 	Template.bRepeatable = true;
 	Template.strImage = "img:///GrimyLootPackage.LockboxER";
@@ -444,7 +444,7 @@ static function XComGameState_Item Identify(XComGameState NewGameState, ELockbox
 		ConfigArray.RemoveItem(ItemName);
 		if (ConfigArray.length == 0)
 		{
-			`redscreen("GrimyLoot_Research::Identify cannot find a real template!");
+			`redscreen("X2Research_GsLoot::Identify cannot find a real template!");
 			return none;
 		}
 		ItemName = ConfigArray[`SYNC_RAND_STATIC(ConfigArray.length)];

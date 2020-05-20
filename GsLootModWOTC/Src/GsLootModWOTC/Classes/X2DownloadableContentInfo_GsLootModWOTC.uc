@@ -99,7 +99,7 @@ static event OnPostTemplatesCreated()
 	OnPostLootTablesCreated();
 
 	class'GrimyLoot_UpgradesPrimary'.static.UpdateOldTemplates();
-	class'GrimyLoot_Research'.static.EnableAlienRulers();
+	class'X2Research_GsLoot'.static.EnableAlienRulers();
 	class'X2Item_GrimyUpgrades'.static.GenerateAttachmentsForUpgrades();
 }
 
@@ -112,7 +112,7 @@ static function UpdateSchematics()
 	local name						SchematicName;
 
 	ItemManager = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
-	foreach class'GrimyLoot_Research'.default.SCHEMATIC_NAMES(SchematicName) {
+	foreach class'X2Research_GsLoot'.default.SCHEMATIC_NAMES(SchematicName) {
 		ItemManager.FindDataTemplateAllDifficulties(SchematicName,DifficultyTemplates);
 		foreach DifficultyTemplates(DifficultyTemplate) {
 			SchematicTemplate = X2SchematicTemplate(DifficultyTemplate);
@@ -447,136 +447,136 @@ static function UpdateItemColors()
 	
 	ItemManager = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
 
-	foreach class'GrimyLoot_Research'.default.PrimaryAffixOne(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PrimaryAffixOne(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.PrimaryAffixTwo(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PrimaryAffixTwo(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.PrimaryAffixThree(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PrimaryAffixThree(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.EPIC_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.EPIC_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.PrimaryAffixFour(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PrimaryAffixFour(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
 	}
 
 	ItemTemplate = ItemManager.FindItemTemplate('GrimyWildcat_Bsc');
-	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	ItemTemplate = ItemManager.FindItemTemplate('GrimyWildcat_Adv');
-	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	ItemTemplate = ItemManager.FindItemTemplate('GrimyWildcat_Sup');
-	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+	class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	
-	foreach class'GrimyLoot_Research'.default.PistolAffixOne(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PistolAffixOne(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.PistolAffixTwo(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PistolAffixTwo(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.EPIC_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.EPIC_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.PistolAffixThree(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PistolAffixThree(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
-	}
-	
-	foreach class'GrimyLoot_Research'.default.SwordAffixOne(ItemName) {
-		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
-	}
-	foreach class'GrimyLoot_Research'.default.SwordAffixTwo(ItemName) {
-		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.EPIC_COLOR);
-	}
-	foreach class'GrimyLoot_Research'.default.SwordAffixThree(ItemName) {
-		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
 	}
 	
-	foreach class'GrimyLoot_Research'.default.GremlinAffixOne(ItemName) {
+	foreach class'X2Research_GsLoot'.default.SwordAffixOne(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.GremlinAffixTwo(ItemName) {
+	foreach class'X2Research_GsLoot'.default.SwordAffixTwo(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.EPIC_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.EPIC_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.GremlinAffixThree(ItemName) {
+	foreach class'X2Research_GsLoot'.default.SwordAffixThree(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
+	}
+	
+	foreach class'X2Research_GsLoot'.default.GremlinAffixOne(ItemName) {
+		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
+	}
+	foreach class'X2Research_GsLoot'.default.GremlinAffixTwo(ItemName) {
+		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.EPIC_COLOR);
+	}
+	foreach class'X2Research_GsLoot'.default.GremlinAffixThree(ItemName) {
+		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
 	}
 
-	foreach class'GrimyLoot_Research'.default.GrenadeLauncherAffixOne(ItemName) {
+	foreach class'X2Research_GsLoot'.default.GrenadeLauncherAffixOne(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.GrenadeLauncherAffixTwo(ItemName) {
+	foreach class'X2Research_GsLoot'.default.GrenadeLauncherAffixTwo(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.EPIC_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.EPIC_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.GrenadeLauncherAffixThree(ItemName) {
+	foreach class'X2Research_GsLoot'.default.GrenadeLauncherAffixThree(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
-	}
-	
-	foreach class'GrimyLoot_Research'.default.PsiAmpAffixOne(ItemName) {
-		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
-	}
-	foreach class'GrimyLoot_Research'.default.PsiAmpAffixTwo(ItemName) {
-		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.EPIC_COLOR);
-	}
-	foreach class'GrimyLoot_Research'.default.PsiAmpAffixThree(ItemName) {
-		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
 	}
 	
-	foreach class'GrimyLoot_Research'.default.ArmorAffixOne(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PsiAmpAffixOne(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.ArmorAffixTwo(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PsiAmpAffixTwo(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.EPIC_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.ArmorAffixThree(ItemName) {
+	foreach class'X2Research_GsLoot'.default.PsiAmpAffixThree(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.EPIC_COLOR);
-	}
-	foreach class'GrimyLoot_Research'.default.ArmorAffixFour(ItemName) {
-		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
 	}
 	
-	foreach class'GrimyLoot_Research'.default.BitAffixOne(ItemName) {
+	foreach class'X2Research_GsLoot'.default.ArmorAffixOne(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.BitAffixTwo(ItemName) {
+	foreach class'X2Research_GsLoot'.default.ArmorAffixTwo(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.EPIC_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.BitAffixThree(ItemName) {
+	foreach class'X2Research_GsLoot'.default.ArmorAffixThree(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.EPIC_COLOR);
+	}
+	foreach class'X2Research_GsLoot'.default.ArmorAffixFour(ItemName) {
+		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
 	}
 	
-	foreach class'GrimyLoot_Research'.default.ChassisAffixOne(ItemName) {
+	foreach class'X2Research_GsLoot'.default.BitAffixOne(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.RARE_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.ChassisAffixTwo(ItemName) {
+	foreach class'X2Research_GsLoot'.default.BitAffixTwo(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.EPIC_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.EPIC_COLOR);
 	}
-	foreach class'GrimyLoot_Research'.default.ChassisAffixThree(ItemName) {
+	foreach class'X2Research_GsLoot'.default.BitAffixThree(ItemName) {
 		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
-		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'GrimyLoot_Research'.default.LEGENDARY_COLOR);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
+	}
+	
+	foreach class'X2Research_GsLoot'.default.ChassisAffixOne(ItemName) {
+		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.RARE_COLOR);
+	}
+	foreach class'X2Research_GsLoot'.default.ChassisAffixTwo(ItemName) {
+		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.EPIC_COLOR);
+	}
+	foreach class'X2Research_GsLoot'.default.ChassisAffixThree(ItemName) {
+		ItemTemplate = ItemManager.FindItemTemplate(ItemName);
+		class'GrimyLoot_ItemTemplateHelper'.static.AddFontColor(ItemTemplate,class'X2Research_GsLoot'.default.LEGENDARY_COLOR);
 	}
 }
 
@@ -636,7 +636,7 @@ static private function UpdateResearch()
 
 exec function GrimyLootOpenLockbox(EGearType GearType, ELockboxRarity Rarity)
 {
-	class'GrimyLoot_Research'.static.IdentifyByIndex(none, GearType, Rarity);
+	class'X2Research_GsLoot'.static.IdentifyByIndex(none, GearType, Rarity);
 }
 
 exec function GrimyLootUpdateResearch()

@@ -1,5 +1,5 @@
 class GrimyLoot_UIScreen extends UIScreen config(GrimyDynamicConfig)
-	dependson(GrimyLoot_Research);
+	dependson(GsLootDataStructures);
 
 var localized String m_strRareName, m_strEpicName, m_strLegendaryName;
 var localized array<String> ChoiceNames;
@@ -178,24 +178,24 @@ simulated function InitLoot(UIAlert Alert, ELockboxRarity LockboxRarity, XComGam
 
 function PickIndices()
 {
-	ChoiceIndices.AddItem(class'GrimyLoot_Research'.static.IdentifyIndex(Rarity > eRarity_Rare));
+	ChoiceIndices.AddItem(class'X2Research_GsLoot'.static.IdentifyIndex(Rarity > eRarity_Rare));
 	
-	ChoiceIndices.AddItem(class'GrimyLoot_Research'.static.IdentifyIndex(Rarity > eRarity_Rare));
+	ChoiceIndices.AddItem(class'X2Research_GsLoot'.static.IdentifyIndex(Rarity > eRarity_Rare));
 	while ( ChoiceIndices[1] == ChoiceIndices[0] )
 	{
-		ChoiceIndices[1] = class'GrimyLoot_Research'.static.IdentifyIndex(Rarity > eRarity_Rare);
+		ChoiceIndices[1] = class'X2Research_GsLoot'.static.IdentifyIndex(Rarity > eRarity_Rare);
 	}
 
-	ChoiceIndices.AddItem(class'GrimyLoot_Research'.static.IdentifyIndex(Rarity > eRarity_Rare));
+	ChoiceIndices.AddItem(class'X2Research_GsLoot'.static.IdentifyIndex(Rarity > eRarity_Rare));
 	while ( ChoiceIndices[2] == ChoiceIndices[1] || ChoiceIndices[2] == ChoiceIndices[0] )
 	{
-		ChoiceIndices[2] = class'GrimyLoot_Research'.static.IdentifyIndex(Rarity > eRarity_Rare);
+		ChoiceIndices[2] = class'X2Research_GsLoot'.static.IdentifyIndex(Rarity > eRarity_Rare);
 	}
 
-	ChoiceIndices.AddItem(class'GrimyLoot_Research'.static.IdentifyIndex(Rarity > eRarity_Rare));
+	ChoiceIndices.AddItem(class'X2Research_GsLoot'.static.IdentifyIndex(Rarity > eRarity_Rare));
 	while ( ChoiceIndices[3] == ChoiceIndices[2] || ChoiceIndices[3] == ChoiceIndices[1] || ChoiceIndices[3] == ChoiceIndices[0] )
 	{
-		ChoiceIndices[3] = class'GrimyLoot_Research'.static.IdentifyIndex(Rarity > eRarity_Rare);
+		ChoiceIndices[3] = class'X2Research_GsLoot'.static.IdentifyIndex(Rarity > eRarity_Rare);
 	}
 }
 
@@ -230,16 +230,16 @@ function GiveItem(UIButton ButtonChoice)
 	local XComGameState_Item ItemState;
 
 	if ( ButtonChoice == Choice1 ) {
-		ItemState = class'GrimyLoot_Research'.static.IdentifyByIndex(TechState, ChoiceIndices[0], Rarity);
+		ItemState = class'X2Research_GsLoot'.static.IdentifyByIndex(TechState, ChoiceIndices[0], Rarity);
 	}
 	if ( ButtonChoice == Choice2 ) {
-		ItemState = class'GrimyLoot_Research'.static.IdentifyByIndex(TechState, ChoiceIndices[1], Rarity);
+		ItemState = class'X2Research_GsLoot'.static.IdentifyByIndex(TechState, ChoiceIndices[1], Rarity);
 	}
 	if ( ButtonChoice == Choice3 ) {
-		ItemState = class'GrimyLoot_Research'.static.IdentifyByIndex(TechState, ChoiceIndices[2], Rarity);
+		ItemState = class'X2Research_GsLoot'.static.IdentifyByIndex(TechState, ChoiceIndices[2], Rarity);
 	}
 	if ( ButtonChoice == Choice4 ) {
-		ItemState = class'GrimyLoot_Research'.static.IdentifyByIndex(TechState, ChoiceIndices[3], Rarity);
+		ItemState = class'X2Research_GsLoot'.static.IdentifyByIndex(TechState, ChoiceIndices[3], Rarity);
 	}
 
 	if ( MyItemCard == none ) {
@@ -298,7 +298,7 @@ function UpdateData(optional int RewardNo=-1)
 		kInfo.strName = TechState.GetDisplayName();
 		kInfo.strHeaderLabel = AlertScreen.m_strResearchCompleteLabel;
 				
-		if ( class'GrimyLoot_Research'.default.RANDOMIZE_NICKNAMES && RecentName != "" ) {
+		if ( class'X2Research_GsLoot'.default.RANDOMIZE_NICKNAMES && RecentName != "" ) {
 			RecentName = default.RecentName;
 			kInfo.strBody = ParamTag.StrValue0;
 			ParamTag.StrValue0 = RecentName;

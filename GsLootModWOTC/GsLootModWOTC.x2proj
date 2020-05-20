@@ -148,6 +148,7 @@ Wraxil - Implementation for continent bonuses</Description>
     <SteamPublishID>0</SteamPublishID>
     <AssemblyName>GsLootModWOTC</AssemblyName>
     <RootNamespace>GsLootModWOTC</RootNamespace>
+    <ProjectGuid>{1336cb7e-8d11-41af-b130-4831951a9a75}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -400,7 +401,7 @@ Wraxil - Implementation for continent bonuses</Description>
     <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_PCS_HackRewards.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_Research.uc">
+    <Content Include="Src\GsLootModWOTC\Classes\X2Research_GsLoot.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\GsLootModWOTC\Classes\GrimyLoot_ScreenListener.uc">

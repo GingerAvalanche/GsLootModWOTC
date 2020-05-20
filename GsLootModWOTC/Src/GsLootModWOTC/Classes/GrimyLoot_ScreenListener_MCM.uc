@@ -155,19 +155,19 @@ simulated function ResetButtonClicked(MCM_API_SettingsPage Page)
 	BASIC_UPGRADE_VALUE = class'GrimyLoot_UpgradesPrimary'.default.BASIC_UPGRADE_VALUE;
 	ADVANCED_UPGRADE_VALUE = class'GrimyLoot_UpgradesPrimary'.default.ADVANCED_UPGRADE_VALUE;
 	SUPERIOR_UPGRADE_VALUE = class'GrimyLoot_UpgradesPrimary'.default.SUPERIOR_UPGRADE_VALUE;
-	RARE_VALUE = class'GrimyLoot_Research'.default.RARE_VALUE;
-	EPIC_VALUE = class'GrimyLoot_Research'.default.EPIC_VALUE;
-	LEGENDARY_VALUE = class'GrimyLoot_Research'.default.LEGENDARY_VALUE;
-	RARE_RESEARCH_COST = class'GrimyLoot_Research'.default.RARE_RESEARCH_COST;
-	EPIC_RESEARCH_COST = class'GrimyLoot_Research'.default.EPIC_RESEARCH_COST;
-	LEGENDARY_RESEARCH_COST = class'GrimyLoot_Research'.default.LEGENDARY_RESEARCH_COST;
-	RARE_RESEARCH_COST_INCREASE = class'GrimyLoot_Research'.default.RARE_RESEARCH_COST_INCREASE;
-	EPIC_RESEARCH_COST_INCREASE = class'GrimyLoot_Research'.default.EPIC_RESEARCH_COST_INCREASE;
-	LEGENDARY_RESEARCH_COST_INCREASE = class'GrimyLoot_Research'.default.LEGENDARY_RESEARCH_COST_INCREASE;
-	LIGHT_ARMOR_CHANCE = class'GrimyLoot_Research'.default.LIGHT_ARMOR_CHANCE;
-	HEAVY_ARMOR_CHANCE = class'GrimyLoot_Research'.default.HEAVY_ARMOR_CHANCE;
-	WEAPON_UNLOCK_CHANCE = class'GrimyLoot_Research'.default.WEAPON_UNLOCK_CHANCE;
-	ARMOR_UNLOCK_CHANCE = class'GrimyLoot_Research'.default.ARMOR_UNLOCK_CHANCE;
+	RARE_VALUE = class'X2Research_GsLoot'.default.RARE_VALUE;
+	EPIC_VALUE = class'X2Research_GsLoot'.default.EPIC_VALUE;
+	LEGENDARY_VALUE = class'X2Research_GsLoot'.default.LEGENDARY_VALUE;
+	RARE_RESEARCH_COST = class'X2Research_GsLoot'.default.RARE_RESEARCH_COST;
+	EPIC_RESEARCH_COST = class'X2Research_GsLoot'.default.EPIC_RESEARCH_COST;
+	LEGENDARY_RESEARCH_COST = class'X2Research_GsLoot'.default.LEGENDARY_RESEARCH_COST;
+	RARE_RESEARCH_COST_INCREASE = class'X2Research_GsLoot'.default.RARE_RESEARCH_COST_INCREASE;
+	EPIC_RESEARCH_COST_INCREASE = class'X2Research_GsLoot'.default.EPIC_RESEARCH_COST_INCREASE;
+	LEGENDARY_RESEARCH_COST_INCREASE = class'X2Research_GsLoot'.default.LEGENDARY_RESEARCH_COST_INCREASE;
+	LIGHT_ARMOR_CHANCE = class'X2Research_GsLoot'.default.LIGHT_ARMOR_CHANCE;
+	HEAVY_ARMOR_CHANCE = class'X2Research_GsLoot'.default.HEAVY_ARMOR_CHANCE;
+	WEAPON_UNLOCK_CHANCE = class'X2Research_GsLoot'.default.WEAPON_UNLOCK_CHANCE;
+	ARMOR_UNLOCK_CHANCE = class'X2Research_GsLoot'.default.ARMOR_UNLOCK_CHANCE;
 	ArtifactSlider1.SetValue(RARE_ARTIFACT_VALUE, true);
 	ArtifactSlider2.SetValue(EPIC_ARTIFACT_VALUE, true);
 	ArtifactSlider3.SetValue(LEGENDARY_ARTIFACT_VALUE, true);
@@ -237,86 +237,86 @@ simulated function LoadInitialValues()
 	}
 
 	if ( RARE_VALUE > 0 ) {
-		RARE_VALUE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.RARE_VALUE,RARE_VALUE);
+		RARE_VALUE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.RARE_VALUE,RARE_VALUE);
 	}
 	else {
-		RARE_VALUE = class'GrimyLoot_Research'.default.RARE_VALUE;
+		RARE_VALUE = class'X2Research_GsLoot'.default.RARE_VALUE;
 	}
 	if ( EPIC_VALUE > 0 ) {
-		EPIC_VALUE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.EPIC_VALUE,EPIC_VALUE);
+		EPIC_VALUE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.EPIC_VALUE,EPIC_VALUE);
 	}
 	else {
-		EPIC_VALUE = class'GrimyLoot_Research'.default.EPIC_VALUE;
+		EPIC_VALUE = class'X2Research_GsLoot'.default.EPIC_VALUE;
 	}
 	if ( LEGENDARY_VALUE > 0 ) {
-		LEGENDARY_VALUE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.LEGENDARY_VALUE,LEGENDARY_VALUE);
+		LEGENDARY_VALUE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.LEGENDARY_VALUE,LEGENDARY_VALUE);
 	}
 	else {
-		LEGENDARY_VALUE = class'GrimyLoot_Research'.default.LEGENDARY_VALUE;
+		LEGENDARY_VALUE = class'X2Research_GsLoot'.default.LEGENDARY_VALUE;
 	}
 
 	if ( RARE_RESEARCH_COST > 0 ) {
-		RARE_RESEARCH_COST = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.RARE_RESEARCH_COST,RARE_RESEARCH_COST);
+		RARE_RESEARCH_COST = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.RARE_RESEARCH_COST,RARE_RESEARCH_COST);
 	}
 	else {
-		RARE_RESEARCH_COST = class'GrimyLoot_Research'.default.RARE_RESEARCH_COST;
+		RARE_RESEARCH_COST = class'X2Research_GsLoot'.default.RARE_RESEARCH_COST;
 	}
 	if ( EPIC_RESEARCH_COST > 0 ) {
-		EPIC_RESEARCH_COST = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.EPIC_RESEARCH_COST,EPIC_RESEARCH_COST);
+		EPIC_RESEARCH_COST = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.EPIC_RESEARCH_COST,EPIC_RESEARCH_COST);
 	}
 	else {
-		EPIC_RESEARCH_COST = class'GrimyLoot_Research'.default.EPIC_RESEARCH_COST;
+		EPIC_RESEARCH_COST = class'X2Research_GsLoot'.default.EPIC_RESEARCH_COST;
 	}
 	if ( LEGENDARY_RESEARCH_COST > 0 ) {
-		LEGENDARY_RESEARCH_COST = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.LEGENDARY_RESEARCH_COST,LEGENDARY_RESEARCH_COST);
+		LEGENDARY_RESEARCH_COST = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.LEGENDARY_RESEARCH_COST,LEGENDARY_RESEARCH_COST);
 	}
 	else {
-		LEGENDARY_RESEARCH_COST = class'GrimyLoot_Research'.default.LEGENDARY_RESEARCH_COST;
+		LEGENDARY_RESEARCH_COST = class'X2Research_GsLoot'.default.LEGENDARY_RESEARCH_COST;
 	}
 
 	if ( RARE_RESEARCH_COST_INCREASE > 0 ) {
-		RARE_RESEARCH_COST_INCREASE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.RARE_RESEARCH_COST_INCREASE,RARE_RESEARCH_COST_INCREASE);
+		RARE_RESEARCH_COST_INCREASE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.RARE_RESEARCH_COST_INCREASE,RARE_RESEARCH_COST_INCREASE);
 	}
 	else {
-		RARE_RESEARCH_COST_INCREASE = class'GrimyLoot_Research'.default.RARE_RESEARCH_COST_INCREASE;
+		RARE_RESEARCH_COST_INCREASE = class'X2Research_GsLoot'.default.RARE_RESEARCH_COST_INCREASE;
 	}
 	if ( EPIC_RESEARCH_COST_INCREASE > 0 ) {
-		EPIC_RESEARCH_COST_INCREASE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.EPIC_RESEARCH_COST_INCREASE,EPIC_RESEARCH_COST_INCREASE);
+		EPIC_RESEARCH_COST_INCREASE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.EPIC_RESEARCH_COST_INCREASE,EPIC_RESEARCH_COST_INCREASE);
 	}
 	else {
-		EPIC_RESEARCH_COST_INCREASE = class'GrimyLoot_Research'.default.EPIC_RESEARCH_COST_INCREASE;
+		EPIC_RESEARCH_COST_INCREASE = class'X2Research_GsLoot'.default.EPIC_RESEARCH_COST_INCREASE;
 	}
 	if ( LEGENDARY_RESEARCH_COST_INCREASE > 0 ) {
-		LEGENDARY_RESEARCH_COST_INCREASE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.LEGENDARY_RESEARCH_COST_INCREASE,LEGENDARY_RESEARCH_COST_INCREASE);
+		LEGENDARY_RESEARCH_COST_INCREASE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.LEGENDARY_RESEARCH_COST_INCREASE,LEGENDARY_RESEARCH_COST_INCREASE);
 	}
 	else {
-		LEGENDARY_RESEARCH_COST_INCREASE = class'GrimyLoot_Research'.default.LEGENDARY_RESEARCH_COST_INCREASE;
+		LEGENDARY_RESEARCH_COST_INCREASE = class'X2Research_GsLoot'.default.LEGENDARY_RESEARCH_COST_INCREASE;
 	}
 
 	if ( LIGHT_ARMOR_CHANCE > 0 ) {
-		LIGHT_ARMOR_CHANCE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.LIGHT_ARMOR_CHANCE,LIGHT_ARMOR_CHANCE);
+		LIGHT_ARMOR_CHANCE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.LIGHT_ARMOR_CHANCE,LIGHT_ARMOR_CHANCE);
 	}
 	else {
-		LIGHT_ARMOR_CHANCE = class'GrimyLoot_Research'.default.LIGHT_ARMOR_CHANCE;
+		LIGHT_ARMOR_CHANCE = class'X2Research_GsLoot'.default.LIGHT_ARMOR_CHANCE;
 	}
 	if ( HEAVY_ARMOR_CHANCE > 0 ) {
-		HEAVY_ARMOR_CHANCE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.HEAVY_ARMOR_CHANCE,HEAVY_ARMOR_CHANCE);
+		HEAVY_ARMOR_CHANCE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.HEAVY_ARMOR_CHANCE,HEAVY_ARMOR_CHANCE);
 	}
 	else {
-		HEAVY_ARMOR_CHANCE = class'GrimyLoot_Research'.default.HEAVY_ARMOR_CHANCE;
+		HEAVY_ARMOR_CHANCE = class'X2Research_GsLoot'.default.HEAVY_ARMOR_CHANCE;
 	}
 
 	if ( WEAPON_UNLOCK_CHANCE > 0 ) {
-		WEAPON_UNLOCK_CHANCE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.WEAPON_UNLOCK_CHANCE,WEAPON_UNLOCK_CHANCE);
+		WEAPON_UNLOCK_CHANCE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.WEAPON_UNLOCK_CHANCE,WEAPON_UNLOCK_CHANCE);
 	}
 	else {
-		WEAPON_UNLOCK_CHANCE = class'GrimyLoot_Research'.default.WEAPON_UNLOCK_CHANCE;
+		WEAPON_UNLOCK_CHANCE = class'X2Research_GsLoot'.default.WEAPON_UNLOCK_CHANCE;
 	}
 	if ( ARMOR_UNLOCK_CHANCE > 0 ) {
-		ARMOR_UNLOCK_CHANCE = `MCM_CH_GetValue(class'GrimyLoot_Research'.default.ARMOR_UNLOCK_CHANCE,ARMOR_UNLOCK_CHANCE);
+		ARMOR_UNLOCK_CHANCE = `MCM_CH_GetValue(class'X2Research_GsLoot'.default.ARMOR_UNLOCK_CHANCE,ARMOR_UNLOCK_CHANCE);
 	}
 	else {
-		ARMOR_UNLOCK_CHANCE = class'GrimyLoot_Research'.default.ARMOR_UNLOCK_CHANCE;
+		ARMOR_UNLOCK_CHANCE = class'X2Research_GsLoot'.default.ARMOR_UNLOCK_CHANCE;
 	}
 }
 

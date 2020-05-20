@@ -104,19 +104,19 @@ function GiveRarePCS(XComGameState_Unit Hacker, XComGameState_BaseObject HackTar
 	{
 		LootStats.IDOwner = ItemState.ObjectID;
 		LootStats.NumUpgradeSlots = default.iNumUpgradeSlots_Rare;
-		LootStats.TradingPostValue = class'GrimyLoot_Research'.static.GetRareEquipmentPrice();
+		LootStats.TradingPostValue = class'X2Research_GsLoot'.static.GetRareEquipmentPrice();
 		LootStoreState.AddToLootStore(LootStats);
 	}
 
-	if ( class'GrimyLoot_Research'.default.RANDOMIZE_NICKNAMES )
+	if ( class'X2Research_GsLoot'.default.RANDOMIZE_NICKNAMES )
 	{
-		ItemState.Nickname = class'GrimyLoot_Research'.static.GenerateMissionNickname(0);
+		ItemState.Nickname = class'X2Research_GsLoot'.static.GenerateMissionNickname(0);
 	}
 	else
 	{
-		ItemState.Nickname = class'GrimyLoot_Research'.static.GetRarityPrefix(0) @ ItemTemplate.GetItemFriendlyNameNoStats();
+		ItemState.Nickname = class'X2Research_GsLoot'.static.GetRarityPrefix(0) @ ItemTemplate.GetItemFriendlyNameNoStats();
 	}
-	class'GrimyLoot_Research'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
+	class'X2Research_GsLoot'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
 	ItemState.OnItemBuilt(NewGameState);
 	Hacker.AddLoot(ItemState.GetReference(), NewGameState);
 	
@@ -147,20 +147,20 @@ function GiveEpicPCS(XComGameState_Unit Hacker, XComGameState_BaseObject HackTar
 	{
 		LootStats.IDOwner = ItemState.ObjectID;
 		LootStats.NumUpgradeSlots = default.iNumUpgradeSlots_Epic;
-		LootStats.TradingPostValue = class'GrimyLoot_Research'.static.GetEpicEquipmentPrice();
+		LootStats.TradingPostValue = class'X2Research_GsLoot'.static.GetEpicEquipmentPrice();
 		LootStoreState.AddToLootStore(LootStats);
 	}
 
-	if ( class'GrimyLoot_Research'.default.RANDOMIZE_NICKNAMES )
+	if ( class'X2Research_GsLoot'.default.RANDOMIZE_NICKNAMES )
 	{
-		ItemState.Nickname = class'GrimyLoot_Research'.static.GenerateMissionNickname(1);
+		ItemState.Nickname = class'X2Research_GsLoot'.static.GenerateMissionNickname(1);
 	}
 	else
 	{
-		ItemState.Nickname = class'GrimyLoot_Research'.static.GetRarityPrefix(1) @ ItemTemplate.GetItemFriendlyNameNoStats();
+		ItemState.Nickname = class'X2Research_GsLoot'.static.GetRarityPrefix(1) @ ItemTemplate.GetItemFriendlyNameNoStats();
 	}
-	class'GrimyLoot_Research'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
-	class'GrimyLoot_Research'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
+	class'X2Research_GsLoot'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
+	class'X2Research_GsLoot'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
 
 	ItemState.OnItemBuilt(NewGameState);
 	Hacker.AddLoot(ItemState.GetReference(), NewGameState);
@@ -191,21 +191,21 @@ function GiveLegendaryPCS(XComGameState_Unit Hacker, XComGameState_BaseObject Ha
 	{
 		LootStats.IDOwner = ItemState.ObjectID;
 		LootStats.NumUpgradeSlots = default.iNumUpgradeSlots_Legendary;
-		LootStats.TradingPostValue = class'GrimyLoot_Research'.static.GetLegendaryEquipmentPrice();
+		LootStats.TradingPostValue = class'X2Research_GsLoot'.static.GetLegendaryEquipmentPrice();
 		LootStoreState.AddToLootStore(LootStats);
 	}
 
-	if ( class'GrimyLoot_Research'.default.RANDOMIZE_NICKNAMES )
+	if ( class'X2Research_GsLoot'.default.RANDOMIZE_NICKNAMES )
 	{
-		ItemState.Nickname = class'GrimyLoot_Research'.static.GenerateMissionNickname(2);
+		ItemState.Nickname = class'X2Research_GsLoot'.static.GenerateMissionNickname(2);
 	}
 	else
 	{
-		ItemState.Nickname = class'GrimyLoot_Research'.static.GetRarityPrefix(2) @ ItemTemplate.GetItemFriendlyNameNoStats();
+		ItemState.Nickname = class'X2Research_GsLoot'.static.GetRarityPrefix(2) @ ItemTemplate.GetItemFriendlyNameNoStats();
 	}
-	class'GrimyLoot_Research'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
-	class'GrimyLoot_Research'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
-	class'GrimyLoot_Research'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
+	class'X2Research_GsLoot'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
+	class'X2Research_GsLoot'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
+	class'X2Research_GsLoot'.static.ApplyNovelUpgrade(ItemState, default.PCSUpgrades);
 
 	ItemState.OnItemBuilt(NewGameState);
 	Hacker.AddLoot(ItemState.GetReference(), NewGameState);

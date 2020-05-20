@@ -56,13 +56,13 @@ static function AddExistingGameStatesToLootStore()
 			{
 				case 1:
 				case 2:
-					LootStats.TradingPostValue = class'GrimyLoot_Research'.static.GetRareEquipmentPrice();
+					LootStats.TradingPostValue = class'X2Research_GsLoot'.static.GetRareEquipmentPrice();
 					break;
 				case 3:
-					LootStats.TradingPostValue = class'GrimyLoot_Research'.static.GetEpicEquipmentPrice();
+					LootStats.TradingPostValue = class'X2Research_GsLoot'.static.GetEpicEquipmentPrice();
 					break;
 				case 4:
-					LootStats.TradingPostValue = class'GrimyLoot_Research'.static.GetLegendaryEquipmentPrice();
+					LootStats.TradingPostValue = class'X2Research_GsLoot'.static.GetLegendaryEquipmentPrice();
 			}
 			LootStoreState.AddToLootStore(LootStats);
 		}

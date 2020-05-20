@@ -1,5 +1,5 @@
 class GrimyLoot_ScreenListener extends UIScreenListener
-	dependson(GrimyLoot_Research);
+	dependson(GsLootDataStructures);
 
 event OnInit(UIScreen Screen)
 {
