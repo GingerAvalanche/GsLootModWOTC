@@ -23,7 +23,7 @@ private function int FindIndex(int s, int e, int ID, out bNewValue)
 
 	if (e >= s)
 	{
-		mid = s + Round((e - s) / 2);
+		mid = s + ((e - s) / 2);
 
 		if (LootStore[mid] == ID)
 			return mid;
